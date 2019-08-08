@@ -31,7 +31,7 @@ import java.util.ArrayList
 /**
  * 主页
  */
-class Main2Activity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
+class MainActivity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
 
     private lateinit var mIconUnSelectIds: IntArray
     private lateinit var mIconSelectIds: IntArray
@@ -68,16 +68,18 @@ class Main2Activity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
         //   DialogUtils.showUpDataDialog(this, "2.0版本", "http://candao.qizhekeji.com/app-release.apk")
 
         mIconUnSelectIds = intArrayOf(
-            R.mipmap.tab_message_default,
-            R.mipmap.tab_home_default,
-            R.mipmap.tab_my_default
+            R.mipmap.home_tab_s_1,
+            R.mipmap.home_tab_s_1,
+            R.mipmap.home_tab_s_1,
+            R.mipmap.home_tab_s_1
         )
         mIconSelectIds = intArrayOf(
-            R.mipmap.tab_message_selected,
-            R.mipmap.tab_home_selected,
-            R.mipmap.tab_my_selected
+            R.mipmap.home_tab_s_1,
+            R.mipmap.home_tab_s_1,
+            R.mipmap.home_tab_s_1,
+            R.mipmap.home_tab_s_1
         )
-        mTabTitles = arrayOf("首页", "新家", "我的")
+        mTabTitles = arrayOf("工作台", "我的项目", "消息", "我的")
 
 
         initAllFragment(savedInstanceState)
@@ -172,7 +174,7 @@ class Main2Activity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
         const val KEY_PAGE_INDEX = "pageIndex"
 
         fun goHome(context: Context, tabnumer: Int) {
-            val intent = Intent(context, Main2Activity::class.java)
+            val intent = Intent(context, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.putExtra("tabnumer", tabnumer)
             context.startActivity(intent)
@@ -207,7 +209,7 @@ class Main2Activity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
         }
 
         private fun openPage(context: Context, type: Int) {
-            val intent = Intent(context, Main2Activity::class.java)
+            val intent = Intent(context, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.putExtra(KEY_PAGE_INDEX, type)
             context.startActivity(intent)

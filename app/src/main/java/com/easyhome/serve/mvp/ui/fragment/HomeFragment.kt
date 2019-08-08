@@ -26,19 +26,22 @@ import com.easyhome.serve.api.RequestCodeInfo
 import com.easyhome.serve.app.base.JRBaseFragment
 import com.easyhome.serve.app.extension.loadImage
 import com.easyhome.serve.app.extension.singleClick
-import com.easyhome.serve.mvp.ui.activity.Main2Activity
+import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.search.CityPickerActivity
+import com.easyhome.serve.mvp.ui.adapter.HomeStatistics1Adapter
+import com.easyhome.serve.mvp.ui.adapter.HomeStatistics2Adapter
 import com.easyhome.serve.mvp.ui.adapter.MedicineAdapter
 import com.easyhome.serve.mvp.ui.adapter.ProjectDynamicTabAdapter
+import com.haibin.calendarview.Calendar
 import kotlinx.android.synthetic.main.fragment_home.*
-import org.jetbrains.anko.support.v4.startActivity
+import java.util.HashMap
 
 
 /**
  * 首页
  */
 class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
-    override fun getMyself(): BaseActivity<*> = this.activity as Main2Activity
+    override fun getMyself(): BaseActivity<*> = this.activity as MainActivity
 
     companion object {
         fun newInstance(): HomeFragment {
@@ -62,76 +65,47 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
     }
 
     override fun initData(savedInstanceState: Bundle?) {
-        cityTV.singleClick {
-            startActivityForResult(Intent(activity, CityPickerActivity::class.java), RequestCodeInfo.GETCITY)
-        }
-        searchLL.singleClick {
-        }
 
+        statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))
+        statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", ""))
 
-        var mutableList = mutableListOf<String>(
-            "http://d.paper.i4.cn/max/2017/03/23/14/1490249222986_905517.jpg",
-            "http://pic34.photophoto.cn/20150202/0005018384491898_b.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=2095807035,495047869&fm=26&gp=0.j"
-        )
-        /* for (vp in it) {
-             mutableList.add(vp.a6)
-         }*/
+        val year = mCalendarView.getCurYear()
+        val month = mCalendarView.getCurMonth()
 
-        // 轮播图
-        (banner as ConvenientBanner<String>)
-            .setPages(object : CBViewHolderCreator {
-                override fun createHolder(itemView: View) = ImageHolderView(itemView)
-                override fun getLayoutId() = R.layout.item_image
-            }, mutableList)
-            .setOnPageChangeListener(object : OnPageChangeListener {
-                override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
-                }
-
-                override fun onPageSelected(index: Int) {
-                }
-
-                override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
-                }
-            })
-            .setPageIndicator(intArrayOf(R.mipmap.banner_1, R.mipmap.banner_2))
-            .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL)
-            .setOnItemClickListener { position ->
-                //                        openGallery(mutableList, it)
-                //  openH5ForUrl(it[position].a8.strToString())
-            }
-        banner.startTurning()
-
-
-        //设置科室
-        rvDynamicTab.adapter = ProjectDynamicTabAdapter(
-            arrayListOf(
-                ProjectDynamicTabAdapter.DynamicTabInfo(R.mipmap.user_icon_1, "设计师"),
-                ProjectDynamicTabAdapter.DynamicTabInfo(R.mipmap.user_icon_1, "设计师"),
-                ProjectDynamicTabAdapter.DynamicTabInfo(R.mipmap.user_icon_1, "设计师"),
-                ProjectDynamicTabAdapter.DynamicTabInfo(R.mipmap.user_icon_1, "设计师"),
-                ProjectDynamicTabAdapter.DynamicTabInfo(R.mipmap.user_icon_1, "设计师")
-            )
-        )
-        //设置医院
-     //   hospitalRV.adapter
-
-
-        //设置药品
-        medicineRV.adapter = MedicineAdapter(
-            arrayListOf(
-                MedicineAdapter.Info("http://d.paper.i4.cn/max/2017/03/23/14/1490249222986_905517.jpg", "建材", 1.0f),
-                MedicineAdapter.Info("http://d.paper.i4.cn/max/2017/03/23/14/1490249222986_905517.jpg", "建材", 1.0f),
-                MedicineAdapter.Info("http://d.paper.i4.cn/max/2017/03/23/14/1490249222986_905517.jpg", "建材", 1.0f),
-                MedicineAdapter.Info("http://d.paper.i4.cn/max/2017/03/23/14/1490249222986_905517.jpg", "建材", 1.0f)
-            )
-        )
-
-
-        homeIV1.singleClick {
-        }
+        val map = HashMap<String, Calendar>()
+        map[getSchemeCalendar(year, month, 3, -0xbf24db, "假").toString()] =
+                getSchemeCalendar(year, month, 3, -0xbf24db, "假")
+        map[getSchemeCalendar(year, month, 6, -0x196ec8, "事").toString()] =
+                getSchemeCalendar(year, month, 6, -0x196ec8, "事")
+        map[getSchemeCalendar(year, month, 9, -0x20ecaa, "议").toString()] =
+                getSchemeCalendar(year, month, 9, -0x20ecaa, "议")
+        map[getSchemeCalendar(year, month, 13, -0x123a93, "记").toString()] =
+                getSchemeCalendar(year, month, 13, -0x123a93, "记")
+        map[getSchemeCalendar(year, month, 14, -0x123a93, "记").toString()] =
+                getSchemeCalendar(year, month, 14, -0x123a93, "记")
+        map[getSchemeCalendar(year, month, 15, -0x5533bc, "假").toString()] =
+                getSchemeCalendar(year, month, 15, -0x5533bc, "假")
+        map[getSchemeCalendar(year, month, 18, -0x43ec10, "记").toString()] =
+                getSchemeCalendar(year, month, 18, -0x43ec10, "记")
+        map[getSchemeCalendar(year, month, 25, -0xec5310, "假").toString()] =
+                getSchemeCalendar(year, month, 25, -0xec5310, "假")
+        map[getSchemeCalendar(year, month, 27, -0xec5310, "多").toString()] =
+                getSchemeCalendar(year, month, 27, -0xec5310, "多")
+        //此方法在巨大的数据量上不影响遍历性能，推荐使用
+        mCalendarView.setSchemeDate(map)
     }
-
+    private fun getSchemeCalendar(year: Int, month: Int, day: Int, color: Int, text: String): Calendar {
+        val calendar = Calendar()
+        calendar.year = year
+        calendar.month = month
+        calendar.day = day
+        calendar.schemeColor = color//如果单独标记颜色、则会使用这个颜色
+        calendar.scheme = text
+        calendar.addScheme(Calendar.Scheme())
+        calendar.addScheme(-0xff7800, "假")
+        calendar.addScheme(-0xff7800, "节")
+        return calendar
+    }
     /**
      * 通过此方法可以使 Fragment 能够与外界做一些交互和通信, 比如说外部的 Activity 想让自己持有的某个 Fragment 对象执行一些方法,
      * 建议在有多个需要与外界交互的方法时, 统一传 {@link Message}, 通过 what 字段来区分不同的方法, 在 {@link #setData(Object)}
@@ -185,15 +159,5 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
 
     }
 
-    inner class ImageHolderView(itemView: View) : Holder<String>(itemView) {
-        private var imageView: ImageView? = null
 
-        override fun initView(itemView: View) {
-            imageView = itemView.findViewById(R.id.ivBanner)
-        }
-
-        override fun updateUI(url: String) {
-            imageView?.loadImage(url)
-        }
-    }
 }

@@ -17,14 +17,14 @@ import com.easyhome.serve.mvp.presenter.fragment.MessagePresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseFragment
-import com.easyhome.serve.mvp.ui.activity.Main2Activity
+import com.easyhome.serve.mvp.ui.activity.MainActivity
 
 
 /**
  * 消息
  */
 class MessageFragment : JRBaseFragment<MessagePresenter>(), MessageContract.View {
-    override fun getMyself(): BaseActivity<*> =this.activity as Main2Activity
+    override fun getMyself(): BaseActivity<*> =this.activity as MainActivity
 
     companion object {
         fun newInstance(): MessageFragment {

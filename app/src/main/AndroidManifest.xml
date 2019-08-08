@@ -70,7 +70,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="com.easyhome.serve.mvp.ui.activity.Main2Activity"
+                android:name="com.easyhome.serve.mvp.ui.activity.MainActivity"
                 android:configChanges="orientation|screenSize|keyboardHidden"
                 android:launchMode="singleTask"
                 android:screenOrientation="portrait">

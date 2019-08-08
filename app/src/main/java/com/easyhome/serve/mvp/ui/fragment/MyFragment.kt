@@ -18,7 +18,7 @@ import com.easyhome.serve.mvp.presenter.fragment.MyPresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseFragment
 import com.easyhome.serve.app.extension.singleClick
-import com.easyhome.serve.mvp.ui.activity.Main2Activity
+import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.user.UserDataActivity
 import com.easyhome.serve.mvp.ui.adapter.MySelectAdapter
 import kotlinx.android.synthetic.main.fragment_my.*
@@ -29,7 +29,7 @@ import org.jetbrains.anko.support.v4.startActivity
  * 我的
  */
 class MyFragment : JRBaseFragment<MyPresenter>(), MyContract.View {
-    override fun getMyself(): BaseActivity<*> = this.activity as Main2Activity
+    override fun getMyself(): BaseActivity<*> = this.activity as MainActivity
 
     companion object {
         fun newInstance(): MyFragment {

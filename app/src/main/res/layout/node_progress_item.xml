@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <View
+            android:id="@+id/pIV1"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/pIV2"
+            app:layout_constraintTop_toTopOf="@id/pIV2"/>
+
+    <ImageView
+            android:id="@+id/pIV2"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintLeft_toRightOf="@id/pIV1"/>
+
+    <View
+            android:id="@+id/pIV3"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/pIV2"
+            app:layout_constraintLeft_toRightOf="@id/pIV2"
+            app:layout_constraintTop_toTopOf="@id/pIV2"/>
+
+
+    <TextView
+            android:id="@+id/pTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:maxLength="7"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/pIV2"
+            app:layout_constraintRight_toRightOf="@id/pIV2"
+            app:layout_constraintTop_toBottomOf="@id/pIV2"/>
+
+
+</android.support.constraint.ConstraintLayout>

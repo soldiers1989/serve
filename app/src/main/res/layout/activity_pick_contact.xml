@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+           >
+        <ImageView
+                android:id="@+id/pic_contact_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@mipmap/back"/>
+
+
+        <LinearLayout
+                android:id="@+id/searchLL"
+                android:layout_width="0dp"
+                android:background="@drawable/login_rb_bg_unchecked"
+                android:layout_marginRight="12dp"
+                app:layout_constraintLeft_toRightOf="@id/pic_contact_back"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_height="29dp"></LinearLayout>
+
+        <ImageView
+                android:id="@+id/searchIV"
+                android:layout_width="15dp"
+                android:src="@mipmap/search"
+                app:layout_constraintTop_toTopOf="@id/searchLL"
+                app:layout_constraintBottom_toBottomOf="@id/searchLL"
+                app:layout_constraintLeft_toLeftOf="@id/searchLL"
+                android:layout_marginLeft="11dp"
+                android:layout_height="15dp"/>
+
+        <EditText
+                android:id="@+id/searchED"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toRightOf="@id/searchIV"
+                app:layout_constraintRight_toRightOf="@id/searchLL"
+                app:layout_constraintTop_toTopOf="@id/searchLL"
+                app:layout_constraintBottom_toBottomOf="@id/searchLL"
+                android:hint="搜索医院、医生、科室、疾病"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <me.yokeyword.indexablerv.IndexableLayout
+            android:id="@+id/indexableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:indexBar_selectedTextColor="#000"
+            app:indexBar_textColor="#999"
+            app:indexBar_layout_width="40dp"
+            app:indexBar_textSize="14sp"
+            app:indexBar_textSpace="5dp"/>
+
+</LinearLayout>

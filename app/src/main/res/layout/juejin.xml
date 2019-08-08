@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/buttonTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color50A"
+        android:gravity="center"
+        android:text="消息红点"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/hintIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dot_red"
+        app:layout_constraintBottom_toTopOf="@id/buttonTV"
+        app:layout_constraintLeft_toRightOf="@id/buttonTV"
+        app:layout_constraintRight_toRightOf="@id/buttonTV"
+        app:layout_constraintTop_toTopOf="@id/buttonTV" />
+
+    <TextView
+        android:id="@+id/hintTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11"
+        android:textColor="#E95548"
+        app:layout_constraintBottom_toTopOf="@id/buttonTV"
+        app:layout_constraintLeft_toRightOf="@id/buttonTV"
+        app:layout_constraintRight_toRightOf="@id/buttonTV"
+        app:layout_constraintTop_toTopOf="@id/buttonTV" />
+</merge>

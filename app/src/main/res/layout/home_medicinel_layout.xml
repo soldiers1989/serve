@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="117dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+    <ImageView
+            android:id="@+id/medicineIV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="91dp"
+            android:layout_height="91dp"/>
+
+
+    <TextView
+            android:id="@+id/medicineTV"
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/medicineIV"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color333"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="地板"
+            app:layout_constraintTop_toBottomOf="@id/medicineIV"/>
+    <TextView
+            android:id="@+id/pricTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorFEA"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/medicineIV"
+            android:textSize="12sp"
+            android:text="￥268.00"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/medicineTV"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView android:layout_width="wrap_content"
+               android:src="@mipmap/ic_launcher"
+               app:layout_constraintRight_toRightOf="@id/skipB"
+               app:layout_constraintBottom_toTopOf="@id/sloganTV"
+               android:layout_marginBottom="10dp"
+               app:layout_constraintLeft_toLeftOf="@id/skipB"
+               android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/sloganTV"
+            android:layout_width="wrap_content"
+            android:text="居然装饰"
+            app:layout_constraintRight_toRightOf="@id/skipB"
+            app:layout_constraintBottom_toTopOf="@id/skipB"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/skipB"
+            android:textSize="20dp"
+            android:textColor="#222"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/skipB"
+            android:layout_width="200dp"
+            android:background="@drawable/bg_amount_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/skip"
+            android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>

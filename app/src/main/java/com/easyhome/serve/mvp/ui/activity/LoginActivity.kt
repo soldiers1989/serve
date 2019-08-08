@@ -47,17 +47,6 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
 
     override fun initData(savedInstanceState: Bundle?) {
 
-        forgetPasswordTV.singleClick {
-            startActivity<RetrievePasswordActivity>()
-        }
-        goRegisterTV.singleClick {
-        }
-
-
-        /* mPresenter!!.test("aaa","7"){
-
-             print("000----------")
-         }*/
 
         accountTV.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {

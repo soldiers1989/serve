@@ -18,6 +18,9 @@ import com.easyhome.serve.mvp.presenter.fragment.MessagePresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseFragment
 import com.easyhome.serve.mvp.ui.activity.MainActivity
+import com.easyhome.serve.mvp.ui.adapter.MessageListAdapter
+import com.easyhome.serve.mvp.ui.adapter.MessageTabAdapter
+import kotlinx.android.synthetic.main.fragment_message.*
 
 
 /**
@@ -48,7 +51,8 @@ class MessageFragment : JRBaseFragment<MessagePresenter>(), MessageContract.View
     }
 
     override fun initData(savedInstanceState: Bundle?) {
-
+        tabRV.adapter= MessageTabAdapter(arrayListOf("","",""))
+        messageRV.adapter= MessageListAdapter(arrayListOf("","",""))
     }
 
     /**

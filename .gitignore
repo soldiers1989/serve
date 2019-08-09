@@ -15,3 +15,8 @@
 /build
 /captures
 .externalNativeBuild
+app/release/release/app.aab
+app/release/output.json
+.idea/inspectionProfiles/Project_Default.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml

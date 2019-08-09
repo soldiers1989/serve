@@ -32,7 +32,7 @@
                 android:layout_width="81dp"
                 android:layout_height="26dp"
                 android:drawableLeft="@mipmap/location_icon"
-                android:drawableRight="@mipmap/location_icon"
+                android:drawableRight="@mipmap/down"
                 android:background="@drawable/rectangle_side"
                 android:text="北京"
                 android:gravity="center"

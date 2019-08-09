@@ -62,7 +62,7 @@
                         android:layout_width="match_parent"
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_height="194dp"
-                        android:background="@mipmap/home_top_bac"/>
+                        android:background="@mipmap/login_botom_bac"/>
                 <android.support.v7.widget.CardView
                         android:id="@+id/statisticsCV"
                         android:layout_width="match_parent"
@@ -82,6 +82,8 @@
                                 android:id="@+id/statisticsRV1"
                                 android:layout_width="match_parent"
                                 android:layout_height="54dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
                                 android:orientation="horizontal"
                                 app:layoutManager="android.support.v7.widget.LinearLayoutManager">
                         </android.support.v7.widget.RecyclerView>
@@ -91,6 +93,8 @@
                         <android.support.v7.widget.RecyclerView
                                 android:id="@+id/statisticsRV2"
                                 android:layout_width="match_parent"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
                                 android:layout_height="64dp"
                                 android:orientation="horizontal"
                                 app:layoutManager="android.support.v7.widget.LinearLayoutManager"

@@ -69,15 +69,15 @@ class MainActivity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
 
         mIconUnSelectIds = intArrayOf(
             R.mipmap.home_tab_s_1,
-            R.mipmap.home_tab_s_1,
-            R.mipmap.home_tab_s_1,
-            R.mipmap.home_tab_s_1
+            R.mipmap.home_tab_s_2,
+            R.mipmap.home_tab_s_3,
+            R.mipmap.home_tab_s_4
         )
         mIconSelectIds = intArrayOf(
             R.mipmap.home_tab_s_1,
-            R.mipmap.home_tab_s_1,
-            R.mipmap.home_tab_s_1,
-            R.mipmap.home_tab_s_1
+            R.mipmap.home_tab_s_2,
+            R.mipmap.home_tab_s_3,
+            R.mipmap.home_tab_s_4
         )
         mTabTitles = arrayOf("工作台", "我的项目", "消息", "我的")
 

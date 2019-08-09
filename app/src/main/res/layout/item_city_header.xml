@@ -23,7 +23,7 @@
             app:layout_constraintTop_toBottomOf="@id/titlTV1"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginLeft="13dp"
-            android:src="@mipmap/location"/>
+            android:src="@mipmap/location_icon"/>
     <TextView
             android:id="@+id/item_header_city_dw"
             android:layout_width="wrap_content"

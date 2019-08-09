@@ -5,6 +5,7 @@ import com.jess.arms.base.delegate.FragmentNavigatorAdapter
 import com.easyhome.serve.mvp.ui.fragment.HomeFragment
 import com.easyhome.serve.mvp.ui.fragment.MessageFragment
 import com.easyhome.serve.mvp.ui.fragment.MyFragment
+import com.easyhome.serve.mvp.ui.fragment.MyProjectFragment
 
 
 class HomeFragmentAdapter(val mTabs: Array<String>) : FragmentNavigatorAdapter {
@@ -15,7 +16,8 @@ class HomeFragmentAdapter(val mTabs: Array<String>) : FragmentNavigatorAdapter {
     override fun onCreateFragment(position: Int): Fragment {
         return when (position) {
             0 -> HomeFragment.newInstance()
-            1 -> MessageFragment.newInstance()
+            1 -> MyProjectFragment.newInstance()
+            2 -> MessageFragment.newInstance()
             else -> MyFragment.newInstance()
         }
     }

@@ -115,7 +115,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                     // println("上划-------")
 
                     if (!calendarCV.getLocalVisibleRect(scrollBounds)) {//不可见
-                        topCV.visibility = View.VISIBLE
+                      //  topCV.visibility = View.VISIBLE
                     }
 
 

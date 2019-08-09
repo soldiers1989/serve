@@ -42,7 +42,7 @@
         <ImageView
                 android:id="@+id/searchIV"
                 android:layout_width="15dp"
-                android:src="@mipmap/search"
+                android:src="@mipmap/search_icon"
                 app:layout_constraintTop_toTopOf="@id/searchLL"
                 app:layout_constraintBottom_toBottomOf="@id/searchLL"
                 app:layout_constraintLeft_toLeftOf="@id/searchLL"

@@ -20,6 +20,7 @@ import com.easyhome.serve.app.base.JRBaseFragment
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.setting.AboutAppActivity
+import com.easyhome.serve.mvp.ui.activity.setting.ISetActivity
 import com.easyhome.serve.mvp.ui.activity.user.UserDataActivity
 import com.easyhome.serve.mvp.ui.adapter.MySelectAdapter
 import kotlinx.android.synthetic.main.fragment_my.*
@@ -71,7 +72,7 @@ class MyFragment : JRBaseFragment<MyPresenter>(), MyContract.View {
 
                 }
                 2 -> {
-                   //startActivity<SettingActivity>()
+                   startActivity<ISetActivity>()
                 }
 
             }

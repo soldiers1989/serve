@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+
+    <TextView
+            android:id="@+id/timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="上午 08:00"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/color666"
+            android:textSize="11sp"
+    />
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="36dp"
+              android:text="上门量房"
+              android:gravity="center"
+              app:layout_constraintLeft_toRightOf="@id/timeTV"
+              android:layout_marginLeft="16dp"
+              android:textColor="@color/color333"
+              android:textSize="12sp"/>
+    <android.support.v7.widget.CardView
+            android:id="@+id/detailCV"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
+            app:layout_constraintTop_toBottomOf="@id/timeTV">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+        >
+            <TextView
+                    android:id="@+id/locationTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="项目地址：朝阳。。。。。"
+                    android:gravity="left"
+                    android:textColor="@color/color333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/locationIconIV"
+            />
+            <ImageView
+                    android:id="@+id/locationIconIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="客户姓名：王先生"
+                    android:gravity="left"
+                    android:textColor="@color/color333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/detailTV"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+            <TextView
+                    android:id="@+id/detailTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="项目详情"
+                    android:gravity="left"
+                    android:textColor="@color/color333"
+                    android:textSize="12sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+            app:layout_constraintTop_toBottomOf="@id/detailCV"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorFFE"/>
+</android.support.constraint.ConstraintLayout>

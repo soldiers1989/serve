@@ -13,6 +13,7 @@
     <string name="go_register">去注册</string>
     <string name="invoice_company">公司</string>
     <string name="no_account">没有账号？</string>
+    <string name="homr_item_title_1"> 待办事项</string>
 
     <string-array name="chinese_week_string_array">
         <item>周日</item>

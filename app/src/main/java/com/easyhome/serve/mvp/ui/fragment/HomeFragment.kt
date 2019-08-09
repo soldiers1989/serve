@@ -28,10 +28,7 @@ import com.easyhome.serve.app.extension.loadImage
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.search.CityPickerActivity
-import com.easyhome.serve.mvp.ui.adapter.HomeStatistics1Adapter
-import com.easyhome.serve.mvp.ui.adapter.HomeStatistics2Adapter
-import com.easyhome.serve.mvp.ui.adapter.MedicineAdapter
-import com.easyhome.serve.mvp.ui.adapter.ProjectDynamicTabAdapter
+import com.easyhome.serve.mvp.ui.adapter.*
 import com.haibin.calendarview.Calendar
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.HashMap
@@ -67,7 +64,8 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
     override fun initData(savedInstanceState: Bundle?) {
 
         statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))
-        statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", ""))
+        statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", "","", ""))
+        waitThing.adapter = WaitThingAdapter(arrayListOf("", ""))
 
         val year = mCalendarView.getCurYear()
         val month = mCalendarView.getCurMonth()

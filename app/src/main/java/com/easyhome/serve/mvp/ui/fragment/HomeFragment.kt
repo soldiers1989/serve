@@ -1,7 +1,9 @@
 package com.easyhome.serve.mvp.ui.fragment
 
 import android.content.Intent
+import android.graphics.Rect
 import android.os.Bundle
+import android.support.v4.widget.NestedScrollView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -64,8 +66,8 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
     override fun initData(savedInstanceState: Bundle?) {
 
         statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))
-        statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", "","", ""))
-        waitThing.adapter = WaitThingAdapter(arrayListOf("", ""))
+        statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", "", "", ""))
+        waitThing.adapter = WaitThingAdapter(arrayListOf("", "", "", "", "", "", "", "", "", ""))
 
         val year = mCalendarView.getCurYear()
         val month = mCalendarView.getCurMonth()
@@ -91,7 +93,51 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                 getSchemeCalendar(year, month, 27, -0xec5310, "多")
         //此方法在巨大的数据量上不影响遍历性能，推荐使用
         mCalendarView.setSchemeDate(map)
+
+
+
+
+
+        homeSV.setOnScrollChangeListener(object : NestedScrollView.OnScrollChangeListener {
+            override fun onScrollChange(
+                v: NestedScrollView,
+                scrollX: Int,
+                scrollY: Int,
+                oldScrollX: Int,
+                oldScrollY: Int
+            ) {
+
+                //监听滚动状态
+                //判断某个控件是否可见
+                val scrollBounds = Rect()
+                homeSV.getHitRect(scrollBounds)
+                if (scrollY > oldScrollY) {//上划
+                    // println("上划-------")
+
+                    if (!calendarCV.getLocalVisibleRect(scrollBounds)) {//不可见
+                        topCV.visibility = View.VISIBLE
+                    }
+
+
+                }
+                if (scrollY < oldScrollY) {//下划
+                    //    println("下划-------")
+
+
+                }
+
+                if (scrollY == 0) {// 滚动到顶
+                    // dataRB1.isChecked = true
+                }
+                // 滚动到底
+                if (scrollY == v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight()) {
+                }
+
+
+            }
+        })
     }
+
     private fun getSchemeCalendar(year: Int, month: Int, day: Int, color: Int, text: String): Calendar {
         val calendar = Calendar()
         calendar.year = year
@@ -104,6 +150,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
         calendar.addScheme(-0xff7800, "节")
         return calendar
     }
+
     /**
      * 通过此方法可以使 Fragment 能够与外界做一些交互和通信, 比如说外部的 Activity 想让自己持有的某个 Fragment 对象执行一些方法,
      * 建议在有多个需要与外界交互的方法时, 统一传 {@link Message}, 通过 what 字段来区分不同的方法, 在 {@link #setData(Object)}

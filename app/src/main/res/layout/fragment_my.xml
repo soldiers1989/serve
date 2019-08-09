@@ -6,176 +6,98 @@
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <View
-            android:id="@+id/topV"
+
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/topCL"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/color529"/>
+            android:layout_height="236dp"
+            android:background="@color/color366">
 
-    <android.support.v4.widget.NestedScrollView
-            android:id="@+id/homeSV"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/topV"
+
+        <ImageView
+                android:id="@+id/headIV"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/my_head"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="31dp"/>
+
+        <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="王五"
+                app:layout_constraintTop_toTopOf="@id/headIV"
+                app:layout_constraintLeft_toRightOf="@id/headIV"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="31dp"/>
+        <TextView
+                android:layout_width="63dp"
+                android:layout_height="19dp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="设计师"
+                android:background="@drawable/my_fragment_top_bac"
+                app:layout_constraintBaseline_toBaselineOf="@id/nameTV"
+                app:layout_constraintLeft_toRightOf="@id/nameTV"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"/>
+        <TextView
+                android:id="@+id/jobnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:text="手机号：111111"
+                app:layout_constraintTop_toBottomOf="@+id/nameTV"
+                app:layout_constraintLeft_toRightOf="@id/headIV"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="手机号：13299999999"
+                app:layout_constraintTop_toBottomOf="@id/jobnumber"
+                app:layout_constraintLeft_toRightOf="@id/headIV"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+
+        <TextView
+                android:id="@+id/userinfoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="》"
+                app:layout_constraintTop_toTopOf="@id/jobnumber"
+                app:layout_constraintBottom_toBottomOf="@id/jobnumber"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="15dp"
+                />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/setItem"
             android:layout_width="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_height="0dp">
+            android:layout_height="wrap_content"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/topCL">
+    </android.support.v7.widget.RecyclerView>
 
-
-        <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            <View
-                    android:id="@+id/titleV"
-                    android:layout_width="match_parent"
-                    android:layout_height="44dp"
-                    android:background="@color/color529"/>
-            <TextView
-                    android:id="@+id/settingTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/titleV"
-                    app:layout_constraintBottom_toBottomOf="@id/titleV"
-                    android:layout_marginRight="13dp"
-                    android:text="操作手册"
-                    android:textSize="14sp"
-                    android:textColor="#fff"/>
-            <ImageView android:layout_width="15dp"
-                       android:layout_height="15dp"
-                       android:src="@mipmap/setting"
-                       app:layout_constraintTop_toTopOf="@id/settingTV"
-                       app:layout_constraintBottom_toBottomOf="@id/settingTV"
-                       app:layout_constraintRight_toLeftOf="@id/settingTV"
-                       android:layout_marginRight="7dp"/>
-            <View
-                    android:id="@+id/userV"
-                    android:layout_width="match_parent"
-                    android:layout_height="122dp"
-                    app:layout_constraintTop_toBottomOf="@id/titleV"
-                    android:background="@color/color529"/>
-            <ImageView
-                    android:id="@+id/headIV"
-                    android:layout_width="57dp"
-                    android:layout_height="57dp"
-                    app:layout_constraintTop_toTopOf="@id/userV"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:layout_marginLeft="13dp"
-                    android:src="@mipmap/my_head"/>
-
-            <TextView
-                    android:id="@+id/nicknameTV"
-                    android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:textSize="17sp"
-                      android:textColor="@color/white"
-                      android:text="用户"
-                      app:layout_constraintTop_toTopOf="@id/headIV"
-                      app:layout_constraintBottom_toBottomOf="@id/headIV"
-                      app:layout_constraintLeft_toRightOf="@id/headIV"
-                      android:layout_marginLeft="17dp"/>
-
-            <TextView android:layout_width="95dp"
-                      android:layout_height="25dp"
-                      app:layout_constraintTop_toTopOf="@id/headIV"
-                      app:layout_constraintBottom_toBottomOf="@id/headIV"
-                      app:layout_constraintRight_toRightOf="parent"
-                      android:text="已实名认证"
-                      android:visibility="invisible"
-                      android:gravity="center"
-                      android:textColor="@color/white"
-                      android:textSize="13sp"
-                      android:background="@mipmap/real_icon"/>
-
-
-            <LinearLayout
-                    android:id="@+id/userCV"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@mipmap/shadow_img"
-                    android:visibility="invisible"
-                    app:layout_constraintTop_toBottomOf="@id/headIV">
-
-                <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp">
-
-
-                    <ImageView
-                            android:id="@+id/moneyIV"
-                            android:layout_width="16dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:layout_height="17dp"
-                            android:src="@mipmap/money_icon"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            android:layout_marginTop="19dp"
-                            android:layout_marginLeft="19dp"
-                    />
-
-
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/color333"
-                            android:gravity="center"
-                            android:textSize="14sp"
-                            android:text="账户余额（元）"
-                            app:layout_constraintTop_toTopOf="@id/moneyIV"
-                            app:layout_constraintBottom_toBottomOf="@id/moneyIV"
-                            app:layout_constraintLeft_toRightOf="@id/moneyIV"
-                            android:layout_marginLeft="12dp"/>
-                    <TextView
-                            android:id="@+id/moneyTV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/color333"
-                            android:gravity="center"
-                            android:textSize="30sp"
-                            android:text="0.00"
-                            android:textStyle="bold"
-                            app:layout_constraintLeft_toLeftOf="@id/moneyIV"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginBottom="10dp"/>
-
-                    <TextView
-                            android:id="@+id/chargeTV"
-                            android:layout_width="95dp"
-                            android:layout_height="25dp"
-                            android:textColor="#fea423"
-                            android:gravity="center"
-                            android:textSize="13sp"
-                            android:text="去充值"
-                            android:background="@drawable/button_hollow__brimf99"
-                            app:layout_constraintTop_toTopOf="@id/moneyTV"
-                            app:layout_constraintBottom_toBottomOf="@id/moneyTV"
-                            app:layout_constraintRight_toRightOf="parent"
-                            android:layout_marginRight="19dp"
-                            android:layout_marginBottom="10dp"/>
-
-                    <ImageView android:layout_width="14dp"
-                               android:layout_height="14dp"
-                               android:src="@mipmap/money_icon_2"
-                               app:layout_constraintTop_toTopOf="@id/chargeTV"
-                               app:layout_constraintBottom_toBottomOf="@id/chargeTV"
-                               app:layout_constraintLeft_toLeftOf="@id/chargeTV"
-                               android:layout_marginLeft="10dp"/>
-
-                </android.support.constraint.ConstraintLayout>
-            </LinearLayout>
-
-            <android.support.v7.widget.RecyclerView
-                    android:id="@+id/userSelectRV"
-                    android:layout_width="match_parent"
-                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                    app:layout_constraintTop_toBottomOf="@+id/userCV"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_height="match_parent">
-            </android.support.v7.widget.RecyclerView>
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v4.widget.NestedScrollView>
+    <View android:layout_width="match_parent"
+          android:layout_height="7dp"
+          android:background="@color/colorFFE"
+          app:layout_constraintTop_toBottomOf="@id/setItem"/>
 </android.support.constraint.ConstraintLayout>

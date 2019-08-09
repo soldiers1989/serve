@@ -19,6 +19,7 @@ import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseFragment
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
+import com.easyhome.serve.mvp.ui.activity.setting.AboutAppActivity
 import com.easyhome.serve.mvp.ui.activity.user.UserDataActivity
 import com.easyhome.serve.mvp.ui.adapter.MySelectAdapter
 import kotlinx.android.synthetic.main.fragment_my.*
@@ -53,24 +54,31 @@ class MyFragment : JRBaseFragment<MyPresenter>(), MyContract.View {
     }
 
     override fun initData(savedInstanceState: Bundle?) {
-        var adaptr = MySelectAdapter(
+        val adapter = MySelectAdapter(
             arrayListOf(
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "预约"),
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "保修"),
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "售后"),
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "客服"),
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "消息"),
+                MySelectAdapter.Info(R.mipmap.my_icon_6, "关于APP"),
+                MySelectAdapter.Info(R.mipmap.my_icon_6, "清理缓存"),
                 MySelectAdapter.Info(R.mipmap.my_icon_6, "设置")
             )
         )
+        adapter.setOnItemClickListener { adapter, view, position ->
 
-        adaptr.addFooterView(LayoutInflater.from(activity).inflate(R.layout.rv_foot_layout, null))
-        userSelectRV.adapter = adaptr
+            when (position) {
+                0 -> {
+                    startActivity<AboutAppActivity>()
+                }
+                1 -> {
 
-        nicknameTV.singleClick {
-            startActivity<UserDataActivity>()
+                }
+                2 -> {
+                   //startActivity<SettingActivity>()
+                }
+
+            }
+
         }
-        headIV.singleClick {
+        setItem.adapter = adapter
+        userinfoTV.singleClick {
             startActivity<UserDataActivity>()
         }
     }

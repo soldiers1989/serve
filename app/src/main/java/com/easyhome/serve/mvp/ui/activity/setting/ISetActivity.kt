@@ -18,23 +18,15 @@ import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.adapter.SettingAdapter
 import kotlinx.android.synthetic.main.activity_iset.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.startActivity
 
 
 /**
- * 如果没presenter
- * 你可以这样写
- *
- * @ActivityScope(請注意命名空間) class NullObjectPresenterByActivity
- * @Inject constructor() : IPresenter {
- * override fun onStart() {
- * }
- *
- * override fun onDestroy() {
- * }
+ * 设置
  * }
  */
 class ISetActivity : JRBaseActivity<ISetPresenter>(), ISetContract.View {
-    override fun getMyself(): BaseActivity<*> =this
+    override fun getMyself(): BaseActivity<*> = this
 
     override fun setupActivityComponent(appComponent: AppComponent) {
         DaggerISetComponent //如找不到该类,请编译一下项目
@@ -59,7 +51,7 @@ class ISetActivity : JRBaseActivity<ISetPresenter>(), ISetContract.View {
 
             when (position) {
                 0 -> {
-                   // startActivity<NewPasswordActivity>()
+                    startActivity<NewPasswordActivity>()
                 }
                 1 -> {
                 }

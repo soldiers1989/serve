@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="5dp">
+
+
+    <TextView
+            android:id="@+id/workType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:text="水电工："/>
+    <TextView
+            android:id="@+id/worker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/workType"
+            android:textColor="@color/color666"
+            android:textSize="10sp"
+            android:text="张三、李四、王五"/>
+</android.support.constraint.ConstraintLayout>

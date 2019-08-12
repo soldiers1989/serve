@@ -107,7 +107,7 @@ class RetrievePasswordActivity : JRBaseActivity<RetrievePasswordPresenter>(), Re
             passwordED.text.clear()
         }
         smsB.singleClick {
-            smsB.backgroundResource = R.drawable.bg_amount_layout
+            smsB.backgroundResource = R.drawable.labels_bac_s
             smsB.textColor = R.color.color999
             smsB.text= "已发送(${60}s)"
 

@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:focusable="true"
     android:divider="@drawable/divider"
-    android:background="@drawable/bg_amount_layout"
+    android:background="@drawable/labels_bac_s"
     android:showDividers="middle"
     android:orientation="horizontal">
 

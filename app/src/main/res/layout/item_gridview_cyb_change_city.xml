@@ -8,7 +8,7 @@
     android:id="@+id/item_gridview_cyb_change_city_tv"
     android:layout_width="match_parent"
     android:layout_height="29dp"
-    android:background="@drawable/bg_amount_layout"
+    android:background="@drawable/labels_bac_s"
     android:gravity="center"
     android:textColor="@color/color333"
     android:paddingTop="2dp"

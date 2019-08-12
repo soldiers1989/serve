@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 import com.jess.arms.base.BaseFragment
 import com.jess.arms.di.component.AppComponent
@@ -18,8 +19,10 @@ import com.easyhome.serve.mvp.contract.fragment.MyProjectContract
 import com.easyhome.serve.mvp.presenter.fragment.MyProjectPresenter
 
 import com.easyhome.serve.R
+import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.project.ProjectActivity
 import com.easyhome.serve.mvp.ui.adapter.MyProjectAdapter
+import com.easyhome.serve.util.StringUtil
 import kotlinx.android.synthetic.main.fragment_my_project.*
 import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.support.v4.startActivity
@@ -55,9 +58,35 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
         val adapter = MyProjectAdapter(arrayListOf("", "", "", ""))
         adapter.setOnItemClickListener { adapter, view, position ->
             startActivity<ProjectActivity>()
-
         }
         projetRV.adapter = adapter
+        labels1.setLabels(StringUtil.getLabels1())
+        labels2.setLabels(StringUtil.getLabels2())
+        labels3.setLabels(StringUtil.getLabels3())
+        filtrateTV.singleClick {
+            labelsLL.visibility = View.VISIBLE
+        }
+        reset.singleClick {
+            labels1.clearAllSelect()
+            labels2.clearAllSelect()
+            labels3.clearAllSelect()
+
+        }
+        labels1.setOnLabelClickListener() { textView: TextView, any: Any, i: Int ->
+
+
+        }
+        labels2.setOnLabelClickListener() { textView: TextView, any: Any, i: Int ->
+
+
+        }
+        labels3.setOnLabelClickListener() { textView: TextView, any: Any, i: Int ->
+
+
+        }
+        confirm.singleClick {
+            labelsLL.visibility = View.GONE
+        }
     }
 
     /**

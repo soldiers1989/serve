@@ -14,11 +14,13 @@ import com.easyhome.serve.mvp.presenter.project.ProjectPresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
+import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.adapter.ProjectActionAdapter
 import com.easyhome.serve.mvp.ui.adapter.ProjectProgressAdapter
 import com.easyhome.serve.mvp.ui.adapter.ProjectServeAdapter
 import com.easyhome.serve.mvp.ui.adapter.WaitThingAdapter
 import kotlinx.android.synthetic.main.activity_project.*
+import kotlinx.android.synthetic.main.layout_title.*
 
 
 /**
@@ -43,6 +45,10 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
 
 
     override fun initData(savedInstanceState: Bundle?) {
+        ivPageBack.singleClick {
+            killMyself()
+        }
+        tvPageTitle.text = "项目详情"
         progressRV.adapter = ProjectProgressAdapter(arrayListOf("", "", "", "", ""))
         actionRV.adapter = ProjectActionAdapter(arrayListOf("", "", "", "", "", "", "", ""))
         serveRV.adapter = ProjectServeAdapter(arrayListOf("", "", "", "", "", "", "", ""))

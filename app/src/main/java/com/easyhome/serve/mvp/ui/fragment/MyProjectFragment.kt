@@ -18,9 +18,11 @@ import com.easyhome.serve.mvp.contract.fragment.MyProjectContract
 import com.easyhome.serve.mvp.presenter.fragment.MyProjectPresenter
 
 import com.easyhome.serve.R
+import com.easyhome.serve.mvp.ui.activity.project.ProjectActivity
 import com.easyhome.serve.mvp.ui.adapter.MyProjectAdapter
 import kotlinx.android.synthetic.main.fragment_my_project.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.support.v4.startActivity
 
 
 /**
@@ -50,7 +52,12 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
 
     override fun initData(savedInstanceState: Bundle?) {
         tvPageTitle.text = "我的项目"
-        projetRV.adapter = MyProjectAdapter(arrayListOf("", "", "", ""))
+        val adapter = MyProjectAdapter(arrayListOf("", "", "", ""))
+        adapter.setOnItemClickListener { adapter, view, position ->
+            startActivity<ProjectActivity>()
+
+        }
+        projetRV.adapter = adapter
     }
 
     /**

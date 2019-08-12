@@ -101,12 +101,17 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
             passwordED.text.clear()
         }
         loginB.singleClick {
-              startActivity<MainActivity>()
-           /* mPresenter!!.login(accountTV.text.toString().trim(), passwordED.text.toString()) {
-                startActivity<Main2Activity>()
-            }*/
+            startActivity<MainActivity>()
+            /* mPresenter!!.login(accountTV.text.toString().trim(), passwordED.text.toString()) {
+                 startActivity<Main2Activity>()
+             }*/
         }
 
+
+        findPsw.singleClick {
+
+            startActivity<FindPasswordActivity>()
+        }
     }
 
     override fun showMessage(message: String) {

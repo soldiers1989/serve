@@ -46,11 +46,12 @@
 
     <TextView
             android:id="@+id/tvPageRight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="53dp"
+            android:layout_height="24dp"
             android:layout_marginEnd="15dp"
-            android:textColor="@color/text_view_deep"
+            android:textColor="@color/white"
             android:textSize="16sp"
+            android:gravity="center"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -18,6 +18,7 @@ import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.adapter.*
 import kotlinx.android.synthetic.main.activity_project.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.startActivity
 
 
 /**
@@ -55,7 +56,8 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 Pair(R.mipmap.progress_icon_2, "结算")
             )
         )
-        actionRV.adapter = ProjectActionAdapter(
+
+        val ada1 = ProjectActionAdapter(
             arrayListOf(
                 Pair(R.mipmap.action_icon_1, "变更时间"),
                 Pair(R.mipmap.action_icon_2, "发起量房"),
@@ -67,6 +69,34 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 Pair(R.mipmap.action_icon_8, "验收")
             )
         )
+        ada1.setOnItemClickListener { adapter, view, position ->
+
+            when (position) {
+                0 -> {
+                }
+                1 -> {
+                }
+                2 -> {
+                }
+                3 -> {
+                }
+                4 -> {
+                    startActivity<AbarbeitungActivity>()
+                }
+                5 -> {
+                }
+                6 -> {
+                }
+                7 -> {
+                    startActivity<VerifyActivity>()
+                }
+
+            }
+
+        }
+        actionRV.adapter = ada1
+
+
         serveRV.adapter = ProjectServeAdapter(arrayListOf("", "", "", "", "", "", "", ""))
         dataRV.adapter = WaitThingAdapter(arrayListOf("", "", "", "", "", "", "", "", "", ""))
         workerRV.adapter = WorkerAdapter(arrayListOf("", "", "", "", "", ""))

@@ -149,6 +149,10 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.ProjectActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.AbarbeitungActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.project.VerifyActivity">
+        </activity>
     </application>
 
 </manifest>

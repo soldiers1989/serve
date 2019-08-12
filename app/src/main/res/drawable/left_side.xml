@@ -17,5 +17,5 @@
            <!-- //整个空间的背景颜色-->
         </shape>
     </item>
-
+    <corners android:radius="2dp" /><!--圆角-->
 </layer-list>

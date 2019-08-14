@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/photoIV"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="4dp"
+            android:src="@mipmap/imaginary_line_rectangle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+            android:id="@+id/photoMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/photoIV"
+            app:layout_constraintBottom_toTopOf="@id/photoIV"
+            app:layout_constraintRight_toRightOf="@id/photoIV"
+            app:layout_constraintLeft_toRightOf="@id/photoIV"
+            android:src="@mipmap/photo_minus_icon"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -16,6 +16,7 @@ import com.easyhome.serve.mvp.presenter.project.AbarbeitungPresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.ui.activity.projet.AbarbeitungInfoActivity
 import com.easyhome.serve.mvp.ui.adapter.AbarbeitungAdapter
 import kotlinx.android.synthetic.main.activity_abarbeitung.*
 import kotlinx.android.synthetic.main.layout_title.*
@@ -53,7 +54,12 @@ class AbarbeitungActivity : JRBaseActivity<AbarbeitungPresenter>(), AbarbeitungC
         tvPageRight.singleClick {
             startActivity<NewAbarbeitungActivity>()
         }
-        abarbeitungRV.adapter = AbarbeitungAdapter(arrayListOf("", "", ""))
+        val adapter = AbarbeitungAdapter(arrayListOf("", "", ""))
+        adapter.setOnItemClickListener { adapter, view, position ->
+            startActivity<AbarbeitungInfoActivity>()
+        }
+        abarbeitungRV.adapter = adapter
+
     }
 
 

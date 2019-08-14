@@ -155,6 +155,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.NewAbarbeitungActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.projet.AbarbeitungInfoActivity">
+        </activity>
     </application>
 
 </manifest>

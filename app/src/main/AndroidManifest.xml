@@ -159,6 +159,10 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.DynamicActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.AddDynamicActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.project.AddNodeActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -77,6 +77,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 1 -> {
                 }
                 2 -> {
+                    startActivity<DynamicActivity>()
                 }
                 3 -> {
                 }

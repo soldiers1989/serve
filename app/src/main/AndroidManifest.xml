@@ -157,6 +157,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.projet.AbarbeitungInfoActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.DynamicActivity">
+        </activity>
     </application>
 
 </manifest>

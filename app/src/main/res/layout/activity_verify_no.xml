@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <android.support.constraint.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+                    android:id="@+id/nodeTV"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="验收节点："
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            <TextView
+                    android:id="@+id/content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="基础验收"
+                    app:layout_constraintLeft_toRightOf="@id/nodeTV"
+                    app:layout_constraintBaseline_toBaselineOf="@id/nodeTV"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/color666"/>
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/colorFFE"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                    android:id="@+id/realDate"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="实际验收日期："
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            <TextView
+                    android:id="@+id/dateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019-07-20"
+                    app:layout_constraintLeft_toRightOf="@id/realDate"
+                    app:layout_constraintBaseline_toBaselineOf="@id/realDate"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/color666"/>
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/colorFFE"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                    android:id="@+id/cause"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="失败原因："
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            <TextView
+                    android:id="@+id/cntent2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击设置原因"
+                    app:layout_constraintLeft_toRightOf="@id/cause"
+                    app:layout_constraintBaseline_toBaselineOf="@id/cause"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/color666"/>
+
+
+            <EditText android:layout_width="223dp"
+                      android:layout_height="70dp"
+                      android:hint="请输入其他原因"
+                      android:textSize="12sp"
+                      android:gravity="left"
+                      android:padding="10dp"
+                      android:textColor="@color/black"
+                      android:background="@drawable/labels_bac_d"
+                      app:layout_constraintLeft_toRightOf="@id/cause"
+                      app:layout_constraintTop_toBottomOf="@id/cntent2"
+                      android:layout_marginTop="10dp"
+            />
+
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <View
+                    android:id="@+id/fg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorFFE"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                    android:id="@+id/next"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="下次验收日期："
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fg"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            <TextView
+                    android:id="@+id/nextDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击设置日期"
+                    app:layout_constraintLeft_toRightOf="@id/next"
+                    app:layout_constraintBaseline_toBaselineOf="@id/next"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/color666"/>
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/colorFFE"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                    android:id="@+id/photoTV"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="上传照片:"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/photoRV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="3"
+                    app:layout_constraintLeft_toRightOf="@+id/photoTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="15dp">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <View
+                    android:id="@+id/fg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/colorFFE"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"
+
+            />
+            <TextView
+                    android:id="@+id/itemTV"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="整改建议/备注："
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fg1"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+            <EditText android:layout_width="223dp"
+                      android:layout_height="70dp"
+                      android:hint="请输入其他原因"
+                      android:textSize="12sp"
+                      android:gravity="left"
+                      android:padding="10dp"
+                      android:textColor="@color/black"
+                      android:background="@drawable/labels_bac_d"
+                      app:layout_constraintLeft_toRightOf="@id/itemTV"
+                      app:layout_constraintTop_toBottomOf="@id/fg1"
+                      android:layout_marginTop="15dp"
+                      android:layout_marginLeft="12dp"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+    <RadioButton
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:background="@drawable/labels_button_s"
+            android:layout_marginRight="10dp"
+            android:text="提交"
+            android:gravity="center"
+            android:checked="true"
+            android:button="@null"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_height="49dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="15dp"
+    />
+</android.support.constraint.ConstraintLayout>

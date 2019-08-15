@@ -7,38 +7,37 @@ import com.jess.arms.base.BaseActivity
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.utils.ArmsUtils
 
-import com.easyhome.serve.di.component.DaggerVerifyComponent
-import com.easyhome.serve.di.module.VerifyModule
-import com.easyhome.serve.mvp.contract.project.VerifyContract
-import com.easyhome.serve.mvp.presenter.project.VerifyPresenter
+import com.easyhome.serve.di.component.DaggerVerifyAffirmComponent
+import com.easyhome.serve.di.module.VerifyAffirmModule
+import com.easyhome.serve.mvp.contract.project.VerifyAffirmContract
+import com.easyhome.serve.mvp.presenter.project.VerifyAffirmPresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
-import com.easyhome.serve.mvp.ui.adapter.VerifyAdapter
-import kotlinx.android.synthetic.main.activity_verify.*
+import com.easyhome.serve.mvp.ui.adapter.PhotoAdapter
+import kotlinx.android.synthetic.main.activity_verify_affirm.*
 import kotlinx.android.synthetic.main.layout_title.*
-import org.jetbrains.anko.startActivity
 
 
 /**
- * 验收
+ * 验收--确认
  */
-class VerifyActivity : JRBaseActivity<VerifyPresenter>(), VerifyContract.View {
+class VerifyAffirmActivity : JRBaseActivity<VerifyAffirmPresenter>(), VerifyAffirmContract.View {
     override fun getMyself(): BaseActivity<*> = this
 
     override fun setupActivityComponent(appComponent: AppComponent) {
-        DaggerVerifyComponent //如找不到该类,请编译一下项目
+        DaggerVerifyAffirmComponent //如找不到该类,请编译一下项目
             .builder()
             .appComponent(appComponent)
-            .verifyModule(VerifyModule(this))
+            .verifyAffirmModule(VerifyAffirmModule(this))
             .build()
             .inject(this)
     }
 
 
     override fun initView(savedInstanceState: Bundle?): Int {
-        return R.layout.activity_verify //如果你不需要框架帮你设置 setContentView(id) 需要自行设置,请返回 0
+        return R.layout.activity_verify_affirm //如果你不需要框架帮你设置 setContentView(id) 需要自行设置,请返回 0
     }
 
 
@@ -46,18 +45,8 @@ class VerifyActivity : JRBaseActivity<VerifyPresenter>(), VerifyContract.View {
         ivPageBack.singleClick {
             killMyself()
         }
-        tvPageTitle.text = "验收"
-        val adapter = VerifyAdapter(arrayListOf("", "", ""))
-        adapter.setOnItemClickListener { adapter, view, position ->
-            startActivity<VerifyPassActivity>("position" to position)
-        }
-        verifyRV.adapter = adapter
-        reset.singleClick {
-            startActivity<VerifyAffirmActivity>()
-        }
-        confirm.singleClick {
-            startActivity<VerifyNoActivity>()
-        }
+        tvPageTitle.text = "验收通过"
+        photoRV.adapter = PhotoAdapter(arrayListOf(""))
     }
 
 

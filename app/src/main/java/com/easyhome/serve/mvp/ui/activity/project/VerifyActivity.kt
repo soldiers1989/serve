@@ -18,6 +18,7 @@ import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.adapter.VerifyAdapter
 import kotlinx.android.synthetic.main.activity_verify.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.startActivity
 
 
 /**
@@ -45,8 +46,12 @@ class VerifyActivity : JRBaseActivity<VerifyPresenter>(), VerifyContract.View {
         ivPageBack.singleClick {
             killMyself()
         }
-        tvPageTitle.text = "项目详情"
-        verifyRV.adapter = VerifyAdapter(arrayListOf("", "", ""))
+        tvPageTitle.text = "验收"
+        val adapter = VerifyAdapter(arrayListOf("", "", ""))
+        adapter.setOnItemClickListener { adapter, view, position ->
+            startActivity<VerifyPassActivity>("position" to position)
+        }
+        verifyRV.adapter = adapter
     }
 
 

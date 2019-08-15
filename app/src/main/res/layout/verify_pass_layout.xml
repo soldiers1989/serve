@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <View
+            android:id="@+id/fg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/colorFFE"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:id="@+id/itemTV"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:text="修改密码:"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+    <TextView
+            android:id="@+id/moreTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintLeft_toRightOf="@id/itemTV"
+            app:layout_constraintBaseline_toBaselineOf="@id/itemTV"
+            android:layout_marginLeft="12dp"
+            android:textSize="14sp"
+            android:textColor="@color/color666"/>
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/photoRV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            app:spanCount="3"
+            app:layout_constraintLeft_toRightOf="@+id/itemTV"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

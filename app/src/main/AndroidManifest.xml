@@ -163,6 +163,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.AddNodeActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.VerifyPassActivity">
+        </activity>
     </application>
 
 </manifest>

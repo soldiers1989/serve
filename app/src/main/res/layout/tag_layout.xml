@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="61dp"
+        android:layout_height="20dp" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/labels_bac_d"
+>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:text="标签"
+              android:textColor="@color/color999"
+              android:textSize="13sp"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:layout_marginLeft="12dp"
+    />
+</android.support.constraint.ConstraintLayout>

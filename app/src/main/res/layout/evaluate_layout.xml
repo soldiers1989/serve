@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/labels_bac_d"
+            app:layout_constraintTop_toTopOf="parent"
+    >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="客户标签客户标签客户标签"
+                  android:textColor="@color/black"
+                  android:textSize="13sp"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  android:layout_marginLeft="12dp"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客户经理  2019-07-11"
+                android:textColor="@color/color666"
+                android:textSize="13sp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="12dp"
+        />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/photo_minus_icon"
+               app:layout_constraintTop_toTopOf="@id/evaluate"
+               app:layout_constraintBottom_toTopOf="@id/evaluate"
+               app:layout_constraintRight_toRightOf="@id/evaluate"
+               app:layout_constraintLeft_toRightOf="@id/evaluate"
+    />
+</android.support.constraint.ConstraintLayout>

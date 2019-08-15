@@ -85,6 +85,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                     startActivity<AbarbeitungActivity>()
                 }
                 5 -> {
+                    startActivity<CustomerTagActivity>()
                 }
                 6 -> {
                     startActivity<PostponeActivity>()

@@ -57,9 +57,9 @@ class MyFragment : JRBaseFragment<MyPresenter>(), MyContract.View {
     override fun initData(savedInstanceState: Bundle?) {
         val adapter = MySelectAdapter(
             arrayListOf(
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "关于APP"),
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "清理缓存"),
-                MySelectAdapter.Info(R.mipmap.my_icon_6, "设置")
+                MySelectAdapter.Info(R.mipmap.my_icon_2, "关于APP"),
+                MySelectAdapter.Info(R.mipmap.my_icon_1, "清理缓存"),
+                MySelectAdapter.Info(R.mipmap.my_icon_3, "设置")
             )
         )
         adapter.setOnItemClickListener { adapter, view, position ->

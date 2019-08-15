@@ -87,6 +87,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 5 -> {
                 }
                 6 -> {
+                    startActivity<PostponeActivity>()
                 }
                 7 -> {
                     startActivity<VerifyActivity>()

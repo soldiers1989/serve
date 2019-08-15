@@ -169,6 +169,10 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.VerifyNoActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.PostponeActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.project.ApplyPostponeActivity">
+        </activity>
     </application>
 
 </manifest>

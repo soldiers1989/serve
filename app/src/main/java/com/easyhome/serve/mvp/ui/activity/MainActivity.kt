@@ -68,10 +68,10 @@ class MainActivity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
         //   DialogUtils.showUpDataDialog(this, "2.0版本", "http://candao.qizhekeji.com/app-release.apk")
 
         mIconUnSelectIds = intArrayOf(
-            R.mipmap.home_tab_s_1,
-            R.mipmap.home_tab_s_2,
-            R.mipmap.home_tab_s_3,
-            R.mipmap.home_tab_s_4
+            R.mipmap.home_tab_d_1,
+            R.mipmap.home_tab_d_2,
+            R.mipmap.home_tab_d_3,
+            R.mipmap.home_tab_d_4
         )
         mIconSelectIds = intArrayOf(
             R.mipmap.home_tab_s_1,

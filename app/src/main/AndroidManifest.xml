@@ -175,6 +175,10 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.CustomerTagActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.WorkOrderActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.project.WorkOrderInfoActivity">
+        </activity>
     </application>
 
 </manifest>

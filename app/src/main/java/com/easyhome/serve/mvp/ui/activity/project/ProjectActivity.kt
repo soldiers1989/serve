@@ -66,32 +66,69 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 Pair(R.mipmap.action_icon_5, "整改"),
                 Pair(R.mipmap.action_icon_6, "施工进度"),
                 Pair(R.mipmap.action_icon_7, "提醒客户"),
-                Pair(R.mipmap.action_icon_8, "验收")
-            )
+                Pair(R.mipmap.action_icon_8, "验收"),
+                Pair(R.mipmap.action_icon_9, "发起预交底"),
+                Pair(R.mipmap.action_icon_10, "完成量房"),
+                Pair(R.mipmap.action_icon_11, "完成预交底"),
+                Pair(R.mipmap.action_icon_12, "签约失败"),
+                Pair(R.mipmap.action_icon_13, "主材信息"),
+                Pair(R.mipmap.action_icon_14, "延期"),
+                Pair(R.mipmap.action_icon_15, "工单")
+                )
         )
         ada1.setOnItemClickListener { adapter, view, position ->
 
             when (position) {
                 0 -> {
+                    //变更时间
                 }
                 1 -> {
+                    //发起量房
                 }
                 2 -> {
+                    //施工动态
                     startActivity<DynamicActivity>()
                 }
                 3 -> {
+                    //指派
                 }
                 4 -> {
+                    //整改
                     startActivity<AbarbeitungActivity>()
                 }
                 5 -> {
+                    //施工进度
                     startActivity<CustomerTagActivity>()
                 }
                 6 -> {
-                    startActivity<PostponeActivity>()
+                    //提醒客户
                 }
                 7 -> {
+                    //验收
                     startActivity<VerifyActivity>()
+                }
+                8 -> {
+                    //发起预交底
+                }
+                9 -> {
+                    //完成量房
+                }
+                10 -> {
+                    //完成预交底
+                }
+                11 -> {
+                    //签约失败
+                }
+                12 -> {
+                    //主材信息
+                }
+                13 -> {
+                    //延期
+                    startActivity<PostponeActivity>()
+                }
+                14 -> {
+                    //工单
+                    startActivity<WorkOrderActivity>()
                 }
 
             }

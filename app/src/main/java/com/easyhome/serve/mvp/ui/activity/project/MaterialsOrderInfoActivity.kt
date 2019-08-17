@@ -21,6 +21,8 @@ import com.easyhome.serve.mvp.ui.adapter.PInfoAdapter
 import com.easyhome.serve.mvp.ui.adapter.PhotoAdapter
 import kotlinx.android.synthetic.main.activity_materials_order_info.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.support.v4.startActivity
 import kotlin.math.PI
 
 
@@ -54,7 +56,7 @@ class MaterialsOrderInfoActivity : JRBaseActivity<MaterialsOrderInfoPresenter>()
         tvPageRight.visibility = View.VISIBLE
         tvPageRight.setBackgroundResource(R.drawable.white_side)
         tvPageRight.singleClick {
-
+            startActivity<EditCommodityInfoActivity>()
         }
         consumer.adapter = PInfoAdapter(
             arrayListOf(
@@ -68,7 +70,17 @@ class MaterialsOrderInfoActivity : JRBaseActivity<MaterialsOrderInfoPresenter>()
             )
         )
         measure.adapter = PhotoAdapter(arrayListOf("", ""))
-        commodity.adapter = MaterialsOrder2Adapter(arrayListOf(R.mipmap.test_icon_4, R.mipmap.test_icon_4))
+        val commodityAdapter = MaterialsOrder2Adapter(arrayListOf(R.mipmap.test_icon_4, R.mipmap.test_icon_4))
+        commodityAdapter.setOnItemChildClickListener { adapter, view, position ->
+
+            when (view.id) {
+                R.id.edit -> {
+                    startActivity<EditMaterialsInfoActivity>()
+                }
+            }
+
+        }
+        commodity.adapter = commodityAdapter
         order.adapter = PInfoAdapter(
             arrayListOf(
                 " 订单编号：11111",

@@ -18,6 +18,8 @@ import com.easyhome.serve.mvp.contract.fragment.Materials2Contract
 import com.easyhome.serve.mvp.presenter.fragment.Materials2Presenter
 
 import com.easyhome.serve.R
+import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.ui.activity.project.EditCommodityInfoActivity
 import com.easyhome.serve.mvp.ui.activity.project.MaterialsOrderInfoActivity
 import com.easyhome.serve.mvp.ui.adapter.MaterialsOrderAdapter
 import kotlinx.android.synthetic.main.fragment_materials2.*
@@ -56,6 +58,10 @@ class Materials2Fragment : BaseFragment<Materials2Presenter>(), Materials2Contra
             startActivity<MaterialsOrderInfoActivity>()
         }
         dataRV.adapter = adapter
+        add.singleClick {
+            startActivity<EditCommodityInfoActivity>()
+        }
+
     }
 
     /**

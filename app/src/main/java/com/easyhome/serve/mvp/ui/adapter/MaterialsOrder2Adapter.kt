@@ -11,6 +11,7 @@ class MaterialsOrder2Adapter(data: List<Int>) :
 
     override fun convert(helper: BaseViewHolder, item: Int) {
         helper.setBackgroundRes(R.id.brandIcon, item)
+        helper.addOnClickListener(R.id.edit)
     }
 
 

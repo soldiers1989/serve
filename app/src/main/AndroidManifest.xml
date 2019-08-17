@@ -191,6 +191,10 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.EditUserDataActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.EditCommodityInfoActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.project.EditMaterialsInfoActivity">
+        </activity>
     </application>
 
 </manifest>

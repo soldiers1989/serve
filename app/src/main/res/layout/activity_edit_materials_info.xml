@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:background="@color/white"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/item1"
             android:layout_width="match_parent"
             android:layout_height="44dp">
 
@@ -15,17 +14,19 @@
                 android:id="@+id/title1"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="客户编号："
+                android:text="测量日期："
                 android:textSize="13sp"
                 android:textColor="@color/black"
                 android:gravity="center_vertical|right"/>
 
-        <EditText android:layout_width="0dp"
+
+        <TextView android:layout_width="0dp"
                   android:layout_height="match_parent"
                   app:layout_constraintLeft_toRightOf="@id/title1"
                   app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/black"
-                  android:hint="0001"
+                  android:textColor="@color/color999"
+                  android:gravity="center_vertical"
+                  android:text="点击设置日期"
                   android:textSize="13sp"
                   android:background="@null"/>
         <View android:layout_width="match_parent"
@@ -34,6 +35,8 @@
               app:layout_constraintBottom_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/item2"
+            app:layout_constraintTop_toBottomOf="@id/item1"
             android:layout_width="match_parent"
             android:layout_height="44dp">
 
@@ -41,25 +44,44 @@
                 android:id="@+id/title2"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="客户姓名："
+                android:text="测量日期："
                 android:textSize="13sp"
                 android:textColor="@color/black"
                 android:gravity="center_vertical|right"/>
 
-        <EditText android:layout_width="0dp"
-                  android:layout_height="match_parent"
-                  app:layout_constraintLeft_toRightOf="@id/title2"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/black"
-                  android:hint="王麻子"
-                  android:textSize="13sp"
-                  android:background="@null"/>
+
+        <CheckBox
+                android:id="@+id/yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/title2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="是"
+                android:checked="true"
+                android:textSize="12sp"
+                android:textColor="@color/color555"
+        />
+        <CheckBox
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/yes"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="20dp"
+                android:text="否"
+                android:textSize="12sp"
+                android:textColor="@color/color555"
+        />
+
         <View android:layout_width="match_parent"
               android:layout_height="1dp"
               android:background="@color/colorFFE"
               app:layout_constraintBottom_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/item3"
             android:layout_width="match_parent"
             android:layout_height="44dp">
 
@@ -67,17 +89,19 @@
                 android:id="@+id/title3"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="客户电话："
+                android:text="复尺日期："
                 android:textSize="13sp"
                 android:textColor="@color/black"
                 android:gravity="center_vertical|right"/>
 
-        <EditText android:layout_width="0dp"
+
+        <TextView android:layout_width="0dp"
                   android:layout_height="match_parent"
                   app:layout_constraintLeft_toRightOf="@id/title3"
                   app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/black"
-                  android:hint="13000000000"
+                  android:textColor="@color/color999"
+                  android:gravity="center_vertical"
+                  android:text="点击设置日期"
                   android:textSize="13sp"
                   android:background="@null"/>
         <View android:layout_width="match_parent"
@@ -86,6 +110,7 @@
               app:layout_constraintBottom_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/item4"
             android:layout_width="match_parent"
             android:layout_height="44dp">
 
@@ -93,10 +118,11 @@
                 android:id="@+id/title4"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="户型："
+                android:text="送货日期："
                 android:textSize="13sp"
                 android:textColor="@color/black"
                 android:gravity="center_vertical|right"/>
+
 
         <TextView android:layout_width="0dp"
                   android:layout_height="match_parent"
@@ -104,7 +130,7 @@
                   app:layout_constraintRight_toRightOf="parent"
                   android:textColor="@color/color999"
                   android:gravity="center_vertical"
-                  android:text="点击选择房屋类型"
+                  android:text="点击设置日期"
                   android:textSize="13sp"
                   android:background="@null"/>
         <View android:layout_width="match_parent"
@@ -113,6 +139,8 @@
               app:layout_constraintBottom_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/item5"
+            app:layout_constraintTop_toBottomOf="@id/item2"
             android:layout_width="match_parent"
             android:layout_height="44dp">
 
@@ -120,26 +148,28 @@
                 android:id="@+id/title5"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="房屋类型："
+                android:text="送货人："
                 android:textSize="13sp"
                 android:textColor="@color/black"
                 android:gravity="center_vertical|right"/>
 
-        <TextView android:layout_width="0dp"
-                  android:layout_height="match_parent"
+        <EditText android:layout_width="141dp"
+                  android:layout_height="29dp"
+                  android:background="@drawable/labels_bac_d"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
                   app:layout_constraintLeft_toRightOf="@id/title5"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/color999"
-                  android:gravity="center_vertical"
-                  android:text="点击选择户型"
+                  android:textColor="@color/black"
                   android:textSize="13sp"
-                  android:background="@null"/>
+        />
         <View android:layout_width="match_parent"
               android:layout_height="1dp"
               android:background="@color/colorFFE"
               app:layout_constraintBottom_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/item6"
+            app:layout_constraintTop_toBottomOf="@id/item2"
             android:layout_width="match_parent"
             android:layout_height="44dp">
 
@@ -147,97 +177,22 @@
                 android:id="@+id/title6"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="建筑面积："
+                android:text="送货人电话："
                 android:textSize="13sp"
                 android:textColor="@color/black"
                 android:gravity="center_vertical|right"/>
 
-        <EditText
-                android:id="@+id/area"
-                android:layout_width="82dp"
-                android:layout_height="25dp"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:background="@drawable/labels_bac_d" tools:layout_editor_absoluteY="10dp"
-                tools:layout_editor_absoluteX="100dp"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="m2"
-                app:layout_constraintLeft_toRightOf="@id/area"
-                android:layout_marginLeft="10dp"
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp">
-
-        <TextView
-                android:id="@+id/title7"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="客户编号："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
-
-
-        <EditText
-                android:id="@+id/tarea"
-                android:layout_width="82dp"
-                android:layout_height="25dp"
-                app:layout_constraintLeft_toRightOf="@id/title7"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:padding="5dp"
-                android:background="@drawable/labels_bac_d"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="m2"
-                app:layout_constraintLeft_toRightOf="@id/tarea"
-                android:layout_marginLeft="10dp"
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-    >
-
-        <TextView
-                android:id="@+id/title8"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="客户地址："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
-
-        <EditText android:layout_width="244dp"
-                  android:layout_height="67dp"
-                  app:layout_constraintLeft_toRightOf="@id/title8"
-                  android:textColor="@color/black"
-                  android:padding="5dp"
+        <EditText android:layout_width="141dp"
+                  android:layout_height="29dp"
                   android:background="@drawable/labels_bac_d"
-                  android:textSize="13sp"/>
-    </android.support.constraint.ConstraintLayout>
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintLeft_toRightOf="@id/title6"
+                  android:textColor="@color/black"
+                  android:textSize="13sp"
+        />
 
+    </android.support.constraint.ConstraintLayout>
 
     <RadioButton android:layout_width="match_parent"
                  android:layout_height="49dp"
@@ -245,9 +200,10 @@
                  android:button="@null"
                  android:layout_marginLeft="12dp"
                  android:layout_marginRight="12dp"
-                 android:text="确定"
+                 android:text="保存"
                  android:gravity="center"
                  android:textColor="@color/white"
-                 app:layout_constraintTop_toBottomOf="@id/fg9V"
-                 android:layout_marginTop="54dp"/>
+                 app:layout_constraintTop_toBottomOf="@id/item12"
+                 android:layout_marginTop="100dp"/>
+
 </LinearLayout>

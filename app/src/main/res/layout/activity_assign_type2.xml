@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="服务信息"
+                  android:textSize="16sp"
+                  android:textColor="@color/black"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="14dp"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="14dp"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/workerRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+        </android.support.v7.widget.RecyclerView>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+        >
+
+            <TextView
+                    android:id="@+id/person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人员"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                    android:id="@+id/workType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工种"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/person"/>
+        </android.support.constraint.ConstraintLayout>
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorD8D"
+              android:layout_marginRight="25dp"
+              android:layout_marginLeft="25dp"
+              android:layout_marginTop="14dp"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/workerTypeRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+        </android.support.v7.widget.RecyclerView>
+
+        <RadioButton
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:background="@drawable/labels_button_s"
+                android:text="添加+"
+                android:gravity="center"
+                android:checked="true"
+                android:button="@null"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_height="23dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <View android:layout_width="match_parent"
+              android:layout_height="10dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="14dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="指派历史"
+                  android:textSize="16sp"
+                  android:textColor="@color/black"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="14dp"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="14dp"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:layout_marginTop="10dp">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

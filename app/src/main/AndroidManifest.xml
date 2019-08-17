@@ -181,6 +181,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.AssignActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.AssignType2Activity">
+        </activity>
     </application>
 
 </manifest>

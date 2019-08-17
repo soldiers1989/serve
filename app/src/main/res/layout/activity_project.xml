@@ -165,7 +165,7 @@
                             android:layout_height="match_parent"
                             android:paddingLeft="10dp"
                             android:gravity="center"
-                            android:text="客户信息"
+                            android:text="客户标签"
                             android:textColor="@color/white"
                             android:textSize="14sp"
                     />

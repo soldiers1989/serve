@@ -47,6 +47,9 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
             killMyself()
         }
         tvPageTitle.text = "项目详情"
+        customerTag.singleClick {
+            startActivity<CustomerTagActivity>()
+        }
         progressRV.adapter = ProjectProgressAdapter(
             arrayListOf(
                 Pair(R.mipmap.progress_icon_2, "量房"),
@@ -92,7 +95,8 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 }
                 3 -> {
                     //指派
-                    startActivity<AssignActivity>()
+                    //startActivity<AssignActivity>()
+                    startActivity<AssignType2Activity>()
                 }
                 4 -> {
                     //整改
@@ -100,7 +104,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 }
                 5 -> {
                     //施工进度
-                    startActivity<CustomerTagActivity>()
+
                 }
                 6 -> {
                     //提醒客户

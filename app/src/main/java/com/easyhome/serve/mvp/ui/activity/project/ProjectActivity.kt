@@ -84,7 +84,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
             when (position) {
                 0 -> {
                     //变更时间
-
+                    startActivity<ChangeTimeActivity>()
                 }
                 1 -> {
                     //发起量房

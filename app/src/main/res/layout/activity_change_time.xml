@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+        <TextView
+                android:id="@+id/remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注："
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+
+        <EditText
+                android:id="@+id/cause"
+                android:layout_width="0dp"
+                android:layout_height="67dp"
+                app:layout_constraintTop_toTopOf="@id/remark"
+                app:layout_constraintLeft_toRightOf="@id/remark"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:hint="请输入备注内容"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="left"
+                android:padding="5dp"
+                android:background="@drawable/labels_bac_d"/>
+
+        <View
+                android:id="@+id/fg"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cause"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorFFE"/>
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="指派历史"
+                  android:textSize="16sp"
+                  app:layout_constraintTop_toBottomOf="@id/fg"
+                  android:textColor="@color/black"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="14dp"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="14dp"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

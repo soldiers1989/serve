@@ -18,8 +18,10 @@ import com.easyhome.serve.mvp.contract.fragment.Materials2Contract
 import com.easyhome.serve.mvp.presenter.fragment.Materials2Presenter
 
 import com.easyhome.serve.R
+import com.easyhome.serve.mvp.ui.activity.project.MaterialsOrderInfoActivity
 import com.easyhome.serve.mvp.ui.adapter.MaterialsOrderAdapter
 import kotlinx.android.synthetic.main.fragment_materials2.*
+import org.jetbrains.anko.support.v4.startActivity
 
 
 /**
@@ -48,7 +50,12 @@ class Materials2Fragment : BaseFragment<Materials2Presenter>(), Materials2Contra
     }
 
     override fun initData(savedInstanceState: Bundle?) {
-        dataRV.adapter = MaterialsOrderAdapter(arrayListOf(R.mipmap.test_icon_3, R.mipmap.test_icon_3, R.mipmap.test_icon_3))
+        val adapter =
+            MaterialsOrderAdapter(arrayListOf(R.mipmap.test_icon_3, R.mipmap.test_icon_3, R.mipmap.test_icon_3))
+        adapter.setOnItemClickListener { adapter, view, position ->
+            startActivity<MaterialsOrderInfoActivity>()
+        }
+        dataRV.adapter = adapter
     }
 
     /**

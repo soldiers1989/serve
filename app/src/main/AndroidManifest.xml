@@ -185,6 +185,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.MaterialsListActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.MaterialsOrderInfoActivity">
+        </activity>
     </application>
 
 </manifest>

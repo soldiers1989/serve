@@ -9,6 +9,7 @@ class PInfoAdapter(data: List<String>) :
         (R.layout.p_info_layout, data) {
 
     override fun convert(helper: BaseViewHolder, item: String) {
+        helper.setText(R.id.itemContent, if (!item.isNullOrEmpty()) item else "客户编号：111111")
     }
 
 

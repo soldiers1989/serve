@@ -50,6 +50,9 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
         customerTag.singleClick {
             startActivity<CustomerTagActivity>()
         }
+        editUserData.singleClick {
+            startActivity<EditUserDataActivity>()
+        }
         progressRV.adapter = ProjectProgressAdapter(
             arrayListOf(
                 Pair(R.mipmap.progress_icon_2, "量房"),

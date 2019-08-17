@@ -189,6 +189,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.ChangeTimeActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.EditUserDataActivity">
+        </activity>
     </application>
 
 </manifest>

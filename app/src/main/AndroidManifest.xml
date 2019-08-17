@@ -183,6 +183,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.AssignType2Activity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.MaterialsListActivity">
+        </activity>
     </application>
 
 </manifest>

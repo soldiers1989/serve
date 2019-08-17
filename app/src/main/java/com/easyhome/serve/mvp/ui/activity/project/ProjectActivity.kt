@@ -127,6 +127,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 }
                 12 -> {
                     //主材信息
+                    startActivity<MaterialsListActivity>()
                 }
                 13 -> {
                     //延期

@@ -74,13 +74,14 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 Pair(R.mipmap.action_icon_13, "主材信息"),
                 Pair(R.mipmap.action_icon_14, "延期"),
                 Pair(R.mipmap.action_icon_15, "工单")
-                )
+            )
         )
         ada1.setOnItemClickListener { adapter, view, position ->
 
             when (position) {
                 0 -> {
                     //变更时间
+
                 }
                 1 -> {
                     //发起量房
@@ -91,6 +92,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 }
                 3 -> {
                     //指派
+                    startActivity<AssignActivity>()
                 }
                 4 -> {
                     //整改

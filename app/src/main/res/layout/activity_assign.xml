@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="服务信息"
+                  android:textSize="16sp"
+                  android:textColor="@color/black"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="14dp"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="14dp"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/workerRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+        </android.support.v7.widget.RecyclerView>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="10dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="14dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="指派历史"
+                  android:textSize="16sp"
+                  android:textColor="@color/black"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="14dp"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="14dp"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

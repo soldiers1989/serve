@@ -179,6 +179,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.WorkOrderInfoActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.AssignActivity">
+        </activity>
     </application>
 
 </manifest>

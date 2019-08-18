@@ -21,6 +21,7 @@ import com.easyhome.serve.mvp.presenter.fragment.MyProjectPresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.project.ProjectActivity
+import com.easyhome.serve.mvp.ui.adapter.CitySelectorAdapter
 import com.easyhome.serve.mvp.ui.adapter.MyProjectAdapter
 import com.easyhome.serve.util.StringUtil
 import kotlinx.android.synthetic.main.fragment_my_project.*
@@ -64,13 +65,24 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
         labels2.setLabels(StringUtil.getLabels2())
         labels3.setLabels(StringUtil.getLabels3())
         filtrateTV.singleClick {
-            labelsLL.visibility = View.VISIBLE
+            if (labelsLL.visibility == View.VISIBLE)
+                labelsLL.visibility = View.GONE
+            else
+                labelsLL.visibility = View.VISIBLE
         }
+        cityTV.singleClick {
+            if (locationCL.visibility == View.VISIBLE)
+                locationCL.visibility = View.GONE
+            else
+                locationCL.visibility = View.VISIBLE
+        }
+
+        province.adapter = CitySelectorAdapter(arrayListOf("省", "省", "省", "省", "省"))
+        city.adapter = CitySelectorAdapter(arrayListOf("市", "市", "市", "市", "市"))
         reset.singleClick {
             labels1.clearAllSelect()
             labels2.clearAllSelect()
             labels3.clearAllSelect()
-
         }
         labels1.setOnLabelClickListener() { textView: TextView, any: Any, i: Int ->
 

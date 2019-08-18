@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+            android:id="@+id/indicate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@mipmap/indicate_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:text="上午"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+    />
+    <View
+            android:id="@+id/verticalLine"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/infoCL"
+            app:layout_constraintLeft_toRightOf="@id/indicate"
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorD8D"/>
+
+    <RadioButton android:layout_width="6dp"
+                 android:layout_height="6dp"
+                 android:background="@drawable/round_selector"
+                 android:button="@null"
+                 app:layout_constraintTop_toTopOf="@id/indicate"
+                 app:layout_constraintBottom_toBottomOf="@id/indicate"
+                 app:layout_constraintLeft_toLeftOf="@id/verticalLine"
+                 app:layout_constraintRight_toRightOf="@id/verticalLine"
+    />
+
+    <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/verticalLine"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="2019-07-09 14:00:00 (昨天) 店长 张三"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/infoCL"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            app:layout_constraintLeft_toLeftOf="@id/verticalLine"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/labels_bac_d"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+        <TextView
+                android:id="@+id/info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color555"
+                android:textSize="11sp"
+                android:drawableRight="@mipmap/more_icon"
+                android:text="详情"/>
+        <TextView
+                android:id="@+id/itemname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:text="上门量房"/>
+        <TextView
+                android:id="@+id/user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/itemname"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textColor="@color/color888"
+                android:layout_marginTop="6dp"
+                android:textSize="11sp"
+                android:text="李先生"/>
+        <TextView
+                android:id="@+id/number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/user"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textColor="@color/color888"
+                android:layout_marginTop="6dp"
+                android:textSize="11sp"
+                android:text="客户编号：123234"/>
+        <TextView
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/number"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/location"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/color888"
+                android:textSize="11sp"
+                android:text="项目地址：北京市海淀区上地东路哈新龙城1号楼 三单元1006 "/>
+
+
+        <ImageView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/location_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

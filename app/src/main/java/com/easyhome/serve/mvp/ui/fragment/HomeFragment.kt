@@ -29,15 +29,17 @@ import com.easyhome.serve.app.base.JRBaseFragment
 import com.easyhome.serve.app.extension.loadImage
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
+import com.easyhome.serve.mvp.ui.activity.ScheduleActivity
 import com.easyhome.serve.mvp.ui.activity.search.CityPickerActivity
 import com.easyhome.serve.mvp.ui.adapter.*
 import com.haibin.calendarview.Calendar
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.jetbrains.anko.support.v4.startActivity
 import java.util.HashMap
 
 
 /**
- * 首页
+ * 工作台
  */
 class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
     override fun getMyself(): BaseActivity<*> = this.activity as MainActivity
@@ -64,6 +66,10 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
     }
 
     override fun initData(savedInstanceState: Bundle?) {
+
+        schedule.singleClick {
+            startActivity<ScheduleActivity>()
+        }
 
         statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))
         statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", "", "", ""))
@@ -115,7 +121,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                     // println("上划-------")
 
                     if (!calendarCV.getLocalVisibleRect(scrollBounds)) {//不可见
-                      //  topCV.visibility = View.VISIBLE
+                        //  topCV.visibility = View.VISIBLE
                     }
 
 

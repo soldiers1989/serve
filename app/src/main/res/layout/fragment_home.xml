@@ -148,6 +148,17 @@
                                 android:textSize="19sp"
                         />
 
+                        <ImageView
+                                android:id="@+id/schedule"
+                                android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   app:layout_constraintTop_toTopOf="parent"
+                                   app:layout_constraintRight_toRightOf="parent"
+                                   android:layout_marginTop="13dp"
+                                   android:layout_marginRight="14dp"
+                                   android:src="@mipmap/schedule_icon"
+                        />
+
                         <com.haibin.calendarview.CalendarView
                                 android:id="@+id/mCalendarView"
                                 app:layout_constraintTop_toBottomOf="@id/dateTV"

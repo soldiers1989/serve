@@ -5,5 +5,5 @@
             android:width="1dp"
             android:color="@color/color_c9c9c9" />描边-->
     <solid android:color="#2775E9" /><!--背景-->
-    <corners android:radius="20dp" /><!--圆角-->
+    <corners android:radius="5dp" /><!--圆角-->
 </shape>

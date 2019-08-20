@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/color222"
+                  android:layout_marginLeft="13dp"
+                  android:layout_marginTop="34dp"
+                  android:text="反馈问题类型"
+                  android:textSize="15sp"/>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorD8D"
+              android:layout_marginTop="9dp"
+              android:layout_marginLeft="13dp"
+              android:layout_marginRight="13dp"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/tagRV"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                app:spanCount="3"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager">
+        </android.support.v7.widget.RecyclerView>
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="84dp"
+                  android:textSize="12sp"
+                  android:gravity="left"
+                  android:padding="5dp"
+                  android:textColor="@color/color222"
+                  android:background="@drawable/labels_bac_d"
+                  android:layout_marginLeft="13dp"
+                  android:layout_marginRight="13dp"
+                  android:hint="请输入反馈内容"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/photoRV"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                app:spanCount="3"
+                android:layout_marginTop="6dp"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager">
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <RadioButton android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/login_rb_bac"
+                 android:layout_marginLeft="13dp"
+                 android:layout_marginRight="13dp"
+                 android:button="@null"
+                 android:text="提交"
+                 android:checked="true"
+                 android:gravity="center"
+                 android:textColor="@color/white"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 android:layout_marginBottom="36dp"
+    />
+</android.support.constraint.ConstraintLayout>

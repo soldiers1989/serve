@@ -17,20 +17,11 @@ import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.mvp.ui.adapter.SettingOptionAdapter
 import kotlinx.android.synthetic.main.activity_about_app.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.startActivity
 
 
 /**
- * 如果没presenter
- * 你可以这样写
- *
- * @ActivityScope(請注意命名空間) class NullObjectPresenterByActivity
- * @Inject constructor() : IPresenter {
- * override fun onStart() {
- * }
- *
- * override fun onDestroy() {
- * }
- * }
+ * 关于APP
  */
 class AboutAppActivity : JRBaseActivity<AboutAppPresenter>(), AboutAppContract.View {
     override fun getMyself(): BaseActivity<*> = this
@@ -54,7 +45,20 @@ class AboutAppActivity : JRBaseActivity<AboutAppPresenter>(), AboutAppContract.V
     override fun initData(savedInstanceState: Bundle?) {
 
         tvPageTitle.text = "关于APP"
-        optionRV.adapter = SettingOptionAdapter(arrayListOf("", ""))
+        val adapter = SettingOptionAdapter(arrayListOf("", ""))
+        adapter.setOnItemClickListener { adapter, view, position ->
+
+            when (position) {
+                0 -> {
+                }
+                1 -> {
+                    startActivity<CoupleBackActivity>()
+                }
+            }
+
+        }
+
+        optionRV.adapter = adapter
     }
 
 

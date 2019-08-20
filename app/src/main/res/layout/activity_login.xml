@@ -129,10 +129,9 @@
 
                 <ImageView
                         android:id="@+id/passwordClean"
-                        android:src="@mipmap/clean"
+                        android:src="@mipmap/password_icon_1"
                         android:layout_width="15dp"
                         app:layout_constraintRight_toRightOf="@id/fg2"
-                        android:visibility="invisible"
                         app:layout_constraintTop_toTopOf="@id/passwordIcon"
                         app:layout_constraintBottom_toBottomOf="@id/passwordIcon"
                         android:layout_height="15dp"/>

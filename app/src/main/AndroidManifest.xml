@@ -197,6 +197,10 @@
         </activity>
         <activity android:name=".mvp.ui.activity.ScheduleActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.notification.NotificationInfoActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.setting.CoupleBackActivity">
+        </activity>
     </application>
 
 </manifest>

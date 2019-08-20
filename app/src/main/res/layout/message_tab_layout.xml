@@ -22,8 +22,7 @@
             android:gravity="center"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:drawablePadding="5dp"
-            android:background="@color/white"
+            android:drawablePadding="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -36,14 +35,14 @@
               android:textColor="@color/white"
               android:background="@drawable/dot_red"
               app:layout_constraintTop_toTopOf="@id/tabB"
-              app:layout_constraintBottom_toTopOf="@id/tabB"
               app:layout_constraintRight_toRightOf="@id/tabB"
-              app:layout_constraintLeft_toRightOf="@id/tabB"
               android:padding="2dp"
               android:textSize="7sp"
               android:text="111"/>
 
-    <View android:layout_width="1dp"
+    <View
+         android:id="@+id/verticalLine"
+            android:layout_width="1dp"
           android:layout_height="16dp"
           android:background="@color/color366"
           app:layout_constraintRight_toRightOf="parent"

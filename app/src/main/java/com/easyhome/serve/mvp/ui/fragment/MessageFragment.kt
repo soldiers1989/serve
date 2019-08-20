@@ -18,16 +18,18 @@ import com.easyhome.serve.mvp.presenter.fragment.MessagePresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseFragment
 import com.easyhome.serve.mvp.ui.activity.MainActivity
+import com.easyhome.serve.mvp.ui.activity.notification.NotificationInfoActivity
 import com.easyhome.serve.mvp.ui.adapter.MessageListAdapter
 import com.easyhome.serve.mvp.ui.adapter.MessageTabAdapter
 import kotlinx.android.synthetic.main.fragment_message.*
+import org.jetbrains.anko.support.v4.startActivity
 
 
 /**
  * 消息
  */
 class MessageFragment : JRBaseFragment<MessagePresenter>(), MessageContract.View {
-    override fun getMyself(): BaseActivity<*> =this.activity as MainActivity
+    override fun getMyself(): BaseActivity<*> = this.activity as MainActivity
 
     companion object {
         fun newInstance(): MessageFragment {
@@ -51,8 +53,15 @@ class MessageFragment : JRBaseFragment<MessagePresenter>(), MessageContract.View
     }
 
     override fun initData(savedInstanceState: Bundle?) {
-        tabRV.adapter= MessageTabAdapter(arrayListOf("","",""))
-        messageRV.adapter= MessageListAdapter(arrayListOf("","",""))
+        tabRV.adapter = MessageTabAdapter(arrayListOf("全部", "未读", "已读"))
+
+        val msgAdapter = MessageListAdapter(arrayListOf("", "", ""))
+        msgAdapter.setOnItemClickListener { adapter, view, position ->
+            startActivity<NotificationInfoActivity>()
+        }
+        messageRV.adapter = msgAdapter
+
+
     }
 
     /**

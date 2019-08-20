@@ -21,7 +21,7 @@
                 android:layout_height="130dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="16dp"
-                android:src="@mipmap/my_head"
+                android:src="@mipmap/test_head"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="31dp"/>
 
@@ -46,7 +46,6 @@
                 android:background="@drawable/my_fragment_top_bac"
                 app:layout_constraintBaseline_toBaselineOf="@id/nameTV"
                 app:layout_constraintLeft_toRightOf="@id/nameTV"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"/>
         <TextView
                 android:id="@+id/jobnumber"
@@ -54,37 +53,48 @@
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:textColor="@color/white"
-                android:text="手机号：111111"
+                android:text="工号：111111"
                 app:layout_constraintTop_toBottomOf="@+id/nameTV"
-                app:layout_constraintLeft_toRightOf="@id/headIV"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"/>
+                app:layout_constraintLeft_toLeftOf="@id/nameTV"
+                android:layout_marginTop="10dp"
+        />
         <TextView
-
+                android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="17sp"
+                android:textSize="13sp"
                 android:textColor="@color/white"
                 android:text="手机号：13299999999"
                 app:layout_constraintTop_toBottomOf="@id/jobnumber"
-                app:layout_constraintLeft_toRightOf="@id/headIV"
+                app:layout_constraintLeft_toLeftOf="@id/nameTV"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"/>
-
-
+        />
         <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:text="评分：4.7"
+                app:layout_constraintTop_toBottomOf="@id/phone"
+                app:layout_constraintLeft_toLeftOf="@id/nameTV"
+                android:layout_marginTop="10dp"
+        />
+
+
+        <ImageView
                 android:id="@+id/userinfoTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="12dp"
-                android:textSize="12sp"
+                android:padding="12dp"
                 android:textColor="@color/white"
-                android:text="》"
+                android:src="@mipmap/more_icon"
+                android:tint="@color/white"
                 app:layout_constraintTop_toTopOf="@id/jobnumber"
                 app:layout_constraintBottom_toBottomOf="@id/jobnumber"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="15dp"
-                />
+        />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -2,7 +2,8 @@
 <android.support.v4.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -116,11 +117,11 @@
                 <ImageView
                         android:id="@+id/editUserData"
                         android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:src="@mipmap/edit_icon"
-                           app:layout_constraintRight_toRightOf="parent"
-                           app:layout_constraintTop_toTopOf="@id/info1"
-                           app:layout_constraintBottom_toBottomOf="@id/info1"/>
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/edit_icon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/info1"
+                        app:layout_constraintBottom_toBottomOf="@id/info1"/>
 
 
                 <TextView
@@ -138,6 +139,94 @@
                         app:layout_constraintTop_toBottomOf="@id/info4"/>
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="6dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/subscribe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:gravity="center"
+                            android:text="预约信息"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"/>
+                    <View
+                            android:id="@+id/vLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorD8D"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintTop_toBottomOf="@id/subscribe"/>
+
+                    <TextView
+                            android:id="@+id/source"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="预约来源：张三案例"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/vLine"
+                            android:layout_marginTop="10dp"/>
+                    <TextView
+                            android:id="@+id/scope"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="预算范围：500-1000元"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/source"
+                            android:layout_marginTop="10dp"/>
+                    <TextView
+                            android:id="@+id/caseInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="案例详情：https://org.modao.cc/app/992df6393b4da053fd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/scope"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="10dp"/>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="预约备注： 想要一个女设计师，擅长中式风格设计，施工队 要山东的 "
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/caseInfo"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="10dp"/>
+                </android.support.constraint.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
 
         <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -339,7 +428,7 @@
                         app:layoutManager="android.support.v7.widget.GridLayoutManager"
                         app:spanCount="2"
                         app:layout_constraintTop_toTopOf="@id/fgV2"
-                        >
+                >
                 </android.support.v7.widget.RecyclerView>
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
@@ -383,11 +472,10 @@
                         android:layout_height="97dp"
                         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
                         app:layout_constraintTop_toTopOf="@id/fgV3"
-                       >
+                >
                 </android.support.v7.widget.RecyclerView>
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
-
 
 
         <android.support.constraint.ConstraintLayout

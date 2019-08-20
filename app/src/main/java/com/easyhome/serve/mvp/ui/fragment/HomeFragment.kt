@@ -30,6 +30,7 @@ import com.easyhome.serve.app.extension.loadImage
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.ScheduleActivity
+import com.easyhome.serve.mvp.ui.activity.project.AddTaskActivity
 import com.easyhome.serve.mvp.ui.activity.search.CityPickerActivity
 import com.easyhome.serve.mvp.ui.adapter.*
 import com.haibin.calendarview.Calendar
@@ -69,6 +70,9 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
 
         schedule.singleClick {
             startActivity<ScheduleActivity>()
+        }
+        add.singleClick {
+            startActivity<AddTaskActivity>()
         }
 
         statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))

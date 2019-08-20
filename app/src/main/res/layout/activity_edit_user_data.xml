@@ -1,253 +1,506 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:background="@color/white"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-    <android.support.constraint.ConstraintLayout
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="44dp">
+            android:layout_height="match_parent">
 
-        <TextView
-                android:id="@+id/title1"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="客户编号："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
 
-        <EditText android:layout_width="0dp"
-                  android:layout_height="match_parent"
-                  app:layout_constraintLeft_toRightOf="@id/title1"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/black"
-                  android:hint="0001"
-                  android:textSize="13sp"
-                  android:background="@null"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp">
+            <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="客户编号："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
 
-        <TextView
-                android:id="@+id/title2"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="客户姓名："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
+            <EditText android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      app:layout_constraintLeft_toRightOf="@id/title1"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:textColor="@color/black"
+                      android:hint="0001"
+                      android:textSize="13sp"
+                      android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
 
-        <EditText android:layout_width="0dp"
-                  android:layout_height="match_parent"
-                  app:layout_constraintLeft_toRightOf="@id/title2"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/black"
-                  android:hint="王麻子"
-                  android:textSize="13sp"
-                  android:background="@null"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp">
+            <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="客户姓名："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
 
-        <TextView
-                android:id="@+id/title3"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="客户电话："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
+            <EditText android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      app:layout_constraintLeft_toRightOf="@id/title2"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:textColor="@color/black"
+                      android:hint="王麻子"
+                      android:textSize="13sp"
+                      android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
 
-        <EditText android:layout_width="0dp"
-                  android:layout_height="match_parent"
-                  app:layout_constraintLeft_toRightOf="@id/title3"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/black"
-                  android:hint="13000000000"
-                  android:textSize="13sp"
-                  android:background="@null"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
 
-        <TextView
-                android:id="@+id/title4"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="户型："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
+            <TextView
+                    android:id="@+id/title9"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="性别："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
 
-        <TextView android:layout_width="0dp"
-                  android:layout_height="match_parent"
-                  app:layout_constraintLeft_toRightOf="@id/title4"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/color999"
-                  android:gravity="center_vertical"
-                  android:text="点击选择房屋类型"
-                  android:textSize="13sp"
-                  android:background="@null"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp">
+            <CheckBox
+                    android:id="@+id/man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toRightOf="@id/title9"
+                    android:textColor="@color/black"
+                    android:text="男"
+                    android:textSize="13sp"
+                    android:background="@null"/>
+            <CheckBox
+                    android:id="@+id/woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toRightOf="@id/man"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:text="女"
+                    android:textSize="13sp"
+                    android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
 
-        <TextView
-                android:id="@+id/title5"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="房屋类型："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
 
-        <TextView android:layout_width="0dp"
-                  android:layout_height="match_parent"
-                  app:layout_constraintLeft_toRightOf="@id/title5"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:textColor="@color/color999"
-                  android:gravity="center_vertical"
-                  android:text="点击选择户型"
-                  android:textSize="13sp"
-                  android:background="@null"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp">
+            <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="客户电话1："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
 
-        <TextView
-                android:id="@+id/title6"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="建筑面积："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
-
-        <EditText
-                android:id="@+id/area"
-                android:layout_width="82dp"
-                android:layout_height="25dp"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:background="@drawable/labels_bac_d" tools:layout_editor_absoluteY="10dp"
-                tools:layout_editor_absoluteX="100dp"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="m2"
-                app:layout_constraintLeft_toRightOf="@id/area"
-                android:layout_marginLeft="10dp"
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp">
-
-        <TextView
-                android:id="@+id/title7"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="客户编号："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toRightOf="@id/title3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/black"
+                    android:gravity="left|center_vertical"
+                    android:text="13000000000"
+                    android:textSize="13sp"
+                    android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
 
 
-        <EditText
-                android:id="@+id/tarea"
-                android:layout_width="82dp"
-                android:layout_height="25dp"
-                app:layout_constraintLeft_toRightOf="@id/title7"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:padding="5dp"
-                android:background="@drawable/labels_bac_d"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="m2"
-                app:layout_constraintLeft_toRightOf="@id/tarea"
-                android:layout_marginLeft="10dp"
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="@color/colorFFE"
-              app:layout_constraintBottom_toBottomOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-    >
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
 
-        <TextView
-                android:id="@+id/title8"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="客户地址："
-                android:textSize="13sp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|right"/>
+            <TextView
+                    android:id="@+id/title10"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="客户电话2："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
 
-        <EditText android:layout_width="244dp"
-                  android:layout_height="67dp"
-                  app:layout_constraintLeft_toRightOf="@id/title8"
-                  android:textColor="@color/black"
-                  android:padding="5dp"
-                  android:background="@drawable/labels_bac_d"
-                  android:textSize="13sp"/>
-    </android.support.constraint.ConstraintLayout>
+            <EditText
+                    android:id="@+id/phone2"
+                    android:layout_width="119dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintLeft_toRightOf="@id/title10"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:hint="13000000000"
+                    android:textSize="13sp"
+                    android:background="@drawable/labels_bac_d"/>
+
+            <EditText
+                    android:layout_width="82dp"
+                    android:layout_height="25dp"
+                    android:paddingLeft="3dp"
+                    android:background="@drawable/labels_bac_d"
+                    app:layout_constraintLeft_toRightOf="@id/phone2"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="10dp"
+                    android:hint="联系人"
+                    android:textSize="13sp"
+            />
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title11"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="客户电话3："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+
+            <EditText
+                    android:id="@+id/phone3"
+                    android:layout_width="119dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/labels_bac_d"
+                    app:layout_constraintLeft_toRightOf="@id/title11"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:hint="13000000000"
+                    android:textSize="13sp"
+            />
+            <EditText
+                    android:layout_width="82dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/labels_bac_d"
+                    app:layout_constraintLeft_toRightOf="@id/phone3"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="3dp"
+                    android:hint="联系人"
+                    android:textSize="13sp"
+            />
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title12"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="房屋类型："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      app:layout_constraintLeft_toRightOf="@id/title12"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:textColor="@color/color999"
+                      android:gravity="center_vertical"
+                      android:text="点击选择"
+                      android:textSize="13sp"
+                      android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="房屋类型："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      app:layout_constraintLeft_toRightOf="@id/title5"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:textColor="@color/color999"
+                      android:gravity="center_vertical"
+                      android:text="点击选择"
+                      android:textSize="13sp"
+                      android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title4"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="户型："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      app:layout_constraintLeft_toRightOf="@id/title4"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:textColor="@color/color999"
+                      android:gravity="center_vertical"
+                      android:text="点击选择"
+                      android:textSize="13sp"
+                      android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title13"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="装修类型："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      app:layout_constraintLeft_toRightOf="@id/title13"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:textColor="@color/color999"
+                      android:gravity="center_vertical"
+                      android:text="点击选择"
+                      android:textSize="13sp"
+                      android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title6"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="建筑面积："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+
+            <EditText
+                    android:id="@+id/area"
+                    android:layout_width="82dp"
+                    android:layout_height="25dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:background="@drawable/labels_bac_d"
+                    app:layout_constraintTop_toTopOf="@id/title6"
+                    app:layout_constraintLeft_toRightOf="@id/title6"
+                    app:layout_constraintBaseline_toBaselineOf="@id/title6"
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="m2"
+                    app:layout_constraintLeft_toRightOf="@id/area"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title7"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="客户编号："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
 
 
-    <RadioButton android:layout_width="match_parent"
-                 android:layout_height="49dp"
-                 android:background="@drawable/labels_button_s"
-                 android:button="@null"
-                 android:layout_marginLeft="12dp"
-                 android:layout_marginRight="12dp"
-                 android:text="确定"
-                 android:gravity="center"
-                 android:textColor="@color/white"
-                 app:layout_constraintTop_toBottomOf="@id/fg9V"
-                 android:layout_marginTop="54dp"/>
-</LinearLayout>
+            <EditText
+                    android:id="@+id/tarea"
+                    android:layout_width="82dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintLeft_toRightOf="@id/title7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:padding="5dp"
+                    android:background="@drawable/labels_bac_d"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="m2"
+                    app:layout_constraintLeft_toRightOf="@id/tarea"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+        >
+
+            <TextView
+                    android:id="@+id/title8"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="客户地址："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+            <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="省份城市"
+                    app:layout_constraintLeft_toRightOf="@id/title8"
+                    android:textSize="13sp"
+                    android:textColor="@color/color888"
+            />
+            <TextView
+                    android:id="@+id/community"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toRightOf="@id/title8"
+                    app:layout_constraintTop_toBottomOf="@+id/city"
+                    android:layout_marginTop="10dp"
+                    android:text="小区"
+                    android:textSize="13sp"
+                    android:textColor="@color/color888"
+            />
+
+            <EditText
+                    android:id="@+id/edit1"
+                    android:layout_width="244dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintLeft_toRightOf="@id/title8"
+                    app:layout_constraintTop_toBottomOf="@+id/community"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/labels_bac_d"
+                    android:textSize="13sp"/>
+            <EditText android:layout_width="244dp"
+                      android:layout_height="67dp"
+                      app:layout_constraintLeft_toRightOf="@id/title8"
+                      app:layout_constraintTop_toBottomOf="@+id/edit1"
+                      android:layout_marginTop="10dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:background="@drawable/labels_bac_d"
+                      android:textSize="13sp"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+            <TextView
+                    android:id="@+id/title14"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="报价级别："
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|right"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      app:layout_constraintLeft_toRightOf="@id/title14"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:textColor="@color/color999"
+                      android:gravity="center_vertical"
+                      android:text="点击选择"
+                      android:textSize="13sp"
+                      android:background="@null"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorFFE"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <RadioButton android:layout_width="match_parent"
+                     android:layout_height="49dp"
+                     android:background="@drawable/labels_button_s"
+                     android:button="@null"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginRight="12dp"
+                     android:text="保存"
+                     android:gravity="center"
+                     android:textColor="@color/white"
+                     app:layout_constraintTop_toBottomOf="@id/fg9V"
+                     android:layout_marginTop="54dp"
+                     android:layout_marginBottom="27dp"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

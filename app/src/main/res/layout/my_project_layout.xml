@@ -81,14 +81,41 @@
             />
 
             <TextView
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="王先生   13212312312  丽泽桥店"
-                    android:gravity="left"
+                    android:text="王先生"
+                    android:gravity="left|center"
+                    android:drawableRight="@mipmap/phone_icon"
+                    android:drawablePadding="5dp"
                     android:textColor="@color/color888"
                     android:textSize="12sp"
                     app:layout_constraintTop_toTopOf="@id/coverIV"
                     app:layout_constraintLeft_toRightOf="@id/coverIV"
+                    android:layout_marginLeft="10dp"
+            />
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="丽泽桥店"
+                    android:gravity="left"
+                    android:textColor="@color/color888"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/name"
+                    app:layout_constraintLeft_toRightOf="@id/name"
+                    android:layout_marginLeft="10dp"
+            />
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目经理"
+                    android:gravity="left"
+                    android:textColor="@color/color888"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/name"
+                    app:layout_constraintRight_toRightOf="parent"
                     android:layout_marginLeft="10dp"
             />
             <TextView

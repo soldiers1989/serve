@@ -79,7 +79,10 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 Pair(R.mipmap.action_icon_12, "签约失败"),
                 Pair(R.mipmap.action_icon_13, "主材信息"),
                 Pair(R.mipmap.action_icon_14, "延期"),
-                Pair(R.mipmap.action_icon_15, "工单")
+                Pair(R.mipmap.action_icon_15, "工单"),
+                Pair(R.mipmap.action_icon_16, "结算"),
+                Pair(R.mipmap.action_icon_16, "取消签约失败"),
+                Pair(R.mipmap.action_icon_16, "作废预交底")
             )
         )
         ada1.setOnItemClickListener { adapter, view, position ->
@@ -139,6 +142,10 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 14 -> {
                     //工单
                     startActivity<WorkOrderActivity>()
+                }
+                15 -> {
+                    //结算
+                    startActivity<SettlementActivity>()
                 }
 
             }

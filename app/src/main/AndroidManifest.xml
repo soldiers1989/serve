@@ -62,6 +62,11 @@
                 android:name="design_height_in_dp"
                 android:value="667"/>
 
+        <!-- 搞得地图 -->
+        <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="66f8ed66b5700cf9ab1d967669dc100a"/>
+
         <activity android:name=".mvp.ui.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -202,6 +207,10 @@
         <activity android:name=".mvp.ui.activity.setting.CoupleBackActivity">
         </activity>
         <activity android:name=".mvp.ui.activity.project.AddTaskActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.project.SettlementActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.project.MapActivity">
         </activity>
     </application>
 

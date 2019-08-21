@@ -10,6 +10,8 @@ class MyProjectAdapter(data: List<String>) :
         (R.layout.my_project_layout, data) {
 
     override fun convert(helper: BaseViewHolder, item: String) {
+
+        helper.addOnClickListener(R.id.nameTV)
     }
 
 

@@ -20,6 +20,7 @@ import com.easyhome.serve.mvp.presenter.fragment.MyProjectPresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.ui.activity.project.MapActivity
 import com.easyhome.serve.mvp.ui.activity.project.ProjectActivity
 import com.easyhome.serve.mvp.ui.adapter.CitySelectorAdapter
 import com.easyhome.serve.mvp.ui.adapter.MyProjectAdapter
@@ -60,6 +61,16 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
         adapter.setOnItemClickListener { adapter, view, position ->
             startActivity<ProjectActivity>()
         }
+        adapter.setOnItemChildClickListener { adapter, view, position ->
+
+            when(view.id){
+                R.id.nameTV->{
+                    startActivity<MapActivity>()
+                }
+            }
+        }
+
+
         projetRV.adapter = adapter
         labels1.setLabels(StringUtil.getLabels1())
         labels2.setLabels(StringUtil.getLabels2())

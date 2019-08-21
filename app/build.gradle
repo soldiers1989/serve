@@ -25,6 +25,24 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
+
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file('../Juran.jks')
+            storePassword 'juransjjsgpt2018'
+            keyAlias 'juran.jks'
+            keyPassword 'juransjjsgpt2018'
+        }
+
+        release {
+            storeFile file('../Juran.jks')
+            storePassword 'juransjjsgpt2018'
+            keyAlias 'juran.jks'
+            keyPassword 'juransjjsgpt2018'
+        }
+    }
+
     buildTypes {
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
@@ -36,6 +54,7 @@ android {
             zipAlignEnabled true
             minifyEnabled false
             shrinkResources false
+            signingConfig signingConfigs.debug
         }
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
@@ -47,8 +66,47 @@ android {
             zipAlignEnabled true
             minifyEnabled false
             shrinkResources false
+
+            signingConfig signingConfigs.release
         }
     }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+
+            signingConfig signingConfigs.debug
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+
+            signingConfig signingConfigs.release
+        }
+    }
+
+    /*lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }*/
+
 }
 
 dependencies {

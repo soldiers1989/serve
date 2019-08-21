@@ -1,5 +1,6 @@
 package com.easyhome.serve.mvp.ui.activity
 
+import android.annotation.TargetApi
 import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
@@ -24,6 +25,8 @@ import com.easyhome.serve.app.JRApp
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.mvp.model.entity.TabEntity
 import com.easyhome.serve.mvp.ui.adapter.HomeFragmentAdapter
+import com.easyhome.serve.util.runtimepermissions.PermissionsManager
+import com.easyhome.serve.util.runtimepermissions.PermissionsResultAction
 import kotlinx.android.synthetic.main.activity_main2.*
 import java.util.ArrayList
 
@@ -89,6 +92,7 @@ class MainActivity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
         val frame: Rect = Rect()
         window.decorView.getWindowVisibleDisplayFrame(frame)
         statusBarHeight = frame.top
+        requestPermissions()
     }
 
     private fun initAllFragment(savedInstanceState: Bundle?) {
@@ -232,5 +236,17 @@ class MainActivity : JRBaseActivity<Main2Presenter>(), Main2Contract.View {
         return applicationContext as JRApp
     }
 
+    @TargetApi(23)
+    private fun requestPermissions() {
+        PermissionsManager.getInstance()
+            .requestAllManifestPermissionsIfNecessary(this, object : PermissionsResultAction() {
+                override fun onGranted() {
+                    //				Toast.makeText(MainActivity.this, "All permissions have been granted", Toast.LENGTH_SHORT).show();
+                }
 
+                override fun onDenied(permission: String) {
+                    //Toast.makeText(MainActivity.this, "Permission " + permission + " has been denied", Toast.LENGTH_SHORT).show();
+                }
+            })
+    }
 }

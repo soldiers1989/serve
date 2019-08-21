@@ -45,7 +45,12 @@ class AboutAppActivity : JRBaseActivity<AboutAppPresenter>(), AboutAppContract.V
     override fun initData(savedInstanceState: Bundle?) {
 
         tvPageTitle.text = "关于APP"
-        val adapter = SettingOptionAdapter(arrayListOf("", ""))
+        val adapter = SettingOptionAdapter(
+            arrayListOf(
+                SettingOptionAdapter.Bean("版本更新：", "V12.01"),
+                SettingOptionAdapter.Bean("意见反馈：", "")
+            )
+        )
         adapter.setOnItemClickListener { adapter, view, position ->
 
             when (position) {

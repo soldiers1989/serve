@@ -31,6 +31,7 @@ import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.ScheduleActivity
 import com.easyhome.serve.mvp.ui.activity.project.AddTaskActivity
+import com.easyhome.serve.mvp.ui.activity.project.MapActivity
 import com.easyhome.serve.mvp.ui.activity.search.CityPickerActivity
 import com.easyhome.serve.mvp.ui.adapter.*
 import com.haibin.calendarview.Calendar
@@ -77,7 +78,17 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
 
         statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))
         statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", "", "", ""))
-        waitThing.adapter = WaitThingAdapter(arrayListOf("", "", "", "", "", "", "", "", "", ""))
+        val wAdapter = WaitThingAdapter(arrayListOf("", "", "", "", "", "", "", "", "", ""))
+        wAdapter.setOnItemChildClickListener { adapter, view, position ->
+
+            when (view.id) {
+                R.id.locationTV -> {
+                    startActivity<MapActivity>()
+                }
+            }
+        }
+        waitThing.adapter = wAdapter
+
 
         val year = mCalendarView.getCurYear()
         val month = mCalendarView.getCurMonth()
@@ -87,20 +98,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                 getSchemeCalendar(year, month, 3, -0xbf24db, "假")
         map[getSchemeCalendar(year, month, 6, -0x196ec8, "事").toString()] =
                 getSchemeCalendar(year, month, 6, -0x196ec8, "事")
-        map[getSchemeCalendar(year, month, 9, -0x20ecaa, "议").toString()] =
-                getSchemeCalendar(year, month, 9, -0x20ecaa, "议")
-        map[getSchemeCalendar(year, month, 13, -0x123a93, "记").toString()] =
-                getSchemeCalendar(year, month, 13, -0x123a93, "记")
-        map[getSchemeCalendar(year, month, 14, -0x123a93, "记").toString()] =
-                getSchemeCalendar(year, month, 14, -0x123a93, "记")
-        map[getSchemeCalendar(year, month, 15, -0x5533bc, "假").toString()] =
-                getSchemeCalendar(year, month, 15, -0x5533bc, "假")
-        map[getSchemeCalendar(year, month, 18, -0x43ec10, "记").toString()] =
-                getSchemeCalendar(year, month, 18, -0x43ec10, "记")
-        map[getSchemeCalendar(year, month, 25, -0xec5310, "假").toString()] =
-                getSchemeCalendar(year, month, 25, -0xec5310, "假")
-        map[getSchemeCalendar(year, month, 27, -0xec5310, "多").toString()] =
-                getSchemeCalendar(year, month, 27, -0xec5310, "多")
+
         //此方法在巨大的数据量上不影响遍历性能，推荐使用
         mCalendarView.setSchemeDate(map)
 
@@ -124,7 +122,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                 if (scrollY > oldScrollY) {//上划
                     // println("上划-------")
 
-                    if (!calendarCV.getLocalVisibleRect(scrollBounds)) {//不可见
+                    if (!bacV.getLocalVisibleRect(scrollBounds)) {//不可见
                         topCalendar.visibility = View.VISIBLE
                     }
 
@@ -132,7 +130,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                 }
                 if (scrollY < oldScrollY) {//下划
                     //    println("下划-------")
-                    if (calendarCV.getLocalVisibleRect(scrollBounds)) {//不可见
+                    if (bacV.getLocalVisibleRect(scrollBounds)) {//不可见
                         topCalendar.visibility = View.GONE
                     }
 

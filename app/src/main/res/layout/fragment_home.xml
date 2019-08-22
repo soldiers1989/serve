@@ -18,7 +18,7 @@
                     android:layout_width="match_parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_height="194dp"
-                    android:background="@mipmap/login_botom_bac"/>
+                    android:background="@mipmap/home_top_bac"/>
             <android.support.v7.widget.CardView
                     android:id="@+id/statisticsCV"
                     android:layout_width="match_parent"
@@ -66,6 +66,8 @@
                     android:paddingLeft="27dp"
                     android:layout_marginTop="17dp"
                     android:text="消息消息消息消息消息"
+                    android:drawableLeft="@mipmap/message_hint_icon"
+                    android:drawablePadding="5dp"
                     android:textColor="@color/color333"
                     android:gravity="center_vertical"
                     android:textSize="11sp"
@@ -88,9 +90,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="20dp">
-                    <View android:layout_width="match_parent"
-                          android:layout_height="76dp"
-                          android:background="@color/color366"/>
+                    <View
+                            android:id="@+id/bacV"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@color/color366"/>
                     <TextView
                             android:id="@+id/dateTV"
                             android:layout_width="wrap_content"
@@ -125,43 +129,48 @@
                             android:src="@mipmap/add_icon_2"
                     />
 
-
-                    <com.haibin.calendarview.CalendarView
-                            android:id="@+id/mCalendarView"
-                            app:layout_constraintTop_toBottomOf="@id/dateTV"
-                            android:layout_marginTop="12dp"
+                    <LinearLayout
+                            android:id="@+id/calendarViewLL"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#fff"
-                            app:calendar_padding="10dp"
-                            app:current_month_lunar_text_color="#CFCFCF"
-                            app:current_month_text_color="#333333"
-                            app:max_year="2020"
-                            app:min_year="2004"
-                            app:month_view="com.easyhome.serve.mvp.ui.widget.custom.CustomMonthView"
-                            app:month_view_show_mode="mode_fix"
-                            app:other_month_lunar_text_color="#e1e1e1"
-                            app:other_month_text_color="#e1e1e1"
-                            app:scheme_text="假"
-                            app:scheme_text_color="#333"
-                            app:scheme_theme_color="#128c4b"
-                            app:selected_lunar_text_color="#fff"
-                            app:selected_text_color="#fff"
-                            app:selected_theme_color="#08aefc"
-                            app:week_background="#fff"
-                            app:week_start_with="sun"
-                            app:week_text_color="#999999"
-                            app:week_view="com.easyhome.serve.mvp.ui.widget.custom.CustomWeekView"
-                            app:year_view="com.easyhome.serve.mvp.ui.widget.custom.CustomYearView"
-                            app:year_view_day_text_color="#333333"
-                            app:year_view_day_text_size="7sp"
-                            app:year_view_month_text_color="#ff0000"
-                            app:year_view_month_text_size="20sp"
-                            app:year_view_scheme_color="#f17706"
-                            app:year_view_select_text_color="#fff"
-                            app:year_view_week_height="12dp"
-                            app:year_view_week_text_color="#e1e1e1"
-                            app:year_view_week_text_size="6sp"/>
+                            app:layout_constraintTop_toBottomOf="@id/dateTV">
+                        <com.haibin.calendarview.CalendarView
+                                android:id="@+id/mCalendarView"
+                                android:layout_marginTop="12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#fff"
+                                app:calendar_padding="10dp"
+                                app:current_month_lunar_text_color="#CFCFCF"
+                                app:current_month_text_color="#333333"
+                                app:max_year="2020"
+                                app:min_year="2004"
+                                app:month_view="com.easyhome.serve.mvp.ui.widget.custom.CustomMonthView"
+                                app:month_view_show_mode="mode_fix"
+                                app:other_month_lunar_text_color="#e1e1e1"
+                                app:other_month_text_color="#e1e1e1"
+                                app:scheme_text="假"
+                                app:scheme_text_color="#333"
+                                app:scheme_theme_color="#128c4b"
+                                app:selected_lunar_text_color="#fff"
+                                app:selected_text_color="#fff"
+                                app:selected_theme_color="#08aefc"
+                                app:week_background="#fff"
+                                app:week_start_with="sun"
+                                app:week_text_color="#999999"
+                                app:week_view="com.easyhome.serve.mvp.ui.widget.custom.CustomWeekView"
+                                app:year_view="com.easyhome.serve.mvp.ui.widget.custom.CustomYearView"
+                                app:year_view_day_text_color="#333333"
+                                app:year_view_day_text_size="7sp"
+                                app:year_view_month_text_color="#ff0000"
+                                app:year_view_month_text_size="20sp"
+                                app:year_view_scheme_color="#f17706"
+                                app:year_view_select_text_color="#fff"
+                                app:year_view_week_height="12dp"
+                                app:year_view_week_text_color="#e1e1e1"
+                                app:year_view_week_text_size="6sp"/>
+
+                    </LinearLayout>
 
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>

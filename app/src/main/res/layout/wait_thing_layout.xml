@@ -4,6 +4,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
 >
 
     <TextView
@@ -11,12 +12,12 @@
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             android:text="上午 08:00"
-            android:gravity="center"
+            android:gravity="center_vertical"
             app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="20dp"
             android:layout_marginLeft="16dp"
             android:textColor="@color/color666"
-            android:textSize="11sp"
-    />
+            android:textSize="11sp"/>
     <TextView android:layout_width="wrap_content"
               android:layout_height="36dp"
               android:text="上门量房"
@@ -25,10 +26,23 @@
               android:layout_marginLeft="16dp"
               android:textColor="@color/color333"
               android:textSize="12sp"/>
+
+    <ImageView
+            android:id="@+id/dOrU"
+            android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toTopOf="@id/timeTV"
+               app:layout_constraintBottom_toBottomOf="@id/timeTV"
+               android:padding="12dp"
+               android:layout_marginRight="10dp"
+               android:src="@mipmap/down_icon"
+    />
     <android.support.v7.widget.CardView
             android:id="@+id/detailCV"
             android:layout_width="match_parent"
             android:layout_height="95dp"
+            android:visibility="gone"
             app:cardBackgroundColor="@color/white"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -45,7 +59,7 @@
                     android:id="@+id/locationTV"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="项目地址：朝阳。。。。。"
+                    android:text="项目地址：北京市朝阳区酒仙桥路8号院"
                     android:gravity="left"
                     android:textColor="@color/color333"
                     android:textSize="12sp"
@@ -56,6 +70,7 @@
                     android:id="@+id/locationIconIV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:src="@mipmap/location_icon"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintRight_toRightOf="parent"/>
             <TextView

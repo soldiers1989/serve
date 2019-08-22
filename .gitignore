@@ -20,3 +20,5 @@ app/release/output.json
 .idea/inspectionProfiles/Project_Default.xml
 .idea/codeStyles/codeStyleConfig.xml
 .idea/codeStyles/Project.xml
+app/release/app-release.rar
+app/release/app-release.apk

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+>
+
+    <TextView
+            android:id="@+id/timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="上午 08:00"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/color666"
+            android:textSize="11sp"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="36dp"
+              android:text="上门量房"
+              android:gravity="center"
+              app:layout_constraintLeft_toRightOf="@id/timeTV"
+              android:layout_marginLeft="16dp"
+              android:textColor="@color/color333"
+              android:textSize="12sp"/>
+
+    <ImageView
+            android:id="@+id/dOrU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/timeTV"
+            app:layout_constraintBottom_toBottomOf="@id/timeTV"
+            android:padding="12dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/down_icon"
+    />
+    <android.support.v7.widget.CardView
+            android:id="@+id/detailCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            android:visibility="gone"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
+            app:layout_constraintTop_toBottomOf="@id/timeTV">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+        >
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="标题"
+                    android:gravity="left"
+                    android:textColor="@color/color333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/imageRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="4"
+                    app:layout_constraintTop_toBottomOf="@id/title"
+                    android:layout_marginTop="10dp">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+            app:layout_constraintTop_toBottomOf="@id/detailCV"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorFFE"/>
+</android.support.constraint.ConstraintLayout>

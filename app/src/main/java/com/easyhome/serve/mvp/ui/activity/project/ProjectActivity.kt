@@ -155,7 +155,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
 
 
         serveRV.adapter = ProjectServeAdapter(arrayListOf("", "", "", "", "", "", "", ""))
-        dataRV.adapter = WaitThingAdapter(arrayListOf("", "", "", "", "", "", "", "", "", ""))
+        dataRV.adapter = DataAdapter(arrayListOf("", "", "", "", "", "", ""))
         workerRV.adapter = WorkerAdapter(arrayListOf("", "", "", "", "", ""))
     }
 

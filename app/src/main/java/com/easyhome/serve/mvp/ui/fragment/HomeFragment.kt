@@ -1,18 +1,14 @@
 package com.easyhome.serve.mvp.ui.fragment
 
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.Rect
 import android.os.Bundle
 import android.support.v4.widget.NestedScrollView
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import com.bigkoo.convenientbanner.ConvenientBanner
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator
-import com.bigkoo.convenientbanner.holder.Holder
-import com.bigkoo.convenientbanner.listener.OnPageChangeListener
+import android.view.animation.AnimationUtils
 import com.jess.arms.base.BaseActivity
 
 import com.jess.arms.di.component.AppComponent
@@ -24,15 +20,12 @@ import com.easyhome.serve.mvp.contract.fragment.HomeContract
 import com.easyhome.serve.mvp.presenter.fragment.HomePresenter
 
 import com.easyhome.serve.R
-import com.easyhome.serve.api.RequestCodeInfo
 import com.easyhome.serve.app.base.JRBaseFragment
-import com.easyhome.serve.app.extension.loadImage
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.ScheduleActivity
 import com.easyhome.serve.mvp.ui.activity.project.AddTaskActivity
 import com.easyhome.serve.mvp.ui.activity.project.MapActivity
-import com.easyhome.serve.mvp.ui.activity.search.CityPickerActivity
 import com.easyhome.serve.mvp.ui.adapter.*
 import com.haibin.calendarview.Calendar
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -101,9 +94,18 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
 
         //此方法在巨大的数据量上不影响遍历性能，推荐使用
         mCalendarView.setSchemeDate(map)
+        // mCalendarView.setBackground(Color.parseColor("#ffffff"),Color.parseColor("#3669F8"),Color.parseColor("#ffffff"))
 
+        dateTV.text="${mCalendarView.curYear}年${mCalendarView.curMonth}月"
+        up.singleClick {
+            mCalendarView.scrollToPre()
+           // dateTV.text="${mCalendarView.curYear}年${mCalendarView.curMonth}月"
+        }
 
-
+        down.singleClick {
+            mCalendarView.scrollToNext()
+           // dateTV.text="${mCalendarView.curYear}年${mCalendarView.curMonth}月"
+        }
 
 
         homeSV.setOnScrollChangeListener(object : NestedScrollView.OnScrollChangeListener {
@@ -122,7 +124,9 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                 if (scrollY > oldScrollY) {//上划
                     // println("上划-------")
 
-                    if (!bacV.getLocalVisibleRect(scrollBounds)) {//不可见
+                    if (!bacV.getLocalVisibleRect(scrollBounds) && topCalendar.visibility != View.VISIBLE) {//不可见
+                        val animation = AnimationUtils.loadAnimation(activity, R.anim.gradually_show);
+                        topCalendar.startAnimation(animation);
                         topCalendar.visibility = View.VISIBLE
                     }
 

@@ -22,8 +22,8 @@
               android:layout_height="36dp"
               android:text="上门量房"
               android:gravity="center"
-              app:layout_constraintLeft_toRightOf="@id/timeTV"
-              android:layout_marginLeft="16dp"
+              app:layout_constraintLeft_toLeftOf="parent"
+              android:layout_marginLeft="97dp"
               android:textColor="@color/color333"
               android:textSize="12sp"/>
 

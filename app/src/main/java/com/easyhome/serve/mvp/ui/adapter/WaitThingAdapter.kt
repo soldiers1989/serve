@@ -30,6 +30,10 @@ class WaitThingAdapter(data: List<String>) :
         }
 
         helper.addOnClickListener(R.id.locationTV)
+
+        if (helper.layoutPosition % 3 != 0) {
+            helper.setText(R.id.timeTV, "")
+        }
     }
 
 

@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.Rect
 import android.os.Bundle
 import android.support.v4.widget.NestedScrollView
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,13 @@ import java.util.HashMap
  * 工作台
  */
 class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
+
+
+    //年
+    var year: Int = 1970
+    //月
+    var month = 1
+
     override fun getMyself(): BaseActivity<*> = this.activity as MainActivity
 
     companion object {
@@ -62,6 +70,13 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
 
     override fun initData(savedInstanceState: Bundle?) {
 
+
+        val str1="总数<font color='#FF0000'>10</font>个";
+        itemTV2.setText(Html.fromHtml(str1));
+        val str2="未完成<font color='#FF0000'>3</font>个";
+        itemTV3.setText(Html.fromHtml(str2));
+
+
         schedule.singleClick {
             startActivity<ScheduleActivity>()
         }
@@ -83,8 +98,8 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
         waitThing.adapter = wAdapter
 
 
-        val year = mCalendarView.getCurYear()
-        val month = mCalendarView.getCurMonth()
+        year = mCalendarView.getCurYear()
+        month = mCalendarView.getCurMonth()
 
         val map = HashMap<String, Calendar>()
         map[getSchemeCalendar(year, month, 3, -0xbf24db, "假").toString()] =
@@ -96,15 +111,25 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
         mCalendarView.setSchemeDate(map)
         // mCalendarView.setBackground(Color.parseColor("#ffffff"),Color.parseColor("#3669F8"),Color.parseColor("#ffffff"))
 
-        dateTV.text="${mCalendarView.curYear}年${mCalendarView.curMonth}月"
+        dateTV.text = "${year}年${month}月"
         up.singleClick {
             mCalendarView.scrollToPre()
-           // dateTV.text="${mCalendarView.curYear}年${mCalendarView.curMonth}月"
+            month -= 1
+            if (month < 1) {
+                year -= 1
+                month = 12
+            }
+            dateTV.text = "${year}年${month}月"
         }
 
         down.singleClick {
             mCalendarView.scrollToNext()
-           // dateTV.text="${mCalendarView.curYear}年${mCalendarView.curMonth}月"
+            month += 1
+            if (month >12) {
+                year += 1
+                month = 1
+            }
+            dateTV.text = "${year}年${month}月"
         }
 
 

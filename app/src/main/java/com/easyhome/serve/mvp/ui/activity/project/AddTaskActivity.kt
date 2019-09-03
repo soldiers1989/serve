@@ -2,6 +2,7 @@ package com.easyhome.serve.mvp.ui.activity.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 
 import com.jess.arms.base.BaseActivity
 import com.jess.arms.di.component.AppComponent
@@ -16,6 +17,7 @@ import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.backgroundResource
 
 
 /**
@@ -43,7 +45,10 @@ class AddTaskActivity : JRBaseActivity<AddTaskPresenter>(), AddTaskContract.View
         ivPageBack.singleClick {
             killMyself()
         }
-        tvPageTitle.text = "添加日历"
+        tvPageTitle.text = "添加日程"
+        tvPageRight.text = "保存"
+        tvPageRight.visibility = View.VISIBLE
+        tvPageRight.backgroundResource = R.drawable.white_side
     }
 
 

@@ -2,6 +2,7 @@ package com.easyhome.serve.mvp.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 
 import com.jess.arms.base.BaseActivity
 import com.jess.arms.di.component.AppComponent
@@ -47,6 +48,7 @@ class ScheduleActivity : JRBaseActivity<SchedulePresenter>(), ScheduleContract.V
         }
         tvPageTitle.text = "我的日程"
         ivPageRight.setImageResource(R.mipmap.calendar_icon)
+        ivPageRight.visibility = View.VISIBLE
         scheduleRV.adapter = ScheduleAdapter(arrayListOf("", "", ""))
     }
 

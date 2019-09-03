@@ -64,13 +64,13 @@
                     android:layout_height="24dp"
                     android:paddingLeft="27dp"
                     android:layout_marginTop="17dp"
-                    android:text="消息消息消息消息消息"
+                    android:text="消息：XX客户已确认量房时间（2019-07-01）"
                     android:drawableLeft="@mipmap/message_hint_icon"
                     android:drawablePadding="5dp"
                     android:textColor="@color/color333"
                     android:gravity="center_vertical"
                     android:textSize="11sp"
-                    android:background="#1A080103"
+                    android:background="@color/white"
                     app:layout_constraintTop_toBottomOf="@id/statisticsCV"
             />
 

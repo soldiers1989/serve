@@ -68,11 +68,14 @@
             android:id="@+id/tabRV"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/searchCL"
-            app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+            app:spanCount="3"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager">
     </android.support.v7.widget.RecyclerView>
-
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/colorD8D"
+          app:layout_constraintBottom_toBottomOf="@id/tabRV"/>
     <android.support.v7.widget.RecyclerView
             android:id="@+id/messageRV"
             android:layout_width="match_parent"

@@ -16,6 +16,8 @@ import com.easyhome.serve.mvp.presenter.project.WorkingPlanPresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.ui.adapter.WorkingPlanAdapter
+import kotlinx.android.synthetic.main.activity_working_plan.*
 import kotlinx.android.synthetic.main.layout_title.*
 
 
@@ -46,6 +48,8 @@ class WorkingPlanActivity : JRBaseActivity<WorkingPlanPresenter>(), WorkingPlanC
         ivPageBack.singleClick { killMyself() }
         ivPageRight.setImageResource(R.mipmap.calendar_icon)
         ivPageRight.visibility = View.VISIBLE
+
+        planRV.adapter = WorkingPlanAdapter(arrayListOf("", "", ""))
 
     }
 

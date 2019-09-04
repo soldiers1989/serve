@@ -49,6 +49,7 @@ class DynamicActivity : JRBaseActivity<DynamicPresenter>(), DynamicContract.View
         }
         tvPageTitle.text = "动态"
         ivPageRight.visibility = View.VISIBLE
+        ivPageRight.setImageResource(R.mipmap.camera_icon)
         ivPageRight.singleClick {
             startActivity<AddDynamicActivity>()
         }

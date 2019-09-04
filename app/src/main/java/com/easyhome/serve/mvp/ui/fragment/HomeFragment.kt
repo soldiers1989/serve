@@ -71,10 +71,10 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
     override fun initData(savedInstanceState: Bundle?) {
 
 
-        val str1="总数<font color='#FF0000'>10</font>个";
-        itemTV2.setText(Html.fromHtml(str1));
-        val str2="未完成<font color='#FF0000'>3</font>个";
-        itemTV3.setText(Html.fromHtml(str2));
+        val str1="总数<font color='#FF0000'>10</font>个"
+        itemTV2.setText(Html.fromHtml(str1))
+        val str2="未完成<font color='#FF0000'>3</font>个"
+        itemTV3.setText(Html.fromHtml(str2))
 
 
         schedule.singleClick {

@@ -2,6 +2,7 @@ package com.easyhome.serve.mvp.ui.activity.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 
 import com.jess.arms.base.BaseActivity
 import com.jess.arms.di.component.AppComponent
@@ -110,7 +111,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 }
                 5 -> {
                     //施工进度
-
+                    startActivity<WorkingPlanActivity>()
                 }
                 6 -> {
                     //提醒客户
@@ -157,6 +158,24 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
         serveRV.adapter = ProjectServeAdapter(arrayListOf("", "", "", "", "", "", "", ""))
         dataRV.adapter = DataAdapter(arrayListOf("", "", "", "", "", "", ""))
         workerRV.adapter = WorkerAdapter(arrayListOf("", "", "", "", "", ""))
+
+        swIV.singleClick {
+            if (workerRV.visibility == View.VISIBLE) {
+                workerRV.visibility = View.GONE
+                swIV.setImageResource(R.mipmap.down_icon)
+            } else {
+                workerRV.visibility = View.VISIBLE
+                swIV.setImageResource(R.mipmap.up_icon)
+            }
+        }
+
+        itemRV.adapter = WorkingPlanItem1Adapter(
+            arrayListOf(
+                "项目编号：", "创建时间：", "量房时间：", "预交底时间：",
+                "实际合同签约日期：", "设计合同金额：", "施工签约日期：",
+                "施工合同金额：", "合同开工日期：", "合同竣工日期：", "结算日期："
+            )
+        )
     }
 
 

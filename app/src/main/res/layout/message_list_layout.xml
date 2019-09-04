@@ -47,8 +47,8 @@
     <View
             android:id="@+id/fgV"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/colorFFE"
+            android:layout_height="2dp"
+            android:background="@drawable/line_stroke"
             app:layout_constraintTop_toBottomOf="@id/titleTV"
             android:layout_marginLeft="14dp"
             android:layout_marginRight="14dp"
@@ -79,6 +79,7 @@
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            android:drawableRight="@mipmap/more_icon"
             android:layout_marginRight="14dp"
             android:layout_marginBottom="6dp"
     />

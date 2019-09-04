@@ -212,6 +212,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.MapActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.project.WorkingPlanActivity">
+        </activity>
     </application>
 
 </manifest>

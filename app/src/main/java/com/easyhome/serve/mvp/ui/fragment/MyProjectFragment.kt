@@ -20,10 +20,12 @@ import com.easyhome.serve.mvp.presenter.fragment.MyProjectPresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.model.entity.MPair
 import com.easyhome.serve.mvp.ui.activity.project.MapActivity
 import com.easyhome.serve.mvp.ui.activity.project.ProjectActivity
 import com.easyhome.serve.mvp.ui.adapter.CitySelectorAdapter
 import com.easyhome.serve.mvp.ui.adapter.MyProjectAdapter
+import com.easyhome.serve.mvp.ui.adapter.SelectItemAdapter
 import com.easyhome.serve.util.StringUtil
 import kotlinx.android.synthetic.main.fragment_my_project.*
 import kotlinx.android.synthetic.main.layout_title.*
@@ -63,18 +65,60 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
         }
         adapter.setOnItemChildClickListener { adapter, view, position ->
 
-            when(view.id){
-                R.id.nameTV->{
+            when (view.id) {
+                R.id.nameTV -> {
                     startActivity<MapActivity>()
                 }
             }
         }
 
+        val d1 = arrayListOf(
+            MPair(true, "全部"),
+            MPair(false, "未发起"),
+            MPair(false, "已发起"),
+            MPair(false, "已确认")
+        )
+        val adapter1 = SelectItemAdapter(d1)
+        adapter1.setOnItemClickListener { adapter, view, position ->
+            d1.forEachIndexed { index, mPair ->
+                var b = index == position
+                mPair.first = b
+            }
 
+            adapter1.notifyDataSetChanged()
+        }
+        selectRV1.adapter = adapter1
+        val d2 = arrayListOf(
+            MPair(true, "全部"),
+            MPair(false, "未发起"),
+            MPair(false, "已发起"),
+            MPair(false, "已指派"),
+            MPair(false, "已确认")
+        )
+        val adapter2 = SelectItemAdapter(d2)
+        adapter2.setOnItemClickListener { adapter, view, position ->
+            d2.forEachIndexed { index, mPair ->
+                var b = index == position
+                mPair.first = b
+            }
+
+            adapter2.notifyDataSetChanged()
+        }
+        selectRV2.adapter = adapter2
+        val d3 = arrayListOf(
+            MPair(true, "全部"), MPair(false, "未开工"), MPair(false, "已开工"), MPair(false, "隐藏"),
+            MPair(false, "中期"), MPair(false, "基础"), MPair(false, "竣工"), MPair(false, "结算")
+        )
+        val adapter3 = SelectItemAdapter(d3)
+        adapter3.setOnItemClickListener { adapter, view, position ->
+            d3.forEachIndexed { index, mPair ->
+                var b = index == position
+                mPair.first = b
+            }
+            adapter3.notifyDataSetChanged()
+        }
+        selectRV3.adapter = adapter3
         projetRV.adapter = adapter
-        labels1.setLabels(StringUtil.getLabels1())
-        labels2.setLabels(StringUtil.getLabels2())
-        labels3.setLabels(StringUtil.getLabels3())
         filtrateTV.singleClick {
             if (labelsLL.visibility == View.VISIBLE)
                 labelsLL.visibility = View.GONE
@@ -91,22 +135,9 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
         province.adapter = CitySelectorAdapter(arrayListOf("省", "省", "省", "省", "省"))
         city.adapter = CitySelectorAdapter(arrayListOf("市", "市", "市", "市", "市"))
         reset.singleClick {
-            labels1.clearAllSelect()
-            labels2.clearAllSelect()
-            labels3.clearAllSelect()
-        }
-        labels1.setOnLabelClickListener() { textView: TextView, any: Any, i: Int ->
-
 
         }
-        labels2.setOnLabelClickListener() { textView: TextView, any: Any, i: Int ->
 
-
-        }
-        labels3.setOnLabelClickListener() { textView: TextView, any: Any, i: Int ->
-
-
-        }
         confirm.singleClick {
             labelsLL.visibility = View.GONE
         }

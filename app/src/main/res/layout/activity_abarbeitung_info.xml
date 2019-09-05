@@ -142,7 +142,9 @@
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v4.widget.NestedScrollView>
-    <TextView android:layout_width="0dp"
+    <TextView
+            android:id="@+id/total"
+            android:layout_width="0dp"
               android:layout_height="49dp"
               android:paddingLeft="12dp"
               android:text="合计:罚款999元 扣10分"

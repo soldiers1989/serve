@@ -165,7 +165,7 @@
                   android:gravity="center_vertical"
                   android:textColor="@color/black"
                   android:textSize="15sp"
-                  android:drawableRight="@mipmap/down_icon"/>
+                 />
         <View android:layout_width="match_parent"
               android:layout_height="1dp"
               android:layout_marginLeft="20dp"
@@ -173,6 +173,29 @@
               android:background="@color/colorFFE"/>
         <android.support.v7.widget.RecyclerView
                 android:id="@+id/order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="10dp"
+              android:background="@color/colorFFE"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="37dp"
+                  android:paddingLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:text="保修政策"
+                  android:gravity="center_vertical"
+                  android:textColor="@color/black"
+                  android:textSize="15sp"
+                  />
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:background="@color/colorFFE"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/afterSaleRV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>

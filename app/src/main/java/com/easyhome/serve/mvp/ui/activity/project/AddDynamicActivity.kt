@@ -45,9 +45,9 @@ class AddDynamicActivity : JRBaseActivity<AddDynamicPresenter>(), AddDynamicCont
 
     override fun initData(savedInstanceState: Bundle?) {
         tvPageTitle.text = "发布动态"
-        tvPageRight.visibility = View.VISIBLE
-        tvPageRight.text = "发布"
-        tvPageRight.singleClick {
+        ivPageRight.visibility = View.VISIBLE
+        ivPageRight.setImageResource(R.mipmap.question_icon)
+        ivPageRight.singleClick {
 
         }
         node.singleClick {

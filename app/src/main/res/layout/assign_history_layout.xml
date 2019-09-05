@@ -6,13 +6,18 @@
         android:layout_height="wrap_content">
 
 
-    <ImageView
+    <TextView
             android:id="@+id/indicate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/indicate_icon"
+            android:background="@mipmap/indicate_icon"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
+            android:text="1"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="25dp"/>
     <View

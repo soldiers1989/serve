@@ -52,11 +52,11 @@ class MaterialsOrderInfoActivity : JRBaseActivity<MaterialsOrderInfoPresenter>()
             killMyself()
         }
         tvPageTitle.text = "订单详情"
-        tvPageRight.text = "添加商品"
+        tvPageRight.text = "提醒发货"
         tvPageRight.visibility = View.VISIBLE
         tvPageRight.setBackgroundResource(R.drawable.white_side)
         tvPageRight.singleClick {
-            startActivity<EditCommodityInfoActivity>()
+            //startActivity<EditCommodityInfoActivity>()
         }
         consumer.adapter = PInfoAdapter(
             arrayListOf(
@@ -91,6 +91,12 @@ class MaterialsOrderInfoActivity : JRBaseActivity<MaterialsOrderInfoPresenter>()
                 "交易门店：111",
                 "订单类型：套餐",
                 "订单金额：99999元"
+            )
+        )
+        afterSaleRV.adapter = PInfoAdapter(
+            arrayListOf(
+                "保修五年",
+                "售后电话：010-6769789"
             )
         )
     }

@@ -2,6 +2,7 @@ package com.easyhome.serve.mvp.ui.activity.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
 import android.view.View
 
 import com.jess.arms.base.BaseActivity
@@ -49,8 +50,11 @@ class NewAbarbeitungActivity : JRBaseActivity<NewAbarbeitungPresenter>(), NewAba
         ivPageBack.singleClick { killMyself() }
         submit.text = "提交"
         infoRV.adapter = PInfoAdapter(arrayListOf("", "", "", "", ""))
-        abarbeitungRV.adapter = AddAbarbeitungAdapter(arrayListOf("", "", "", "", ""))
+        abarbeitungRV.adapter = AddAbarbeitungAdapter(arrayListOf("", "", ""))
         photoRV.adapter = PhotoAdapter(arrayListOf("", "", "", "", ""))
+
+
+        total.setText(Html.fromHtml("合计:<font color='#3669F8'>罚款999元 扣10分</font>"))
     }
 
 

@@ -50,11 +50,57 @@
                     android:id="@+id/type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="今天"
+                    android:text="中期验收"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/type"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                        android:id="@+id/stateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="审核通过"
+                        android:visibility="gone"
+                        android:textColor="@color/color555"
+                        android:textSize="8sp"/>
+                <TextView
+                        android:id="@+id/auditTV"
+                        android:layout_width="39dp"
+                        android:layout_height="17dp"
+                        android:text="审核"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:background="@drawable/label_bac"
+                        android:textSize="8sp"/>
+
+                <ImageView
+                        android:id="@+id/resultIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:src="@mipmap/refuse_icon"/>
+                <TextView
+                        android:id="@+id/resultTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="动态被驳回"
+                        android:textColor="@color/color999"
+                        app:layout_constraintTop_toTopOf="@id/resultIV"
+                        app:layout_constraintBottom_toBottomOf="@id/resultIV"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:textSize="8sp"/>
+
+            </android.support.constraint.ConstraintLayout>
             <TextView
                     android:id="@+id/administrator"
                     android:layout_width="wrap_content"

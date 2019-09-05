@@ -4,8 +4,9 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/labels_bac_d"
-        android:padding="10dp">
+        android:background="@drawable/bac_fff85636_2"
+        android:layout_marginTop="10dp"
+>
 
     <TextView
             android:id="@+id/customerTV"
@@ -15,7 +16,19 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             android:textStyle="bold"
+            android:padding="10dp"
             app:layout_constraintTop_toTopOf="parent"
+    />
+    <TextView
+            android:id="@+id/stateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待处理"
+            android:textColor="#FFF85636"
+            android:textSize="11sp"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
     />
     <View
             android:id="@+id/fgV"
@@ -32,4 +45,16 @@
             app:layoutManager="android.support.v7.widget.LinearLayoutManager">
 
     </android.support.v7.widget.RecyclerView>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="处理完成"
+            android:background="@drawable/bac_fff85636"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/issueRV"
+
+    />
 </android.support.constraint.ConstraintLayout>

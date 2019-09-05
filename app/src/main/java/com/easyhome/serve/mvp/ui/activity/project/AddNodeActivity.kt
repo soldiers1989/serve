@@ -44,11 +44,11 @@ class AddNodeActivity : JRBaseActivity<AddNodePresenter>(), AddNodeContract.View
 
     override fun initData(savedInstanceState: Bundle?) {
         tvPageTitle.text = "添加节点"
-        tvPageRight.visibility = View.VISIBLE
+        /*tvPageRight.visibility = View.VISIBLE
         tvPageRight.text = "发布"
         tvPageRight.singleClick {
 
-        }
+        }*/
         selectnode.adapter = AddDynamicAdapter(arrayListOf("", "", "", "", "", "", "", "", "", ""))
     }
 

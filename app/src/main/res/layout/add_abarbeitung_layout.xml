@@ -10,8 +10,10 @@
         android:layout_height="157dp">
 
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/abarbeitungCL1"
             android:layout_width="match_parent"
             android:layout_height="123dp"
+            android:visibility="gone"
             android:background="@drawable/labels_bac_d"
     >
 
@@ -66,7 +68,106 @@
         />
     </android.support.constraint.ConstraintLayout>
 
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/abarbeitungCL2"
+            android:layout_width="match_parent"
+            android:layout_height="123dp"
+            android:background="@drawable/labels_bac_d"
+    >
 
+
+        <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="整改问题:"
+                android:textSize="13sp"
+                android:textColor="@color/color222"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+        />
+        <TextView
+                android:id="@+id/content1"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:text="失败原因"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:drawableRight="@mipmap/down"
+                android:drawableTint="@color/color999"
+                android:textColor="@color/color666"
+                android:background="@drawable/label_bac"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/title1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/num1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+        />
+        <TextView
+                android:id="@+id/content2"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:text="失败原因"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:drawableRight="@mipmap/down"
+                android:drawableTint="@color/color999"
+                android:textColor="@color/color666"
+                android:background="@drawable/label_bac"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/content1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/num1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+        />
+        <TextView
+                android:id="@+id/content3"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:text="失败原因"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:drawableRight="@mipmap/down"
+                android:drawableTint="@color/color999"
+                android:textColor="@color/color666"
+                android:background="@drawable/label_bac"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/content2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/num1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+        />
+        <TextView
+                android:id="@+id/num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="60sp"
+                android:textColor="#E1E9FE"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/title1"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="10dp"/>
+
+        <ImageView
+                android:id="@+id/deleteIV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/delete_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+        />
+    </android.support.constraint.ConstraintLayout>
     <TextView
             android:id="@+id/minus"
             android:layout_width="wrap_content"
@@ -89,7 +190,6 @@
             app:layout_constraintRight_toLeftOf="@id/minus"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-    />
+            android:layout_marginBottom="10dp"/>
 
 </android.support.constraint.ConstraintLayout>

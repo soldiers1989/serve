@@ -18,6 +18,7 @@ import com.easyhome.serve.mvp.presenter.project.MaterialsListPresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.model.entity.MPair
 import com.easyhome.serve.mvp.ui.adapter.MaterialsOrderAdapter
 import com.easyhome.serve.mvp.ui.adapter.MaterialsTabAdapter
 import com.easyhome.serve.mvp.ui.adapter.MessageTabAdapter
@@ -53,8 +54,13 @@ class MaterialsListActivity : JRBaseActivity<MaterialsListPresenter>(), Material
             killMyself()
         }
         tvPageTitle.text = "材料详情"
-        val tabadapter = MaterialsTabAdapter(arrayListOf("代购", "外购"))
+        val data = arrayListOf(MPair(true, "代购"), MPair(false, "外购"))
+        val tabadapter = MaterialsTabAdapter(data)
         tabadapter.setOnItemChildClickListener { adapter, view, position ->
+            data.forEachIndexed { index, mPair ->
+                mPair.first = index == position
+            }
+            adapter.notifyDataSetChanged()
             vpProjectDataPage.currentItem = position
         }
         tabRV.adapter = tabadapter

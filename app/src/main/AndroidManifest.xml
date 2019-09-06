@@ -214,6 +214,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.project.WorkingPlanActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.ComplaintOrRepairsActivity">
+        </activity>
     </application>
 
 </manifest>

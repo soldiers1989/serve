@@ -10,6 +10,8 @@ class HomeStatistics2Adapter(data: List<String>) :
         (R.layout.home_top_statistics_layout_2, data) {
 
     override fun convert(helper: BaseViewHolder, item: String) {
+        helper.setVisible(R.id.hLine, helper.layoutPosition != data.size - 1)
+
     }
 
 

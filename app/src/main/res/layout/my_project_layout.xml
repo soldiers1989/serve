@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent" android:layout_height="166dp">
-    <android.support.v7.widget.CardView
+   <!-- <android.support.v7.widget.CardView
             android:id="@+id/detailCV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -14,11 +14,16 @@
             android:layout_marginTop="5dp"
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
-            app:layout_constraintTop_toBottomOf="@id/timeTV">
+            app:layout_constraintTop_toBottomOf="@id/timeTV">-->
 
         <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/extensively_bac"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:padding="10dp">
             <TextView
                     android:id="@+id/locationTV"
@@ -108,12 +113,13 @@
             />
             <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="47dp"
+                    android:layout_height="17dp"
                     android:text="项目经理"
-                    android:gravity="left"
+                    android:gravity="center"
                     android:textColor="@color/color888"
-                    android:textSize="12sp"
+                    android:background="@drawable/tag_bac_side"
+                    android:textSize="9sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/name"
                     app:layout_constraintRight_toRightOf="parent"
                     android:layout_marginLeft="10dp"
@@ -124,9 +130,9 @@
                     android:layout_height="14dp"
                     android:text="标签"
                     android:gravity="center"
-                    android:textColor="@color/color528"
-                    android:textSize="12sp"
-                    android:background="@drawable/rectangle_side_ff5"
+                    android:textColor="@color/color999"
+                    android:textSize="9sp"
+                    android:background="@drawable/tag_bac"
                     app:layout_constraintTop_toTopOf="@id/coverIV"
                     app:layout_constraintBottom_toBottomOf="@id/coverIV"
                     app:layout_constraintLeft_toRightOf="@id/coverIV"
@@ -137,9 +143,9 @@
                     android:layout_height="14dp"
                     android:text="标签"
                     android:gravity="center"
-                    android:textColor="@color/color5CD"
-                    android:background="@drawable/rectangle_side_5cd"
-                    android:textSize="12sp"
+                    android:textColor="@color/color999"
+                    android:background="@drawable/tag_bac"
+                    android:textSize="9sp"
                     app:layout_constraintTop_toTopOf="@id/coverIV"
                     app:layout_constraintBottom_toBottomOf="@id/coverIV"
                     app:layout_constraintLeft_toRightOf="@id/tagTV1"
@@ -150,9 +156,9 @@
                     android:layout_height="14dp"
                     android:text="标签"
                     android:gravity="center"
-                    android:background="@drawable/rectangle_side_f1a"
-                    android:textColor="@color/colorF0A"
-                    android:textSize="12sp"
+                    android:background="@drawable/tag_bac"
+                    android:textColor="@color/color999"
+                    android:textSize="9sp"
                     app:layout_constraintTop_toTopOf="@id/coverIV"
                     app:layout_constraintBottom_toBottomOf="@id/coverIV"
                     app:layout_constraintLeft_toRightOf="@id/tagTV2"
@@ -179,10 +185,19 @@
                     android:drawableLeft="@mipmap/share_icon"
                     android:textColor="@color/color222"
                     android:textSize="12sp"
+                    android:layout_marginRight="5dp"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
             />
+            <View android:layout_width="5dp"
+                  android:layout_height="5dp"
+            android:background="@drawable/dot_red"
+                  app:layout_constraintBottom_toTopOf="@id/detailTV"
+                  app:layout_constraintLeft_toRightOf="@id/detailTV"
+                  app:layout_constraintRight_toRightOf="@id/detailTV"
+                  app:layout_constraintTop_toTopOf="@id/detailTV"
+            />
         </android.support.constraint.ConstraintLayout>
 
-    </android.support.v7.widget.CardView>
+    <!--</android.support.v7.widget.CardView>-->
 </android.support.constraint.ConstraintLayout>

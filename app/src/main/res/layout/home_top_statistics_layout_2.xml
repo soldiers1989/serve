@@ -23,7 +23,9 @@
               android:layout_marginRight="20dp"
               android:text="21"
     />
-    <View android:layout_width="1dp"
+    <View
+            android:id="@+id/hLine"
+            android:layout_width="1dp"
           android:layout_height="34dp"
           android:background="@color/color366"
           app:layout_constraintRight_toRightOf="parent"

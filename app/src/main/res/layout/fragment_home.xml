@@ -286,10 +286,13 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 app:cardBackgroundColor="@color/white"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="55dp"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="6dp"
-                app:layout_constraintTop_toTopOf="@+id/topv">
+                app:layout_constraintTop_toTopOf="@+id/topv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+        >
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:orientation="vertical"

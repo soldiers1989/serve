@@ -5,20 +5,19 @@ import android.widget.ImageView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.easyhome.serve.R
+import com.easyhome.serve.mvp.model.entity.MPair
 
-class MessageTabAdapter(data: List<String>) :
-    BaseQuickAdapter<String, BaseViewHolder>
+class MessageTabAdapter(data: List<MPair<Boolean,String>>) :
+    BaseQuickAdapter<MPair<Boolean,String>, BaseViewHolder>
         (R.layout.message_tab_layout, data) {
 
-    override fun convert(helper: BaseViewHolder, item: String) {
+    override fun convert(helper: BaseViewHolder, item: MPair<Boolean,String>) {
 
-        if (helper.layoutPosition == data.size - 1) {
-            helper.setVisible(R.id.verticalLine, false)
-        }
+            helper.setVisible(R.id.verticalLine, helper.layoutPosition != data.size - 1)
 
-        helper.setText(R.id.tabB, item)
+        helper.setText(R.id.tabB, item.second)
 
-        if (helper.layoutPosition % 2 == 1) {
+        if (item.first) {
             helper.setImageResource(R.id.mark, R.drawable.tab_s_icon)
             helper.setVisible(R.id.number, true)
             helper.setTextColor(R.id.tabB, Color.parseColor("#FF3669F8"))

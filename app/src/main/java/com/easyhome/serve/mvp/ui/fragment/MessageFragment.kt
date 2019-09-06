@@ -17,6 +17,7 @@ import com.easyhome.serve.mvp.presenter.fragment.MessagePresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseFragment
+import com.easyhome.serve.mvp.model.entity.MPair
 import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.notification.NotificationInfoActivity
 import com.easyhome.serve.mvp.ui.adapter.MessageListAdapter
@@ -53,7 +54,7 @@ class MessageFragment : JRBaseFragment<MessagePresenter>(), MessageContract.View
     }
 
     override fun initData(savedInstanceState: Bundle?) {
-        tabRV.adapter = MessageTabAdapter(arrayListOf("全部", "未读", "已读"))
+        tabRV.adapter = MessageTabAdapter(arrayListOf(MPair(true, "全部"), MPair(false, "未读"), MPair(false, "已读")))
 
         val msgAdapter = MessageListAdapter(arrayListOf("", "", ""))
         msgAdapter.setOnItemClickListener { adapter, view, position ->

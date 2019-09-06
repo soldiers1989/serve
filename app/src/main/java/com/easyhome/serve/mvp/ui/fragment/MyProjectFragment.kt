@@ -120,20 +120,42 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
         selectRV3.adapter = adapter3
         projetRV.adapter = adapter
         filtrateTV.singleClick {
+            locationCL.visibility = View.GONE
             if (labelsLL.visibility == View.VISIBLE)
                 labelsLL.visibility = View.GONE
             else
                 labelsLL.visibility = View.VISIBLE
         }
         cityTV.singleClick {
+            labelsLL.visibility = View.GONE
             if (locationCL.visibility == View.VISIBLE)
                 locationCL.visibility = View.GONE
             else
                 locationCL.visibility = View.VISIBLE
         }
 
-        province.adapter = CitySelectorAdapter(arrayListOf("省", "省", "省", "省", "省"))
-        city.adapter = CitySelectorAdapter(arrayListOf("市", "市", "市", "市", "市"))
+        val data1 = arrayListOf(MPair(true, "北京"), MPair(false, "河北"), MPair(false, "河南"), MPair(false, "天津"))
+
+        val data2 = arrayListOf(
+            arrayListOf(MPair(true, "北京")),
+            arrayListOf(MPair(true, "石家庄"), MPair(true, "保定"), MPair(true, "承德"), MPair(true, "邯郸")),
+            arrayListOf(MPair(true, "郑州"), MPair(true, "开封"), MPair(true, "安阳"), MPair(true, "周口")),
+            arrayListOf(MPair(true, "天津"))
+
+        )
+        val pAdapter = CitySelectorAdapter(data1)
+        val cAdapter = CitySelectorAdapter(data2[1])
+        pAdapter.setOnItemClickListener { adapter, view, position ->
+
+            data1.forEachIndexed { index, mPair ->
+                mPair.first = index == position
+            }
+
+            adapter.notifyDataSetChanged()
+            cAdapter.setNewData(data2[position])
+        }
+        province.adapter = pAdapter
+        city.adapter = cAdapter
         reset.singleClick {
 
         }

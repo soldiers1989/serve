@@ -54,7 +54,16 @@ class MessageFragment : JRBaseFragment<MessagePresenter>(), MessageContract.View
     }
 
     override fun initData(savedInstanceState: Bundle?) {
-        tabRV.adapter = MessageTabAdapter(arrayListOf(MPair(true, "全部"), MPair(false, "未读"), MPair(false, "已读")))
+
+        val tab = arrayListOf(MPair(true, "全部"), MPair(false, "未读"), MPair(false, "已读"))
+        val adapter = MessageTabAdapter(tab)
+        adapter.setOnItemClickListener { adapter, view, position ->
+            tab.forEachIndexed { index, mPair ->
+                mPair.first = index == position
+            }
+            adapter.notifyDataSetChanged()
+        }
+        tabRV.adapter = adapter
 
         val msgAdapter = MessageListAdapter(arrayListOf("", "", ""))
         msgAdapter.setOnItemClickListener { adapter, view, position ->

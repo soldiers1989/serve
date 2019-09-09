@@ -15,14 +15,13 @@
           android:visibility="gone"
     />
 
-    <RadioButton
+    <TextView
             android:id="@+id/tabB"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:text="全部"
             android:button="@null"
             android:gravity="center"
-            android:enabled="false"
             android:textSize="16sp"
             android:textStyle="bold"
             android:drawablePadding="10dp"

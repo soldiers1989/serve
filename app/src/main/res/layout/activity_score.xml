@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:background="@color/white"
+            android:text="评分节点"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+    <View
+            android:id="@+id/hLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorD8D"
+            app:layout_constraintTop_toBottomOf="@id/title"
+    />
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/scoreRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/hLine"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="61dp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:background="@color/color366"
+              android:text="提交"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="17sp"
+    />
+
+</android.support.constraint.ConstraintLayout>

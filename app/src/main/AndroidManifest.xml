@@ -216,6 +216,8 @@
         </activity>
         <activity android:name=".mvp.ui.activity.ComplaintOrRepairsActivity">
         </activity>
+        <activity android:name=".mvp.ui.activity.ScoreActivity">
+        </activity>
     </application>
 
 </manifest>

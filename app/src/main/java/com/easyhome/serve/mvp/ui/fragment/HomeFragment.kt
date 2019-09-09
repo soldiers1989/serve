@@ -112,6 +112,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
         // mCalendarView.setBackground(Color.parseColor("#ffffff"),Color.parseColor("#3669F8"),Color.parseColor("#ffffff"))
 
         dateTV.text = "${year}年${month}月"
+        topTime.text = "${year}年${month}月"
         up.singleClick {
             mCalendarView.scrollToPre()
             month -= 1
@@ -120,6 +121,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                 month = 12
             }
             dateTV.text = "${year}年${month}月"
+            topTime.text = "${year}年${month}月"
         }
 
         down.singleClick {
@@ -130,6 +132,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                 month = 1
             }
             dateTV.text = "${year}年${month}月"
+            topTime.text = "${year}年${month}月"
         }
 
 

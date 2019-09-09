@@ -2,6 +2,7 @@ package com.easyhome.serve.mvp.ui.activity.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
 
 import com.jess.arms.base.BaseActivity
 import com.jess.arms.di.component.AppComponent
@@ -49,6 +50,9 @@ class ApplyPostponeActivity : JRBaseActivity<ApplyPostponePresenter>(), ApplyPos
         tvPageTitle.text = "延期申请"
         nodeRV.adapter = ANodeAdapter(arrayListOf("", "", ""))
         photoRV.adapter = PhotoAdapter(arrayListOf(""))
+        poscontent1.text = Html.fromHtml("延期申请编号：<font color='#777777'>1234</font>")
+        poscontent2.text = Html.fromHtml("计划施工日期：<font color='#777777'>2019-05-12  ~  2019-05-22</font>")
+        poscontent4.text = Html.fromHtml("延期开始日期：<font color='#777777'>点击设置日期</font>")
     }
 
 

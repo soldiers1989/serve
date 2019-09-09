@@ -12,7 +12,7 @@ class WorkingPlanItem1Adapter(data: List<String>) :
         (R.layout.working_plan_item_layout_1, data) {
 
     override fun convert(helper: BaseViewHolder, item: String) {
-        val str1="${item}<font color='#FF777777'>2019年8月20日 - 2019年8月20日</font>";
+        val str1="${item}<font color='#777777'>2019年8月20日 - 2019年8月20日</font>";
         helper.setText(R.id.content,Html.fromHtml(str1))
     }
 

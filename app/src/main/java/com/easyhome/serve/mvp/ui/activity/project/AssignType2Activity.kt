@@ -49,15 +49,15 @@ class AssignType2Activity : JRBaseActivity<AssignType2Presenter>(), AssignType2C
         }
         tvPageTitle.text = "指派"
         workerRV.adapter = AssignWorkerAdapter(arrayListOf(
-            Pair("门店：","丽泽桥"),
-            Pair("客户顾问：","张三"),
-            Pair("设计师：","李四"),
-            Pair("材料员：","王五"),
-            Pair("区域经理：","狗蛋"),
-            Pair("装修管家：","点击选择人员"),
-            Pair("项目经理：","点击选择人员"),
-            Pair("工长：","点击选择人员"),
-            Pair("工人","")
+            Pair("门店：丽泽桥",false),
+            Pair("客户顾问：张三",false),
+            Pair("设计师：李四",false),
+            Pair("材料员：王五",false),
+            Pair("区域经理：狗蛋",true),
+            Pair("装修管家：点击选择人员",false),
+            Pair("项目经理：点击选择人员",false),
+            Pair("工长：点击选择人员",false),
+            Pair("工人：",false)
         )
         )
         history.adapter = AssignHistoryAdapter(arrayListOf("", "", ""))

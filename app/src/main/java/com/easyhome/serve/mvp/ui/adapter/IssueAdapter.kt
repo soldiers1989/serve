@@ -10,7 +10,7 @@ class IssueAdapter(data: List<String>) :
         (R.layout.issue_layout, data) {
 
     override fun convert(helper: BaseViewHolder, item: String) {
-        helper.getView<RecyclerView>(R.id.issueRV).adapter = PInfoAdapter(arrayListOf("", "", ""))
+        helper.getView<RecyclerView>(R.id.issueRV).adapter = PInfoAdapter(arrayListOf("问题类型：一级问题", "问题描述：这样那样的", "负责人：张三"))
     }
 
 

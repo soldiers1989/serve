@@ -49,10 +49,10 @@ class WorkOrderInfoActivity : JRBaseActivity<WorkOrderInfoPresenter>(), WorkOrde
             killMyself()
         }
         tvPageTitle.text = "工单页"
-        dateRV.adapter = PInfoAdapter(arrayListOf("", "", ""))
-        info.adapter = PInfoAdapter(arrayListOf("", "", ""))
-        workorderRV.adapter = IssueAdapter(arrayListOf("", "", ""))
-        historyRV.adapter = HistoryAdapter(arrayListOf("", "", ""))
+        dateRV.adapter = PInfoAdapter(arrayListOf("签约日期：2019-06-28", "竣工日期：2019-06-28", "结算日期：2019-06-28"))
+        info.adapter = PInfoAdapter(arrayListOf("工单信息：1111", "工单类型：客诉", "发起人：客服-张三"))
+        workorderRV.adapter = IssueAdapter(arrayListOf(""))
+        historyRV.adapter = HistoryAdapter(arrayListOf(""))
     }
 
 

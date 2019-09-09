@@ -101,14 +101,14 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
         year = mCalendarView.getCurYear()
         month = mCalendarView.getCurMonth()
 
-        val map = HashMap<String, Calendar>()
-        map[getSchemeCalendar(year, month, 3, -0xbf24db, "假").toString()] =
-                getSchemeCalendar(year, month, 3, -0xbf24db, "假")
-        map[getSchemeCalendar(year, month, 6, -0x196ec8, "事").toString()] =
-                getSchemeCalendar(year, month, 6, -0x196ec8, "事")
+        /*val map = HashMap<String, Calendar>()
+        map[getSchemeCalendar(year, month, 3, -0x02EA0D, "").toString()] =
+                getSchemeCalendar(year, month, 3, -0x02EA0D, "")
+        map[getSchemeCalendar(year, month, 6, -0x196ec8, "").toString()] =
+                getSchemeCalendar(year, month, 6, -0x196ec8, "")
 
         //此方法在巨大的数据量上不影响遍历性能，推荐使用
-        mCalendarView.setSchemeDate(map)
+        mCalendarView.setSchemeDate(map)*/
         // mCalendarView.setBackground(Color.parseColor("#ffffff"),Color.parseColor("#3669F8"),Color.parseColor("#ffffff"))
 
         dateTV.text = "${year}年${month}月"
@@ -188,8 +188,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
         calendar.schemeColor = color//如果单独标记颜色、则会使用这个颜色
         calendar.scheme = text
         calendar.addScheme(Calendar.Scheme())
-        calendar.addScheme(-0xff7800, "假")
-        calendar.addScheme(-0xff7800, "节")
+        calendar.addScheme(-0xff0000, "")
         return calendar
     }
 

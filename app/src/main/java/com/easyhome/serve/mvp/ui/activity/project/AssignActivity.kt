@@ -49,10 +49,10 @@ class AssignActivity : JRBaseActivity<AssignPresenter>(), AssignContract.View {
         tvPageTitle.text = "指派"
         workerRV.adapter = AssignWorkerAdapter(
             arrayListOf(
-                Pair("门店：", "丽泽桥"),
-                Pair("客户顾问：", "张三"),
-                Pair("设计师：", "李四"),
-                Pair("材料员：", "点击选择人员")
+                Pair("门店：丽泽桥", true),
+                Pair("客户顾问：张三", true),
+                Pair("设计师：李四", true),
+                Pair("材料员：点击选择人员", false)
             )
         )
         history.adapter = AssignHistoryAdapter(arrayListOf("", "", ""))

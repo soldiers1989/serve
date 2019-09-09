@@ -121,17 +121,24 @@ class MyProjectFragment : BaseFragment<MyProjectPresenter>(), MyProjectContract.
         projetRV.adapter = adapter
         filtrateTV.singleClick {
             locationCL.visibility = View.GONE
-            if (labelsLL.visibility == View.VISIBLE)
+            if (labelsLL.visibility == View.VISIBLE) {
                 labelsLL.visibility = View.GONE
-            else
+                impede.visibility = View.GONE
+            } else {
                 labelsLL.visibility = View.VISIBLE
+                impede.visibility = View.VISIBLE
+            }
         }
         cityTV.singleClick {
             labelsLL.visibility = View.GONE
-            if (locationCL.visibility == View.VISIBLE)
+            if (locationCL.visibility == View.VISIBLE) {
                 locationCL.visibility = View.GONE
-            else
+                impede.visibility = View.GONE
+            } else {
                 locationCL.visibility = View.VISIBLE
+                impede.visibility = View.VISIBLE
+
+            }
         }
 
         val data1 = arrayListOf(MPair(true, "北京"), MPair(false, "河北"), MPair(false, "河南"), MPair(false, "天津"))

@@ -56,6 +56,7 @@
             android:layout_marginRight="12dp"
             app:layout_constraintTop_toBottomOf="@id/fgV"/>
     <TextView
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="发起时间：2019-05-01"
@@ -67,9 +68,10 @@
             android:layout_marginRight="12dp"
             app:layout_constraintTop_toBottomOf="@id/fgV"/>
     <TextView
+            android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="类型： -类型1\n-类型2\n-类型3"
+            android:text="类型：  类型类型1类型1类型1类型11\n -类型2类型2类型2类型2 \n-类型3... "
             android:layout_marginLeft="10dp"
             android:padding="5dp"
             android:textSize="12sp"

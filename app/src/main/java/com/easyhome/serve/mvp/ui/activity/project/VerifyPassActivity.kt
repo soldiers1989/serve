@@ -46,16 +46,16 @@ class VerifyPassActivity : JRBaseActivity<VerifyPassPresenter>(), VerifyPassCont
             killMyself()
         }
         tvPageTitle.text = "验收"
-        if(intent.getIntExtra("position",0)%2==0) {
+        if (intent.getIntExtra("position", 0) % 2 == 0) {
             contentRV.adapter = VerifyPassAdapter(
                 arrayListOf(
                     VerifyPassAdapter.Bean("节点验收:", "中期验收"),
                     VerifyPassAdapter.Bean("实际验收日期：", "2019-07-20"),
-                    VerifyPassAdapter.Bean("验收照片：", "", arrayListOf("", "", "", "")),
-                    VerifyPassAdapter.Bean("整改建议/备注：", "整改建议/备注：")
+                    VerifyPassAdapter.Bean("验收照片：", "", arrayListOf("")),
+                    VerifyPassAdapter.Bean("整改建议/备注：", "打扫的要干净利索！")
                 )
             )
-        }else{
+        } else {
 
             contentRV.adapter = VerifyPassAdapter(
                 arrayListOf(
@@ -63,8 +63,10 @@ class VerifyPassActivity : JRBaseActivity<VerifyPassPresenter>(), VerifyPassCont
                     VerifyPassAdapter.Bean("验收人：", "郑哈哈哈哈哈"),
                     VerifyPassAdapter.Bean("实际验收日期：", "2019-07-20"),
                     VerifyPassAdapter.Bean("验收结果：", "验收不通过"),
-                    VerifyPassAdapter.Bean("验收不通过", " 类型一类型一类型一类型一 \n" +
-                            "-类型二类型二类型二类型二类型二\n-类型三类型三类型三"),
+                    VerifyPassAdapter.Bean(
+                        "验收不通过", " 类型一类型一类型一类型一 \n" +
+                                "-类型二类型二类型二类型二类型二\n-类型三类型三类型三"
+                    ),
                     VerifyPassAdapter.Bean("备注: ", "备注备注备注"),
                     VerifyPassAdapter.Bean("下次验收日期：", "2019-07-22"),
                     VerifyPassAdapter.Bean("！验收照片：", "", arrayListOf("", "", "", "")),

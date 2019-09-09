@@ -30,7 +30,8 @@
                 android:textColor="@color/black"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:hint=""
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
                 android:textSize="13sp"
         />
 
@@ -139,6 +140,8 @@
                 android:padding="5dp"
                 android:textColor="@color/black"
                 android:textSize="13sp"
+                android:gravity="left"
+                android:paddingLeft="5dp"
                 android:background="@drawable/labels_bac_d"
                 app:layout_constraintTop_toTopOf="@id/title6"
                 app:layout_constraintLeft_toRightOf="@id/title6"

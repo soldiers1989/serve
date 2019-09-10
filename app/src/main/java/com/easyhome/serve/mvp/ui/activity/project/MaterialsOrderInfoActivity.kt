@@ -58,6 +58,9 @@ class MaterialsOrderInfoActivity : JRBaseActivity<MaterialsOrderInfoPresenter>()
         tvPageRight.singleClick {
             //startActivity<EditCommodityInfoActivity>()
         }
+        info.singleClick {
+            startActivity<EditMaterialsInfoActivity>()
+        }
         consumer.adapter = PInfoAdapter(
             arrayListOf(
                 "测量日期：2019-07-21",

@@ -16,9 +16,13 @@ import com.easyhome.serve.mvp.presenter.SchedulePresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.ui.activity.project.MapActivity
 import com.easyhome.serve.mvp.ui.adapter.ScheduleAdapter
+import com.easyhome.serve.mvp.ui.adapter.WaitThingAdapter
 import kotlinx.android.synthetic.main.activity_schedule.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.support.v4.startActivity
 
 
 /**
@@ -26,6 +30,8 @@ import kotlinx.android.synthetic.main.layout_title.*
  */
 class ScheduleActivity : JRBaseActivity<SchedulePresenter>(), ScheduleContract.View {
     override fun getMyself(): BaseActivity<*> = this
+    override fun isUseParentLayout(): Boolean = false
+
 
     override fun setupActivityComponent(appComponent: AppComponent) {
         DaggerScheduleComponent //如找不到该类,请编译一下项目
@@ -50,6 +56,25 @@ class ScheduleActivity : JRBaseActivity<SchedulePresenter>(), ScheduleContract.V
         ivPageRight.setImageResource(R.mipmap.calendar_icon)
         ivPageRight.visibility = View.VISIBLE
         scheduleRV.adapter = ScheduleAdapter(arrayListOf("", "", ""))
+
+        ivPageRight.singleClick {
+            topCalendar.visibility = View.VISIBLE
+            listRV.visibility = View.GONE
+        }
+        schedule2.singleClick {
+            topCalendar.visibility = View.GONE
+            listRV.visibility = View.VISIBLE
+        }
+        val wAdapter = WaitThingAdapter(arrayListOf("", "", "", "", "", ""))
+        wAdapter.setOnItemChildClickListener { adapter, view, position ->
+
+            when (view.id) {
+                R.id.locationTV -> {
+                    startActivity<MapActivity>()
+                }
+            }
+        }
+        waitThing.adapter = wAdapter
     }
 
 

@@ -49,9 +49,9 @@ class UserDataActivity : JRBaseActivity<UserDataPresenter>(), UserDataContract.V
 
     override fun initData(savedInstanceState: Bundle?) {
         tvPageTitle.text = "个人资料"
-        userHeadIV.singleClick {
+       /* userHeadIV.singleClick {
             selectPicture(this)
-        }
+        }*/
        /* moreIV5.singleClick {
             startActivity<DeliveryAddressActivity>()
         }*/

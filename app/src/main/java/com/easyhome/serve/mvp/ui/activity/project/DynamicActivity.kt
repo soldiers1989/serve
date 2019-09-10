@@ -23,7 +23,7 @@ import org.jetbrains.anko.startActivity
 
 
 /**
- * 动态
+ * 施工动态
  */
 class DynamicActivity : JRBaseActivity<DynamicPresenter>(), DynamicContract.View {
     override fun getMyself(): BaseActivity<*> = this
@@ -47,7 +47,7 @@ class DynamicActivity : JRBaseActivity<DynamicPresenter>(), DynamicContract.View
         ivPageBack.singleClick {
             killMyself()
         }
-        tvPageTitle.text = "动态"
+        tvPageTitle.text = "施工动态"
         ivPageRight.visibility = View.VISIBLE
         ivPageRight.setImageResource(R.mipmap.camera_icon)
         ivPageRight.singleClick {

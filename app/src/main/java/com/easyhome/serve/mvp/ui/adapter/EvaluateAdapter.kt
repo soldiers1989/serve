@@ -10,6 +10,12 @@ class EvaluateAdapter(data: List<String>) :
         (R.layout.evaluate_layout, data) {
 
     override fun convert(helper: BaseViewHolder, item: String) {
+
+        if (helper.layoutPosition % 2 == 0) {
+            helper.setText(R.id.type, "仅自己：")
+        } else {
+            helper.setText(R.id.type, "公开：")
+        }
     }
 
 

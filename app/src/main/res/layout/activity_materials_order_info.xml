@@ -46,7 +46,9 @@
               android:layout_height="10dp"
               android:background="@color/colorFFE"/>
 
-        <TextView android:layout_width="match_parent"
+        <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
                   android:layout_height="37dp"
                   android:paddingLeft="20dp"
                   android:layout_marginRight="20dp"

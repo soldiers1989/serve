@@ -34,6 +34,11 @@ class WaitThingAdapter(data: List<String>) :
         if (helper.layoutPosition % 3 != 0) {
             helper.setText(R.id.timeTV, "")
         }
+
+        if(helper.layoutPosition ==3){
+
+            helper.setText(R.id.timeTV, "下午 13:00")
+        }
     }
 
 

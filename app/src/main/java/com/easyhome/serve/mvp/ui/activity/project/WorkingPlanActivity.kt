@@ -46,7 +46,7 @@ class WorkingPlanActivity : JRBaseActivity<WorkingPlanPresenter>(), WorkingPlanC
 
         tvPageTitle.text = "施工排期计划"
         ivPageBack.singleClick { killMyself() }
-        ivPageRight.setImageResource(R.mipmap.calendar_icon)
+        ivPageRight.setImageResource(R.mipmap.prs_icon)
         ivPageRight.visibility = View.VISIBLE
 
         planRV.adapter = WorkingPlanAdapter(arrayListOf("", "", ""))

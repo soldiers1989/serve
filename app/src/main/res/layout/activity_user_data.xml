@@ -315,6 +315,7 @@
                      android:button="@null"
                      android:text="保存"
                      android:gravity="center"
+                     android:visibility="gone"
                      android:textColor="@color/white"
                      app:layout_constraintLeft_toLeftOf="parent"
                      app:layout_constraintRight_toRightOf="parent"

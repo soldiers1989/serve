@@ -1,12 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView
+<FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/scheduleRV"
-        android:orientation="vertical"
-        android:paddingTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+        android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/listRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</android.support.v7.widget.RecyclerView>
+
+        <View
+                android:id="@+id/vvImmersionView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/color366"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <include
+                android:id="@+id/baseTitle"
+                layout="@layout/layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vvImmersionView"/>
+
+        <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/scheduleRV"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/baseTitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/topCalendar">
+
+        <View
+                android:id="@+id/topv"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:background="@color/color366"/>
+
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/waitCL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="55dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="6dp"
+                app:layout_constraintTop_toTopOf="@+id/topv"
+                android:layout_marginBottom="10dp">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                        android:id="@+id/dateCL"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        app:layout_constraintTop_toBottomOf="@id/topv"
+                        android:background="@color/white">
+
+                    <TextView
+                            android:id="@+id/topTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2019年7月"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginLeft="14dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
+
+                    <ImageView
+                            android:id="@+id/schedule2"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginRight="14dp"
+                            android:tint="@color/color529"
+                            android:src="@mipmap/schedule_icon"/>
+                    <ImageView
+                            android:id="@+id/add2"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            app:layout_constraintRight_toLeftOf="@+id/schedule2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginRight="14dp"
+                            android:tint="@color/color529"
+                            android:src="@mipmap/add_icon_2"/>
+
+                </android.support.constraint.ConstraintLayout>
+                <com.haibin.calendarview.CalendarLayout
+                        android:id="@+id/calendarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        app:calendar_content_view_id="@+id/homeSV"
+                        app:calendar_show_mode="only_week_view">
+                    <com.haibin.calendarview.CalendarView
+                            android:id="@+id/topCV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#fff"
+                            app:calendar_padding="10dp"
+                            app:current_month_lunar_text_color="#CFCFCF"
+                            app:current_month_text_color="#333333"
+                            app:max_year="2020"
+                            app:min_year="2004"
+                            app:month_view="com.easyhome.serve.mvp.ui.widget.custom.CustomMonthView"
+                            app:month_view_show_mode="mode_fix"
+                            app:other_month_lunar_text_color="#e1e1e1"
+                            app:other_month_text_color="#e1e1e1"
+                            app:scheme_text="假"
+                            app:scheme_text_color="#333"
+                            app:scheme_theme_color="#128c4b"
+                            app:selected_lunar_text_color="#fff"
+                            app:selected_text_color="#fff"
+                            app:selected_theme_color="#3669F8"
+                            app:week_background="#fff"
+                            app:week_start_with="mon"
+                            app:week_text_color="#999999"
+                            app:week_view="com.easyhome.serve.mvp.ui.widget.custom.CustomWeekView"
+                            app:year_view="com.easyhome.serve.mvp.ui.widget.custom.CustomYearView"
+                            app:year_view_day_text_color="#333333"
+                            app:year_view_day_text_size="7sp"
+                            app:year_view_month_text_color="#ff0000"
+                            app:year_view_month_text_size="20sp"
+                            app:year_view_scheme_color="#f17706"
+                            app:year_view_select_text_color="#fff"
+                            app:year_view_week_height="12dp"
+                            app:year_view_week_text_color="#e1e1e1"
+                            app:year_view_week_text_size="6sp"/>
+                </com.haibin.calendarview.CalendarLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/waitThing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/waitCL"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

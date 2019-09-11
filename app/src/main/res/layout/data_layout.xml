@@ -11,21 +11,20 @@
             android:id="@+id/timeTV"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:text="上午 08:00"
             android:gravity="center_vertical"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="16dp"
             android:textColor="@color/color666"
             android:textSize="11sp"/>
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="36dp"
-              android:text="上门量房"
-              android:gravity="center"
-              app:layout_constraintLeft_toRightOf="@id/timeTV"
-              android:layout_marginLeft="16dp"
-              android:textColor="@color/color333"
-              android:textSize="12sp"/>
+    <TextView
+            android:id="@+id/itemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="设计合同"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/timeTV"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/color333"
+            android:textSize="12sp"/>
 
     <ImageView
             android:id="@+id/dOrU"

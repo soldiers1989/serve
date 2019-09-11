@@ -10,6 +10,9 @@ class ProjectServeAdapter(data: List<String>) :
         (R.layout.project_serve_layout, data) {
 
     override fun convert(helper: BaseViewHolder, item: String) {
+        helper.setText(R.id.itemTitle, item)
+        helper.setText(R.id.nameTV, "老张${helper.layoutPosition}")
+
     }
 
 

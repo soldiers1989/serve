@@ -16,6 +16,8 @@ class DataAdapter(data: List<String>) :
 
     override fun convert(helper: BaseViewHolder, item: String) {
 
+        helper.setText(R.id.itemTitle,item)
+
         helper.getView<RecyclerView>(R.id.imageRV).adapter = PhotoAdapter(arrayListOf("", "", "", ""))
 
         helper.getView<ImageView>(R.id.dOrU).setOnClickListener {

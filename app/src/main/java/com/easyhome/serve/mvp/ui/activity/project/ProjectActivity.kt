@@ -16,6 +16,7 @@ import com.easyhome.serve.mvp.presenter.project.ProjectPresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
+import com.easyhome.serve.mvp.model.entity.MPair
 import com.easyhome.serve.mvp.ui.adapter.*
 import kotlinx.android.synthetic.main.activity_project.*
 import kotlinx.android.synthetic.main.layout_title.*
@@ -155,9 +156,9 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
         actionRV.adapter = ada1
 
 
-        serveRV.adapter = ProjectServeAdapter(arrayListOf("", "", "", "", "", "", "", ""))
-        dataRV.adapter = DataAdapter(arrayListOf("", "", "", "", "", "", ""))
-        workerRV.adapter = WorkerAdapter(arrayListOf("", "", "", "", "", ""))
+        serveRV.adapter = ProjectServeAdapter(arrayListOf("客户顾问：", "装修管家：", "材料员：", "项目经理：", "设计师：", "工长："))
+        dataRV.adapter = DataAdapter(arrayListOf("设计合同", "施工合同", "图纸", "报价单"))
+        workerRV.adapter = WorkerAdapter(arrayListOf(MPair("水电工：", "张三、李四、王五"), MPair("木工：", "小张"), MPair("油漆工：", "张思")))
 
         swIV.singleClick {
             if (workerRV.visibility == View.VISIBLE) {

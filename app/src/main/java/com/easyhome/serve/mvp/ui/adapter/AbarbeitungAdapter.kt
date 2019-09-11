@@ -13,8 +13,9 @@ class AbarbeitungAdapter(data: List<String>) :
     override fun convert(helper: BaseViewHolder, item: String) {
 
         helper.setText(R.id.nameTV, Html.fromHtml("发起人：<font color='#777777'>张三</font>"))
-        helper.setText(R.id.time,Html.fromHtml("发起时间：<font color='#777777'>2019-05-01</font>"))
-        helper.setText(R.id.content,Html.fromHtml("类型：  <font color='#777777'>类型类型1类型1类型1类型11\n -类型2类型2类型2类型2 \n-类型3... </font>"))
+        helper.setText(R.id.time, Html.fromHtml("发起时间：<font color='#777777'>2019-05-01</font>"))
+        helper.setText(R.id.content, "类型：")
+        helper.setText(R.id.typeContent, "-类型11\n-类型2\n-类型3")
 
     }
 

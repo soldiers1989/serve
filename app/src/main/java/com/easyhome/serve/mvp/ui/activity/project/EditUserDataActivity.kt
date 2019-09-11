@@ -15,6 +15,7 @@ import com.easyhome.serve.mvp.presenter.project.EditUserDataPresenter
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
 import com.easyhome.serve.app.extension.singleClick
+import kotlinx.android.synthetic.main.activity_edit_user_data.*
 import kotlinx.android.synthetic.main.layout_title.*
 
 
@@ -44,6 +45,17 @@ class EditUserDataActivity : JRBaseActivity<EditUserDataPresenter>(), EditUserDa
             killMyself()
         }
         tvPageTitle.text = "客户基本信息"
+        man.isChecked=true
+        man.setOnCheckedChangeListener { compoundButton, b ->
+            if(b) {
+                woman.isChecked = false
+            }
+        }
+        woman.setOnCheckedChangeListener { compoundButton, b ->
+            if(b) {
+                man.isChecked = false
+            }
+        }
     }
 
 

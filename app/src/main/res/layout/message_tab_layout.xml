@@ -49,15 +49,17 @@
     <TextView
             android:id="@+id/number"
             android:layout_width="wrap_content"
-            android:layout_height="13dp"
+            android:layout_height="wrap_content"
+            android:minHeight="12dp"
+            android:minWidth="12dp"
             android:textColor="@color/white"
             android:background="@drawable/dot_red"
             app:layout_constraintTop_toTopOf="@id/tabB"
             app:layout_constraintRight_toRightOf="@id/tabB"
             android:visibility="gone"
-            android:padding="2dp"
+            android:gravity="center"
             android:textSize="7sp"
-            android:text="111"/>
+            android:text="2"/>
 
     <View
             android:id="@+id/verticalLine"

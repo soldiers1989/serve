@@ -51,6 +51,7 @@
                 android:id="@+id/filtrateTV"
                 android:layout_width="53dp"
                 android:layout_height="26dp"
+                android:visibility="gone"
                 android:background="@drawable/rectangle_side"
                 android:text="搜索"
                 android:gravity="center"

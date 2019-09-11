@@ -147,7 +147,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 }
                 15 -> {
                     //结算
-                    startActivity<SettlementActivity>()
+                  //  startActivity<SettlementActivity>()
                 }
 
             }

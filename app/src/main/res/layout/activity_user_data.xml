@@ -24,7 +24,7 @@
                 android:id="@+id/userHeadIV"
                 android:layout_width="57dp"
                 android:layout_height="57dp"
-                android:src="@mipmap/user_icon_1"
+                android:src="@mipmap/test_head"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginRight="13dp"

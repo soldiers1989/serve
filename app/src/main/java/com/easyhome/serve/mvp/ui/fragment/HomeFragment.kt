@@ -86,7 +86,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
 
         statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))
         statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", "", "", ""))
-        val wAdapter = WaitThingAdapter(arrayListOf("", "", "", "", "", ""))
+        val wAdapter = WaitThingAdapter(arrayListOf("", "", "", "", "", "","", "", "","", "", ""))
         wAdapter.setOnItemChildClickListener { adapter, view, position ->
 
             when (view.id) {
@@ -156,13 +156,25 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
                         val animation = AnimationUtils.loadAnimation(activity, R.anim.gradually_show);
                         topCalendar.startAnimation(animation);
                         topCalendar.visibility = View.VISIBLE
+
+                        val hide = AnimationUtils.loadAnimation(activity, R.anim.gradually_hide);
+                        calendarCV.startAnimation(hide);
+                        calendarCV.visibility = View.INVISIBLE
+
+
                     }
 
 
                 }
                 if (scrollY < oldScrollY) {//下划
                     //    println("下划-------")
-                    if (bacV.getLocalVisibleRect(scrollBounds)) {//不可见
+                    if (bacV.getLocalVisibleRect(scrollBounds)&&calendarCV.visibility!= View.VISIBLE) {//不可见
+                        val animation = AnimationUtils.loadAnimation(activity, R.anim.gradually_show);
+                        calendarCV.startAnimation(animation);
+                        calendarCV.visibility = View.VISIBLE
+
+                        val hide = AnimationUtils.loadAnimation(activity, R.anim.gradually_hide);
+                        topCalendar.startAnimation(hide);
                         topCalendar.visibility = View.GONE
                     }
 

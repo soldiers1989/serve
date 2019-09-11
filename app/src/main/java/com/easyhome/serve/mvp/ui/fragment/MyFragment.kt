@@ -21,9 +21,11 @@ import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.activity.MainActivity
 import com.easyhome.serve.mvp.ui.activity.setting.AboutAppActivity
 import com.easyhome.serve.mvp.ui.activity.setting.ISetActivity
+import com.easyhome.serve.mvp.ui.activity.setting.NewPasswordActivity
 import com.easyhome.serve.mvp.ui.activity.user.UserDataActivity
 import com.easyhome.serve.mvp.ui.adapter.MySelectAdapter
 import kotlinx.android.synthetic.main.fragment_my.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.startActivity
 
 
@@ -59,7 +61,7 @@ class MyFragment : JRBaseFragment<MyPresenter>(), MyContract.View {
             arrayListOf(
                 MySelectAdapter.Info(R.mipmap.my_icon_2, "关于APP"),
                 MySelectAdapter.Info(R.mipmap.my_icon_1, "清理缓存"),
-                MySelectAdapter.Info(R.mipmap.my_icon_3, "设置")
+                MySelectAdapter.Info(R.mipmap.my_icon_3, "修改密码")
             )
         )
         adapter.setOnItemClickListener { adapter, view, position ->
@@ -72,7 +74,8 @@ class MyFragment : JRBaseFragment<MyPresenter>(), MyContract.View {
 
                 }
                 2 -> {
-                   startActivity<ISetActivity>()
+                  // startActivity<ISetActivity>()
+                    startActivity<NewPasswordActivity>()
                 }
 
             }

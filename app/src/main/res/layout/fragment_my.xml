@@ -3,106 +3,135 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-    <android.support.constraint.ConstraintLayout
+    <View android:layout_width="match_parent"
+          android:layout_height="138dp"
+          android:background="@color/color366"/>
+   <!-- <android.support.v7.widget.CardView
             android:id="@+id/topCL"
             android:layout_width="match_parent"
-            android:layout_height="236dp"
-            android:background="@color/color366">
-
-
-        <ImageView
-                android:id="@+id/headIV"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginLeft="16dp"
-                android:src="@mipmap/test_head"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="31dp"/>
-
-        <TextView
-                android:id="@+id/nameTV"
-                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="6dp">-->
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/topCL"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:text="王五"
-                app:layout_constraintTop_toTopOf="@id/headIV"
-                app:layout_constraintLeft_toRightOf="@id/headIV"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="31dp"/>
-        <TextView
-                android:layout_width="63dp"
-                android:layout_height="19dp"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:text="设计师"
-                android:background="@drawable/my_fragment_top_bac"
-                app:layout_constraintBaseline_toBaselineOf="@id/nameTV"
-                app:layout_constraintLeft_toRightOf="@id/nameTV"
-                android:layout_marginLeft="20dp"/>
-        <TextView
-                android:id="@+id/jobnumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:text="工号：111111"
-                app:layout_constraintTop_toBottomOf="@+id/nameTV"
-                app:layout_constraintLeft_toLeftOf="@id/nameTV"
-                android:layout_marginTop="10dp"
-        />
-        <TextView
-                android:id="@+id/phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:text="手机号：13299999999"
-                app:layout_constraintTop_toBottomOf="@id/jobnumber"
-                app:layout_constraintLeft_toLeftOf="@id/nameTV"
-                android:layout_marginTop="10dp"
-        />
-        <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:text="评分：4.7"
-                app:layout_constraintTop_toBottomOf="@id/phone"
-                app:layout_constraintLeft_toLeftOf="@id/nameTV"
-                android:layout_marginTop="10dp"
-        />
+                android:background="@drawable/extensively_bac"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="83dp">
 
 
-        <ImageView
-                android:id="@+id/userinfoTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:textColor="@color/white"
-                android:src="@mipmap/more_icon"
-                android:tint="@color/white"
-                app:layout_constraintTop_toTopOf="@id/jobnumber"
-                app:layout_constraintBottom_toBottomOf="@id/jobnumber"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginTop="15dp"
-        />
 
-    </android.support.constraint.ConstraintLayout>
+            <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/color333"
+                    android:text="王五"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="100dp"/>
+            <TextView
+                    android:id="@+id/job1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:textSize="11sp"
+                    android:textColor="@color/color333"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:gravity="center"
+                    android:text="材料员"
+                    android:background="@drawable/login_rb_bg_unchecked"
+                    app:layout_constraintBaseline_toBaselineOf="@id/nameTV"
+                    app:layout_constraintLeft_toRightOf="@id/nameTV"
+                    android:layout_marginLeft="20dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:textSize="11sp"
+                    android:textColor="@color/color333"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:gravity="center"
+                    android:text="设计师"
+                    android:background="@drawable/login_rb_bg_unchecked"
+                    app:layout_constraintBaseline_toBaselineOf="@id/nameTV"
+                    app:layout_constraintLeft_toRightOf="@id/job1"
+                    android:layout_marginLeft="7dp"/>
 
+            <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/color666"
+                    android:text="手机号：13299999999"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginTop="67dp"
+                    android:layout_marginBottom="22dp"
+            />
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/color666"
+                    android:text="评分：4.7"
+                    app:layout_constraintBaseline_toBaselineOf="@id/phone"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="33dp"
+            />
+
+
+            <ImageView
+                    android:id="@+id/userinfoTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
+                    android:src="@mipmap/more_icon"
+                    android:tint="@color/color999"
+                    app:layout_constraintTop_toTopOf="@id/nameTV"
+                    app:layout_constraintBottom_toBottomOf="@id/nameTV"
+                    app:layout_constraintRight_toRightOf="parent"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    <ImageView
+            android:id="@+id/headIV"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintLeft_toLeftOf="@id/topCL"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/test_head"
+            app:layout_constraintTop_toTopOf="@id/topCL"
+            app:layout_constraintBottom_toTopOf="@id/topCL"
+            />
+
+  <!--  </android.support.v7.widget.CardView>-->
     <android.support.v7.widget.RecyclerView
             android:id="@+id/setItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/topCL">
     </android.support.v7.widget.RecyclerView>
 

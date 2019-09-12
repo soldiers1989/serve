@@ -86,7 +86,7 @@ class HomeFragment : JRBaseFragment<HomePresenter>(), HomeContract.View {
 
         statisticsRV1.adapter = HomeStatistics1Adapter(arrayListOf("", ""))
         statisticsRV2.adapter = HomeStatistics2Adapter(arrayListOf("", "", "", ""))
-        val wAdapter = WaitThingAdapter(arrayListOf("", "", "", "", "", ""))
+        val wAdapter = WaitThingAdapter(arrayListOf("", "", "", "", "", "", "", "", "","", ""))
         wAdapter.setOnItemChildClickListener { adapter, view, position ->
 
             when (view.id) {

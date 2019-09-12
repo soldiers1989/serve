@@ -58,13 +58,14 @@ class ScheduleActivity : JRBaseActivity<SchedulePresenter>(), ScheduleContract.V
         scheduleRV.adapter = ScheduleAdapter(arrayListOf("", "", ""))
 
         ivPageRight.singleClick {
-            topCalendar.visibility = View.VISIBLE
-            listRV.visibility = View.GONE
+           /* topCalendar.visibility = View.VISIBLE
+            listRV.visibility = View.GONE*/
+            killMyself()
         }
-        schedule2.singleClick {
+        /*schedule2.singleClick {
             topCalendar.visibility = View.GONE
             listRV.visibility = View.VISIBLE
-        }
+        }*/
         val wAdapter = WaitThingAdapter(arrayListOf("", "", "", "", "", ""))
         wAdapter.setOnItemChildClickListener { adapter, view, position ->
 

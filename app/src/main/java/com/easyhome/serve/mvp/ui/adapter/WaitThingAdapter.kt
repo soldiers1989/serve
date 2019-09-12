@@ -31,11 +31,11 @@ class WaitThingAdapter(data: List<String>) :
 
         helper.addOnClickListener(R.id.locationTV)
 
-        if (helper.layoutPosition % 3 != 0) {
+        if (helper.layoutPosition % 5 != 0) {
             helper.setText(R.id.timeTV, "")
         }
 
-        if(helper.layoutPosition ==3){
+        if(helper.layoutPosition ==5){
 
             helper.setText(R.id.timeTV, "下午 13:00")
         }

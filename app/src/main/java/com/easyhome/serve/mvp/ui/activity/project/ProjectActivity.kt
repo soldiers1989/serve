@@ -49,7 +49,7 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
             killMyself()
         }
         tvPageTitle.text = "项目详情"
-        customerTag.singleClick {
+        tagCL.singleClick {
             startActivity<CustomerTagActivity>()
         }
         editUserData.singleClick {

@@ -13,6 +13,7 @@ import com.easyhome.serve.R
 import com.easyhome.serve.app.DownloadException
 import com.easyhome.serve.app.ResponseErrorSubscriber
 import com.easyhome.serve.app.utils.RxUtils
+import com.easyhome.serve.mvp.ui.activity.H5Activity
 import com.easyhome.serve.mvp.ui.service.DownloadService
 import com.tbruyelle.rxpermissions2.RxPermissions
 import okhttp3.ResponseBody
@@ -22,6 +23,8 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 import java.io.OutputStream
+import org.jetbrains.anko.support.v4.startActivity
+import org.jetbrains.anko.startActivity
 
 /**
  * Created by 宗传
@@ -33,16 +36,16 @@ import java.io.OutputStream
 /**
  * 根据Url打开一个WebView
  */
-/*fun BaseActivity<*>.openH5ForUrl(pageUrl: String, title: String = "") {
+fun BaseActivity<*>.openH5ForUrl(pageUrl: String, title: String = "") {
     this.startActivity<H5Activity>("pageUrl" to pageUrl, "title" to title)
-}*/
+}
 
 /**
  * 根据Url打开一个WebView
  */
-/*fun BaseFragment<*>.openH5ForUrl(pageUrl: String, title: String = "") {
+fun BaseFragment<*>.openH5ForUrl(pageUrl: String, title: String = "") {
     this.startActivity<H5Activity>("pageUrl" to pageUrl, "title" to title)
-}*/
+}
 
 /**
  * 根据Url打开一个PdfView

@@ -125,7 +125,7 @@ public class CustomMonthView extends MonthView {
         if (isSelected) {
             mPointPaint.setColor(Color.WHITE);
         } else {
-            mPointPaint.setColor(Color.GRAY);
+            mPointPaint.setColor(Color.RED);
         }
 
         canvas.drawCircle(x + mItemWidth / 2, y + mItemHeight - 3 * mPadding, mPointRadius, mPointPaint);

@@ -65,7 +65,10 @@
         <!-- 搞得地图 -->
         <meta-data
                 android:name="com.amap.api.v2.apikey"
-                android:value="66f8ed66b5700cf9ab1d967669dc100a"/>
+                android:value="7e6ec49de1320c90a90cd70ceddecdc4"/>
+
+        <!-- 7e6ec49de1320c90a90cd70ceddecdc4 -->
+        <!-- 66f8ed66b5700cf9ab1d967669dc100a -->
 
         <activity android:name=".mvp.ui.activity.WelcomeActivity">
             <intent-filter>
@@ -217,6 +220,8 @@
         <activity android:name=".mvp.ui.activity.ComplaintOrRepairsActivity">
         </activity>
         <activity android:name=".mvp.ui.activity.ScoreActivity">
+        </activity>
+        <activity android:name=".mvp.ui.activity.H5Activity">
         </activity>
     </application>
 

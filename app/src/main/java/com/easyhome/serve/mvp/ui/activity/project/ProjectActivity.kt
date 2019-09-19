@@ -15,6 +15,7 @@ import com.easyhome.serve.mvp.presenter.project.ProjectPresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
+import com.easyhome.serve.app.extension.openH5ForUrl
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.model.entity.MPair
 import com.easyhome.serve.mvp.ui.adapter.*
@@ -123,9 +124,11 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 }
                 8 -> {
                     //发起预交底
+                    openH5ForUrl("http://111.231.114.131/guochongyang/%E6%9C%8D%E5%8A%A1%E7%AB%AF-moblie/m_bottom_node.html")
                 }
                 9 -> {
                     //完成量房
+                    openH5ForUrl("http://111.231.114.131/guochongyang/%E6%9C%8D%E5%8A%A1%E7%AB%AF-moblie/m_%20room_node.html")
                 }
                 10 -> {
                     //完成预交底

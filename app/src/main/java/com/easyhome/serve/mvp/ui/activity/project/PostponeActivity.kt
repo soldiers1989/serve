@@ -15,6 +15,7 @@ import com.easyhome.serve.mvp.presenter.project.PostponePresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
+import com.easyhome.serve.app.extension.openH5ForUrl
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.adapter.PostponeAdapter
 import kotlinx.android.synthetic.main.activity_postpone.*
@@ -54,7 +55,11 @@ class PostponeActivity : JRBaseActivity<PostponePresenter>(), PostponeContract.V
         tvPageRight.singleClick {
             startActivity<ApplyPostponeActivity>()
         }
-        postpone.adapter = PostponeAdapter(arrayListOf("", "", ""))
+        val adapter=PostponeAdapter(arrayListOf("", "", ""))
+        adapter.setOnItemClickListener { adapter, view, position ->
+            openH5ForUrl("https://lanhuapp.com/web/#/item/project/board/detail?pid=5a7197ec-9132-42fb-bd02-8393ada85204&project_id=5a7197ec-9132-42fb-bd02-8393ada85204&image_id=eb7e4009-3e36-4ccf-b8fe-95efa38a783a&child=79c42c15-436e-46ec-9bd9-3eb92afce30b")
+        }
+        postpone.adapter = adapter
 
     }
 

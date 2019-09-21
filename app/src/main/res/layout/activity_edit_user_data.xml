@@ -93,6 +93,8 @@
                         app:layout_constraintLeft_toRightOf="@id/title9"
                         android:textColor="@color/black"
                         android:text="男"
+                        android:padding="10dp"
+                        style="@style/mycheckbox"
                         android:textSize="13sp"
                         android:background="@null"/>
                 <CheckBox
@@ -103,6 +105,8 @@
                         android:textColor="@color/black"
                         android:layout_marginLeft="20dp"
                         android:text="女"
+                        android:padding="10dp"
+                        style="@style/mycheckbox"
                         android:textSize="13sp"
                         android:background="@null"/>
                 <View android:layout_width="match_parent"
@@ -476,6 +480,100 @@
                           android:padding="5dp"
                           android:background="@drawable/labels_bac_d"
                           android:textSize="13sp"/>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <TextView
+                        android:id="@+id/title"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="13sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical|right"/>
+
+
+                <EditText
+                        android:id="@+id/towerNumber"
+                        android:layout_width="82dp"
+                        android:layout_height="25dp"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:background="@drawable/labels_bac_d"
+                        app:layout_constraintTop_toTopOf="@id/title"
+                        app:layout_constraintLeft_toRightOf="@id/title"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="楼号"
+                        app:layout_constraintLeft_toRightOf="@id/towerNumber"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/color222"
+                        android:gravity="center_vertical|right"/>
+
+
+
+
+
+                <EditText
+                        android:id="@+id/unitNumber"
+                        android:layout_width="82dp"
+                        android:layout_height="25dp"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/labels_bac_d"
+                        app:layout_constraintTop_toBottomOf="@id/towerNumber"
+                        app:layout_constraintLeft_toRightOf="@id/title"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="楼号"
+                        app:layout_constraintLeft_toRightOf="@id/unitNumber"
+                        app:layout_constraintBaseline_toBaselineOf="@id/unitNumber"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/color222"
+                        android:gravity="center_vertical|right"/>
+
+
+
+                <EditText
+                        android:id="@+id/houseNumber"
+                        android:layout_width="82dp"
+                        android:layout_height="25dp"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/labels_bac_d"
+                        app:layout_constraintTop_toBottomOf="@id/unitNumber"
+                        app:layout_constraintLeft_toRightOf="@id/title"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="门牌号"
+                        app:layout_constraintLeft_toRightOf="@id/houseNumber"
+                        app:layout_constraintBaseline_toBaselineOf="@id/houseNumber"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/color222"
+                        android:gravity="center_vertical|right"/>
+
+
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout

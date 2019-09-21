@@ -93,5 +93,7 @@
     <!--</style>-->
 
     <!-- Base application theme. -->
-
+    <style name="mycheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_selector</item>
+    </style>
 </resources>

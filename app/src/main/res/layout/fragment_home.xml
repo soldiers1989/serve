@@ -115,7 +115,7 @@
                             app:layout_constraintLeft_toRightOf="@id/dateTV"
                             android:padding="10dp"
                             android:layout_marginLeft="15dp"
-                            android:src="@mipmap/up_icon"
+                            android:src="@mipmap/up_calendar_icon"
                             android:tint="@color/white"
                     />
                     <ImageView
@@ -127,7 +127,7 @@
                             app:layout_constraintLeft_toRightOf="@id/up"
                             android:padding="10dp"
                             android:layout_marginLeft="5dp"
-                            android:src="@mipmap/down_icon"
+                            android:src="@mipmap/next_calendar_icon"
                             android:tint="@color/white"
                     />
 

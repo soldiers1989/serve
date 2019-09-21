@@ -60,7 +60,6 @@
                         android:text="客户信息"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold"
                         app:layout_constraintTop_toTopOf="parent"
                 />
 
@@ -89,6 +88,7 @@
                         android:textSize="12sp"
                         app:layout_constraintTop_toBottomOf="@id/fgV"/>
                 <TextView
+                        android:id="@+id/info12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -131,7 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="建筑面积：100m2"
+                        android:text="建筑面积：100m²"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintTop_toBottomOf="@id/info4"/>
@@ -152,7 +152,7 @@
                         app:layout_constraintLeft_toLeftOf="parent"
                         android:layout_marginLeft="150dp"
                         android:padding="5dp"
-                        android:text="套内建筑面积：90m2"
+                        android:text="套内建筑面积：90m²"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintTop_toBottomOf="@id/info4"/>
@@ -246,7 +246,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             android:gravity="center"
                             android:text="预约信息"
-                            android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="16sp"/>
                     <View
@@ -289,6 +288,7 @@
                             app:layout_constraintRight_toRightOf="parent"
                             android:layout_marginTop="10dp"/>
                     <TextView
+                            android:id="@+id/comment"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -504,7 +504,6 @@
                         android:text="服务信息"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold"
                         app:layout_constraintTop_toTopOf="parent"
                 />
                 <View
@@ -606,7 +605,6 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:text="资料信息"
-                        android:textStyle="bold"
                         android:textSize="16sp"
                         android:paddingLeft="5dp"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -672,9 +670,9 @@
     </android.support.v4.widget.NestedScrollView>
 
     <com.easyhome.serve.mvp.ui.widget.MoveTextView
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:background="@drawable/right_floating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/suspension_box_icon"
             android:textColor="#FF2874FB"
             android:textSize="10sp"
             android:gravity="center"

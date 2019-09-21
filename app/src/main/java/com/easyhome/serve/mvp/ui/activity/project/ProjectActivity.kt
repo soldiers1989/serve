@@ -2,6 +2,7 @@ package com.easyhome.serve.mvp.ui.activity.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
 import android.view.View
 
 import com.jess.arms.base.BaseActivity
@@ -180,6 +181,39 @@ class ProjectActivity : JRBaseActivity<ProjectPresenter>(), ProjectContract.View
                 "施工合同金额：", "合同开工日期：", "合同竣工日期：", "结算日期："
             )
         )
+
+
+
+        info1.text=Html.fromHtml("客户编号：<font color='#777777'>11111</font>")
+        info12.text=Html.fromHtml("客户来源：<font color='#777777'>APP咨询</font>")
+        info2.text=Html.fromHtml("客户姓名：<font color='#777777'>周老大</font>")
+        info3.text=Html.fromHtml("房屋熟悉：<font color='#777777'>住宅</font>")
+        info4.text=Html.fromHtml("户型：<font color='#777777'>三室一厅</font>")
+        info9.text=Html.fromHtml("建筑面积：<font color='#777777'>100m²</font>")
+        info11.text=Html.fromHtml("报价级别：<font color='#777777'>套餐-999</font>")
+        info10.text=Html.fromHtml("套内建筑面积：<font color='#777777'>90m²</font>")
+        info5.text=Html.fromHtml("装修类型：<font color='#777777'>全屋装</font>")
+        info6.text=Html.fromHtml("房屋类型：<font color='#777777'>新房</font>")
+
+
+        source.text=Html.fromHtml("预约来源：<font color='#777777'>张三案例</font>")
+        scope.text=Html.fromHtml("预算范围：<font color='#777777'>500-1000元</font>")
+        caseInfo.text=Html.fromHtml("案例详情：<font color='#777777'>https://org.modao.cc/app/992df6393b4da053fd</font>")
+        comment.text=Html.fromHtml("预约备注： <font color='#777777'>想要一个女设计师，擅长中式风格设计，施工队 要山东的 </font>")
+
+
+        contract2.text=Html.fromHtml("合同开工日期： <font color='#777777'>2019-05-01</font>")
+        contract3.text=Html.fromHtml("合同竣工日期： <font color='#777777'>2019-06-01</font>")
+        contract4.text=Html.fromHtml("施工状态： <font color='#777777'>已延期</font>")
+        contract8.text=Html.fromHtml("今日进度： <font color='#777777'>水电施工、木门测量</font>")
+        contract6.text=Html.fromHtml("竣工日期： <font color='#777777'>2019-06-01</font>")
+        contract7.text=Html.fromHtml("开工日期： <font color='#777777'>2019-05-01</font>")
+
+        md.text=Html.fromHtml("门店： <font color='#777777'>丽泽桥店</font>")
+
+
+
+
     }
 
 

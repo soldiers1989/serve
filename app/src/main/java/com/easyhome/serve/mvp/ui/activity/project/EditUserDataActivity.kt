@@ -2,6 +2,7 @@ package com.easyhome.serve.mvp.ui.activity.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 
 import com.jess.arms.base.BaseActivity
 import com.jess.arms.di.component.AppComponent
@@ -45,6 +46,9 @@ class EditUserDataActivity : JRBaseActivity<EditUserDataPresenter>(), EditUserDa
             killMyself()
         }
         tvPageTitle.text = "客户基本信息"
+        tvPageRight.text = "添加电话"
+        tvPageRight.visibility = View.VISIBLE
+        tvPageRight.setBackgroundResource(R.drawable.white_side)
         man.isChecked=true
         man.setOnCheckedChangeListener { compoundButton, b ->
             if(b) {

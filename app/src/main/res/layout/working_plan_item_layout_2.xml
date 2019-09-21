@@ -7,7 +7,8 @@
           android:text="确认完成"
           android:gravity="center"
           android:id="@+id/content"
-android:background="@drawable/label_bac"
+          android:background="@drawable/label_bac"
+          android:layout_marginRight="10dp"
 >
 
 </TextView>

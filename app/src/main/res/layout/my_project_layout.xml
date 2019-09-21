@@ -128,6 +128,9 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginLeft="10dp"
         />
+
+
+<!--
         <TextView
                 android:id="@+id/tagTV1"
                 android:layout_width="47dp"
@@ -163,19 +166,32 @@
                 android:textSize="9sp"
                 app:layout_constraintBottom_toBottomOf="@id/coverIV"
                 app:layout_constraintLeft_toRightOf="@id/tagTV2"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="10dp"/>-->
         <TextView
+                android:id="@+id/info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="三室一厅  |  100m²  |  新房"
                 android:gravity="left"
                 android:textColor="@color/color888"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/coverIV"
                 app:layout_constraintTop_toTopOf="@id/coverIV"
                 app:layout_constraintLeft_toRightOf="@id/coverIV"
-                android:layout_marginLeft="10dp"
-        />
+                android:layout_marginLeft="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/tagRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                app:spanCount="4"
+                app:layout_constraintTop_toBottomOf="@id/info"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/info"
+                app:layout_constraintRight_toLeftOf="@+id/detailTV">
+        </android.support.v7.widget.RecyclerView>
+
 
         <TextView
                 android:id="@+id/detailTV"

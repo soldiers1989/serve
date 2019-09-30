@@ -3,6 +3,17 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.easyhome.serve">
 
+
+    <!-- Required -->
+    <permission
+            android:name="com.easyhome.serve.permission.JPUSH_MESSAGE"
+            android:protectionLevel="signature"/>
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.easyhome.serve.permission.JPUSH_MESSAGE"/>
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <!-- 震动权限 -->
     <uses-permission android:name="android.permission.VIBRATE"/>
@@ -107,31 +118,14 @@
         </activity>
         <activity android:name=".mvp.ui.activity.ConfirmActivity">
         </activity>
-        <activity android:name=".mvp.ui.activity.authentication.Step1Activity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.authentication.Step2Activity">
-        </activity>
+
 
         <!-- ==========================arms配置========================= -->
         <meta-data
                 android:name="com.easyhome.serve.app.GlobalConfiguration"
                 android:value="ConfigModule"/>
 
-        <activity android:name=".mvp.ui.activity.register.RegisterActivity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.register.Register2Activity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.authentication.Step3Activity">
-        </activity>
         <activity android:name=".mvp.ui.activity.search.CityPickerActivity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.search.CityPicker1Activity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.search.SearchActivity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.predetermine.PredetermineActivity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.predetermine.HospitalMainActivity">
         </activity>
         <activity android:name=".mvp.ui.activity.user.UserDataActivity">
         </activity>
@@ -140,12 +134,6 @@
         <activity android:name=".mvp.ui.activity.user.AddAddressActivity">
         </activity>
         <activity android:name=".mvp.ui.activity.setting.AboutAppActivity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.Setting.SettingActivity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.setting.SetPasswordActivity">
-        </activity>
-        <activity android:name=".mvp.ui.activity.setting.SettingActivity">
         </activity>
         <activity android:name=".mvp.ui.activity.setting.ISetActivity">
         </activity>
@@ -223,6 +211,29 @@
         </activity>
         <activity android:name=".mvp.ui.activity.H5Activity">
         </activity>
+        <!--极光推送-->
+        <!-- Since JCore2.0.0 Required SDK核心功能 -->
+        <!-- 这个Service要继承JCommonService -->
+        <service
+                android:name=".mvp.ui.service.PushService"
+                android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action"/>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name=".mvp.ui.service.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE"/>
+
+                <category android:name="com.easyhome.serve"/>
+            </intent-filter>
+        </receiver>
+        <!-- 极光推送 -->
     </application>
 
 </manifest>

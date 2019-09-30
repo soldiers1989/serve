@@ -19,7 +19,12 @@ android {
 
         multiDexEnabled true
 
-        ndk { abiFilters "armeabi", "x86" }// ,"armeabi-v7a", "mips"
+        ndk { abiFilters "armeabi"}// ,"armeabi-v7a", "mips"
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "c88b61d66e30721866200cad", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
     }
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
@@ -146,4 +151,7 @@ dependencies {
     implementation 'me.yokeyword:indexablerecyclerview:1.3.0'
     implementation 'com.github.donkingliang:LabelsView:1.4.1'
     implementation 'com.haibin:calendarview:3.6.3'
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+    implementation 'cn.jiguang.sdk:jpush:3.3.4'  // 此处以JPush 3.3.4 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.1.2'  // 此处以JCore 2.1.2 版本为例。
 }

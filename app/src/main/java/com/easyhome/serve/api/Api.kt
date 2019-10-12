@@ -22,4 +22,5 @@ object Api {
     //短信验证码校验
     const val CODECHECK = "captcha/captcha/check"
 //http://192.168.2.2:8763/captcha/captcha/check?phone=15010118286&code=456467
+
 }

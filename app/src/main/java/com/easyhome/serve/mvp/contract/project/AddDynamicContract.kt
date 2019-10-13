@@ -1,7 +1,10 @@
 package com.easyhome.serve.mvp.contract.project
 
+import com.easyhome.serve.mvp.model.entity.HttpResult
 import com.jess.arms.mvp.IView
 import com.jess.arms.mvp.IModel
+import io.reactivex.Observable
+import okhttp3.RequestBody
 
 
 interface AddDynamicContract {
@@ -9,6 +12,8 @@ interface AddDynamicContract {
     interface View : IView
 
     //Model层定义接口,外部只需关心Model返回的数据,无需关心内部细节,即是否使用缓存
-    interface Model : IModel
+    interface Model : IModel {
+        fun addDynamic(requestBody: RequestBody): Observable<HttpResult<Any>>
+    }
 
 }

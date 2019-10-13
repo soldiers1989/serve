@@ -19,6 +19,7 @@ import okhttp3.Response;
  * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
  * <a href="https://github.com/JessYanCoding">Follow me</a>
  * ================================================
+ * 请求拦截器
  */
 public class GlobalHttpHandlerImpl implements GlobalHttpHandler {
     private Context context;
@@ -68,7 +69,7 @@ public class GlobalHttpHandlerImpl implements GlobalHttpHandler {
             Request oldRequest = chain.request();
 
             return oldRequest.newBuilder()
-                    .url(newUrl)
+                    .url(request.url())
                     .header("Authorization", UserInfoManager.getInstance().getUserToken())
                     .build();
 

@@ -6,7 +6,7 @@ import com.jess.arms.integration.IRepositoryManager
 import com.jess.arms.mvp.BaseModel
 
 import com.jess.arms.di.scope.ActivityScope
-import com.easyhome.serve.api.service.UserInfoService
+import com.easyhome.serve.api.service.JRService
 import javax.inject.Inject
 
 import com.easyhome.serve.mvp.contract.LoginContract
@@ -20,14 +20,15 @@ class LoginModel
 @Inject
 constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager), LoginContract.Model {
     override fun login(username: String, password: String): Observable<HttpResult<LoginInfo>> {
-        return mRepositoryManager.obtainRetrofitService(UserInfoService::class.java).login(username,password)
+        return mRepositoryManager.obtainRetrofitService(JRService::class.java).login(username, password, 1)
     }
 
     override fun test(username: String, size: String): Observable<HttpResult<Any>> {
-        return mRepositoryManager.obtainRetrofitService(UserInfoService::class.java).test(username,size)
+        return mRepositoryManager.obtainRetrofitService(JRService::class.java).test(username, size)
     }
+
     override fun smsCode(phone: String): Observable<HttpResult<Any>> {
-        return mRepositoryManager.obtainRetrofitService(UserInfoService::class.java).smsCode(phone)
+        return mRepositoryManager.obtainRetrofitService(JRService::class.java).smsCode(phone)
     }
 
     @Inject

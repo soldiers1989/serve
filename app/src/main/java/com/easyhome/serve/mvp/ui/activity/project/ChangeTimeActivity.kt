@@ -14,8 +14,9 @@ import com.easyhome.serve.mvp.presenter.project.ChangeTimePresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
+import com.easyhome.serve.app.extension.getRequestBody
 import com.easyhome.serve.app.extension.singleClick
-import com.easyhome.serve.mvp.ui.adapter.AssignHistoryAdapter
+import com.easyhome.serve.mvp.ui.adapter.ChangeHistoryAdapter
 import com.easyhome.serve.mvp.ui.adapter.PInfoAdapter
 import kotlinx.android.synthetic.main.activity_change_time.*
 import kotlinx.android.synthetic.main.layout_title.*
@@ -46,7 +47,23 @@ class ChangeTimeActivity : JRBaseActivity<ChangeTimePresenter>(), ChangeTimeCont
         ivPageBack.singleClick {
             killMyself()
         }
-        tvPageTitle.text = "变更预交底/量房时间"
+        when (intent.getIntExtra("type", 0)) {
+
+            0 -> {
+                tvPageTitle.text = "预交底"
+            }
+            /*1 -> {
+                tvPageTitle.text = "变更预交底"
+            }*/
+            1 -> {
+                tvPageTitle.text = "量房"
+                measureHome()
+            }
+            /* 3 -> {
+                 tvPageTitle.text = "变更量房"
+             }*/
+        }
+
 
         info.adapter = PInfoAdapter(
             arrayListOf(
@@ -57,9 +74,18 @@ class ChangeTimeActivity : JRBaseActivity<ChangeTimePresenter>(), ChangeTimeCont
                 "量房时间：点击设置时间"
             )
         )
-        history.adapter = AssignHistoryAdapter(arrayListOf("", "", ""))
+        history.adapter = ChangeHistoryAdapter(arrayListOf("", "", ""))
     }
 
+
+    fun measureHome() {
+        val b2 = BrandArguments.BeanII("proID_8511", 1, "123456789")
+        val b1 = BrandArguments.BeanI(arrayListOf(b2))
+        val arg = BrandArguments("S85237-I96649-C47331-B61625", "1", arrayListOf(b1))
+        mPresenter!!.measure(arg.getRequestBody()) {
+
+        }
+    }
 
     override fun showLoading() {
 
@@ -79,5 +105,10 @@ class ChangeTimeActivity : JRBaseActivity<ChangeTimePresenter>(), ChangeTimeCont
 
     override fun killMyself() {
         finish()
+    }
+
+    private data class BrandArguments(val codes: String, val isVerify: String, val datas: List<BeanI>) {
+        data class BeanI(val condition: List<BeanII>)
+        data class BeanII(val fieldName: String, val queryMode: Int, val values: String)
     }
 }

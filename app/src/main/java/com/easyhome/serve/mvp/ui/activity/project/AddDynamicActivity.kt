@@ -15,6 +15,7 @@ import com.easyhome.serve.mvp.presenter.project.AddDynamicPresenter
 
 import com.easyhome.serve.R
 import com.easyhome.serve.app.base.JRBaseActivity
+import com.easyhome.serve.app.extension.getRequestBody
 import com.easyhome.serve.app.extension.singleClick
 import com.easyhome.serve.mvp.ui.adapter.AddDynamicAdapter
 import com.easyhome.serve.mvp.ui.adapter.PhotoAdapter
@@ -54,6 +55,13 @@ class AddDynamicActivity : JRBaseActivity<AddDynamicPresenter>(), AddDynamicCont
             startActivity<AddNodeActivity>()
         }
         photoRV.adapter = PhotoAdapter(arrayListOf("", "", "", "", "", "", "", ""))
+
+
+        val arg = BrandArguments("测试一下发布动态", 1,1,"测试", arrayListOf("http://sjdlaj/11.jpg"))//分类列表数据
+        mPresenter!!.addDynamic(arg.getRequestBody()) {
+
+
+        }
     }
 
 
@@ -76,4 +84,22 @@ class AddDynamicActivity : JRBaseActivity<AddDynamicPresenter>(), AddDynamicCont
     override fun killMyself() {
         finish()
     }
+
+    /*{
+        "content": "string",
+        "photosList": [
+        "string"
+        ],
+        "projectId": 0,
+        "staffId": 0,
+        "title": "string"
+    }*/
+
+    private data class BrandArguments(
+        val content: String,
+        val projectId: Int,
+        val staffId: Int,
+        val title: String,
+        val photosList: List<String>
+    )
 }

@@ -1,7 +1,12 @@
 package com.easyhome.serve.mvp.contract.project
 
+import com.easyhome.serve.mvp.model.entity.HttpResult
+import com.easyhome.serve.mvp.model.entity.LoginInfo
+import com.easyhome.serve.mvp.model.javabean.MeasureHome
 import com.jess.arms.mvp.IView
 import com.jess.arms.mvp.IModel
+import io.reactivex.Observable
+import okhttp3.RequestBody
 
 
 interface ChangeTimeContract {
@@ -9,6 +14,8 @@ interface ChangeTimeContract {
     interface View : IView
 
     //Model层定义接口,外部只需关心Model返回的数据,无需关心内部细节,即是否使用缓存
-    interface Model : IModel
+    interface Model : IModel {
+        fun measure(requestBody: RequestBody): Observable<HttpResult<List<MeasureHome>>>
+    }
 
 }
